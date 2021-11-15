@@ -4,3 +4,12 @@ node_modules
 /.svelte-kit
 /package
 .env
+src/config/settings.js
+/dist
+src/config
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
