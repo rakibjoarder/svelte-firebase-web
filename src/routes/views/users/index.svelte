@@ -5,7 +5,38 @@
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
 
-	let people = [];
+	let people = [
+		{
+			name: '12',
+			age: 2,
+			gender: 'fa',
+			id: Math.random()
+		},
+		{
+			name: '12',
+			age: 2,
+			gender: 'fa',
+			id: Math.random()
+		},
+		{
+			name: '12',
+			age: 2,
+			gender: 'fa',
+			id: Math.random()
+		},
+		{
+			name: '12',
+			age: 2,
+			gender: 'fa',
+			id: Math.random()
+		},
+		{
+			name: '12',
+			age: 2,
+			gender: 'fa',
+			id: Math.random()
+		}
+	];
 
 	// get person from store.js
 	// var unsub = PersonStore.subscribe((data) => {
@@ -13,29 +44,18 @@
 	// });
 
 	let ref = collection(Firestoredb, 'users');
-	let unsub;
-	onMount(() => {
-		console.log('MOUNT ');
-		console.log(unsub !== null);
-		// // // get person from firebase
+	// unsub = onSnapshot(ref, (snapshot) => {
+	// 	let results = [];
+	// 	snapshot.docs.forEach((doc) => {
+	// 		results.push({ ...doc.data(), id: doc.id });
+	// 	});
 
-		if (unsub === null) {
-			unsub = onSnapshot(ref, (snapshot) => {
-				let results = [];
-				snapshot.docs.forEach((doc) => {
-					results.push({ ...doc.data(), id: doc.id });
-				});
+	// 	console.log(results);
 
-				console.log(results);
-
-				people = results;
-			});
-		}
-	});
-
+	// 	people = results + results + results;
+	// });
 	onDestroy(() => {
 		console.log('onDestroy');
-		// unsub();
 	});
 
 	const onDelete = async (id) => {
@@ -54,29 +74,48 @@
 </script>
 
 <main>
-	<div in:fade out:scale>
-		<table>
-			<tr>
+	<div in:fade out:fade>
+		<div class="class bg-red-500 flex justify-end border-none w-full">
+			<a
+				class="text-red-800 border-red  bg-white p-1 m-2 px-4 rounded"
+				href="views/users/add_person">Add User</a
+			>
+		</div>
+		<table class="w-full border border-red-600 border-t-0">
+			<tr class="flex justify-around bg-red-500 text-white p-1">
 				<th>Name</th>
 				<th>Gender</th>
 				<th>Age</th>
 				<th>Action</th>
 			</tr>
 			{#each people as person}
-				<tr out:fade>
+				<tr out:fade class="flex justify-around border-b-2 border-red-100 p-1">
 					<td>{person.name}</td>
 					<td>{person.gender}</td>
 					<td>{person.age}</td>
+
 					<button
 						on:click={() => {
 							onDelete(person.id);
-						}}><i class="glyphicon glyphicon-thumbs-up" /></button
+						}}
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+								clip-rule="evenodd"
+							/>
+						</svg></button
 					>
 				</tr>
 			{:else}
 				<div class="emptyTable">No Person Available</div>
 			{/each}
-			<tr>
+			<tr class="flex justify-around bg-red-500 text-white p-1">
 				<th>Name</th>
 				<th>Gender</th>
 				<th>Age</th>
@@ -87,57 +126,4 @@
 </main>
 
 <style>
-	table {
-		font-family: roboto;
-		border-collapse: collapse;
-		width: 100%;
-	}
-
-	th {
-		border: 1px solid #ffffff;
-		background-color: #3d3d3d;
-		color: white;
-		text-align: center;
-		padding: 8px;
-	}
-
-	td {
-		border: 1px solid #dddddd;
-		text-align: center;
-		padding: 8px;
-	}
-	tr:nth-child(even) {
-		background-color: rgb(230, 230, 230);
-		color: black;
-	}
-	/* .tablehead {
-		background-color: rgb(110, 110, 110);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-
-	.button {
-		float: right;
-		color: rgb(255, 255, 255);
-		margin: 10px;
-		font-weight: bold;
-		padding: 5px 10px;
-		border: 2px solid rgb(255, 255, 255);
-		background-color: orange;
-	}
-	h3 {
-		color: rgb(255, 255, 255);
-		font-weight: bold;
-	} */
-
-	.emptyTable {
-		text-align: center;
-	}
-	/* @media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	} */
 </style>

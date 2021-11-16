@@ -65,20 +65,38 @@
 	};
 </script>
 
-<main>
-	<div class="formdiv" in:scale>
-		<p class="headerText">Add Person</p>
-		<form on:submit|preventDefault={onSubmit}>
-			<input type="text" name="Name" bind:value={fields.name} placeholder="Name" />
+<main class="flex justify-center items-center pt-10 pb-10 bg-gray-100  ">
+	<div
+		class="flex flex-col items-center bg-gray-50  p-14 max-w-sm rounded overflow-hidden shadow-xl justify-items-center "
+		in:scale
+	>
+		<p class="text-red-500  p-3 font-bold text-xl border-b-2 mb-6 border-red-600">Add Person</p>
+		<form on:submit|preventDefault={onSubmit} class="flex justify-center flex-col ">
+			<input
+				class="shadow appearance-none border hover:border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+				type="text"
+				name="Name"
+				bind:value={fields.name}
+				placeholder="Name"
+			/>
 			{#if valid == false}
 				<div class="error">{errors.name}</div>
 			{/if}
-			<input type="number" name="Age" bind:value={fields.age} placeholder="Age" />
+			<input
+				class="shadow appearance-none border hover:border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+				type="number"
+				name="Age"
+				bind:value={fields.age}
+				placeholder="Age"
+			/>
 			{#if valid == false}
 				<div class="error">{errors.age}</div>
 			{/if}
-			<select class="selectGender" bind:value={fields.gender}>
-				<option value="">Select Gender</option>
+			<select
+				class="selectGender shadow appearance-none border hover:border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline text-gray-500"
+				bind:value={fields.gender}
+			>
+				<option class="" value="">Select Gender</option>
 				<option value="Male">Male</option>
 				<option value="Female">Female</option>
 			</select>
@@ -86,66 +104,13 @@
 				<div class="error">{errors.gender}</div>
 			{/if}
 			<br />
-			<input class="btn" type="submit" /><br />
+			<input
+				class=" bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full hover:shadow-md cursor-pointer"
+				type="submit"
+			/><br />
 		</form>
 	</div>
 </main>
 
 <style>
-	.formdiv {
-		padding: 10px;
-		background-color: #f7f7f7;
-		margin: auto;
-		width: 60%;
-		border: 1px solid orange;
-		box-shadow: 0.2px 0.2px 30px 0px grey;
-		padding: 10px;
-		border-radius: 10px;
-	}
-
-	.btn {
-		border: 0 px;
-		cursor: pointer;
-		padding: 8px 12px;
-		font-weight: bold;
-		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0, 0.2);
-		background-color: orange;
-		color: white;
-	}
-
-	.selectGender {
-		color: #000;
-		width: 80%;
-		cursor: pointer;
-		border-radius: 10px;
-	}
-
-	input {
-		width: 80%;
-		border-radius: 10px;
-	}
-
-	.error {
-		color: red;
-		font-size: 10px;
-		padding-bottom: 10px;
-	}
-
-	.headerText {
-		color: orange;
-		padding: 10px;
-		font-weight: bold;
-	}
-
-	@media (min-width: 640px) {
-		.selectGender {
-			width: 300px;
-		}
-		input {
-			width: 300px;
-		}
-		.formdiv {
-			width: 400px;
-		}
-	}
 </style>

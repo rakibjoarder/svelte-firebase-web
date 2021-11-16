@@ -3,6 +3,8 @@
 	import ViewPerson from '../routes/views/users/index.svelte';
 </script>
 
-<section>
-	<ViewPerson />
-</section>
+<body>
+	<section class="bg-gray-100">
+		<ViewPerson />
+	</section>
+</body>
