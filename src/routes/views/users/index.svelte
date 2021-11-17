@@ -4,7 +4,6 @@
 	import { fade, slide, scale } from 'svelte/transition';
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
-
 	let people = [
 		{
 			name: '12',
@@ -37,58 +36,54 @@
 			id: Math.random()
 		}
 	];
-
 	// get person from store.js
 	// var unsub = PersonStore.subscribe((data) => {
 	// 	people = data;
 	// });
-
 	let ref = collection(Firestoredb, 'users');
 	// unsub = onSnapshot(ref, (snapshot) => {
 	// 	let results = [];
 	// 	snapshot.docs.forEach((doc) => {
 	// 		results.push({ ...doc.data(), id: doc.id });
 	// 	});
-
 	// 	console.log(results);
-
 	// 	people = results + results + results;
 	// });
 	onDestroy(() => {
 		console.log('onDestroy');
 	});
-
 	const onDelete = async (id) => {
 		console.log(id);
 		// people = people.filter((person) => person.id != id);
-
 		// update data in person store
-
 		// PersonStore.update((currentPerson) => {
 		// 	return people.filter((person) => person.id != id);
 		// });
-
 		await deleteDoc(doc(Firestoredb, 'users', id));
 		// await deleteDoc(ref, id);
 	};
 </script>
 
 <main>
-	<div in:fade out:fade>
-		<div class="class bg-red-500 flex justify-end border-none w-full">
-			<a class="text-red-800 border-red  bg-white p-1 m-2 px-4 rounded" href="users/add_person"
+	<div in:fade out:fade class="block w-full overflow-x-auto md:p-10 ">
+		<div class="class bg-gray-800   border-none w-full flex justify-between items-center">
+			<h3 class="text-white font-bold pl-5">User Table</h3>
+			
+			
+			<a class="text-gray-800 border-red  bg-white p-1 m-2 px-4 rounded" href="users/Adduser"
 				>Add User</a
 			>
+
 		</div>
-		<table class="w-full border border-red-600 border-t-0">
-			<tr class="flex justify-around bg-red-500 text-white p-1">
-				<th>Name</th>
-				<th>Gender</th>
-				<th>Age</th>
-				<th>Action</th>
+		<table class="w-full border border-gray-700 border-t-0 rounded shadow-xl overflow-auto">
+			<tr class="flex justify-around bg-gray-900 text-white p-2">
+				<th class="text-sm">Name</th>
+				<th class="text-sm">Gender</th>
+				<th class="text-sm">Age</th>
+				<th class="text-sm">Action</th>
 			</tr>
-			{#each people as person}
-				<tr out:fade class="flex justify-around border-b-2 border-red-100 p-1">
+			{#each people as person} 
+				<tr out:fade class="flex justify-around border-b-1 border-gray-700 p-3 bg-gray-800 text-white  border-b-2">
 					<td>{person.name}</td>
 					<td>{person.gender}</td>
 					<td>{person.age}</td>
@@ -114,12 +109,7 @@
 			{:else}
 				<div class="emptyTable">No Person Available</div>
 			{/each}
-			<tr class="flex justify-around bg-red-500 text-white p-1">
-				<th>Name</th>
-				<th>Gender</th>
-				<th>Age</th>
-				<th>Action</th>
-			</tr>
+		
 		</table>
 	</div>
 </main>
