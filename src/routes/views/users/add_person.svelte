@@ -65,9 +65,9 @@
 	};
 </script>
 
-<main class="flex justify-center items-center pt-10 pb-10 bg-gray-100  ">
+<main class="flex justify-center items-center h-screen ">
 	<div
-		class="flex flex-col items-center bg-gray-50  p-14 max-w-sm rounded overflow-hidden shadow-xl justify-items-center "
+		class="flex flex-col items-center bg-gray-100  p-14 max-w-sm rounded overflow-hidden shadow-xl justify-items-center "
 		in:scale
 	>
 		<p class="text-red-500  p-3 font-bold text-xl border-b-2 mb-6 border-red-600">Add Person</p>

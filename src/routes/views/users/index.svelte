@@ -76,9 +76,8 @@
 <main>
 	<div in:fade out:fade>
 		<div class="class bg-red-500 flex justify-end border-none w-full">
-			<a
-				class="text-red-800 border-red  bg-white p-1 m-2 px-4 rounded"
-				href="views/users/add_person">Add User</a
+			<a class="text-red-800 border-red  bg-white p-1 m-2 px-4 rounded" href="users/add_person"
+				>Add User</a
 			>
 		</div>
 		<table class="w-full border border-red-600 border-t-0">
