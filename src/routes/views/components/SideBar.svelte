@@ -68,7 +68,7 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/asd"
+				href="/views/users"
 				class={navItem === 'About'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
@@ -91,7 +91,7 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/asd"
+				href="/views/users"
 				class={navItem === 'Contact'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}

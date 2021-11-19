@@ -1,6 +1,6 @@
 <script>
 	// library for creating dropdown menu appear on click
-	import { createPopper } from '@popperjs/core';
+	// import { createPopper } from '@popperjs/core';
 	// core components
 	import { createEventDispatcher } from 'svelte';
 	import { FontAwesomeIcon } from 'fontawesome-svelte';
