@@ -119,7 +119,7 @@
 				<a
 					class="  hover:bg-red-700 text-white font-bold py-1 px-4 rounded-full hover:shadow-md cursor-pointer bg-red-500 flex-grow ml-4 text-sm text-center"
 					href="/views/users"
-					>Back <a />
+					>Back
 				</a>
 			</div>
 		</form>
