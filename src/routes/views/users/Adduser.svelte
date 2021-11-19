@@ -124,7 +124,7 @@
 			</div>
 		</form>
 		{#if message.length > 0}
-			<Alert type="success" {message} />
+			<Alert type="success" class="mt-4" {message} />
 		{/if}
 	</div>
 </main>

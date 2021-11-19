@@ -95,22 +95,22 @@
 						<tbody>
 							<tr>
 								<td
-									class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center"
+									class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-center"
 								>
 									{person.name}
 								</td>
 								<td
-									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center"
+									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-center"
 								>
 									{person.email}
 								</td>
 								<td
-									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xl whitespace-nowrap p-4 text-center"
+									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xl whitespace-nowrap p-2 text-center"
 								>
 									{person.gender === 'Male' ? '👨' : '👧'}
 								</td>
 								<td
-									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-left"
 								>
 									<TableDropdown
 										item={person}

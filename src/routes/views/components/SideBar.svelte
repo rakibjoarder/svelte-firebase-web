@@ -68,8 +68,8 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/views/users"
-				class={navItem === 'About'
+				href="/views/products"
+				class={navItem === 'Product'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
 				on:click={() => setNavValue('About')}
