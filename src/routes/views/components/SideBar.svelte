@@ -23,7 +23,7 @@
 			</h1>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 mr-4 cursor-pointer md:hidden "
+				class="h-6 w-6 mr-4 cursor-pointer md:hidden text-white"
 				id="menu"
 				fill="none"
 				viewBox="0 0 24 24"
@@ -44,7 +44,7 @@
 			<a
 				href="/views/users"
 				class={navItem === 'User'
-					? 'border-red-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
+					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4 '}
 				on:click={() => setNavValue('User')}
 			>
@@ -70,7 +70,7 @@
 			<a
 				href="/asd"
 				class={navItem === 'About'
-					? 'border-red-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
+					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
 				on:click={() => setNavValue('About')}
 			>
@@ -93,7 +93,7 @@
 			<a
 				href="/asd"
 				class={navItem === 'Contact'
-					? 'border-red-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
+					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
 				on:click={() => setNavValue('Contact')}
 			>

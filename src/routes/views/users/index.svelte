@@ -65,9 +65,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="block w-full overflow-x-auto bg-gray-800">
+		<div class="block w-full overflow-x-auto bg-gray-800 max-h-96">
 			<!-- Projects table -->
-			<table class="items-center w-full bg-transparent border-collapse">
+			<table class="items-center w-full bg-transparent border-collapse max-h-96 overflow-auto">
 				<thead class="bg-gray-900 text-white">
 					<tr>
 						<th
@@ -105,7 +105,7 @@
 									{person.email}
 								</td>
 								<td
-									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center"
+									class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xl whitespace-nowrap p-4 text-center"
 								>
 									{person.gender === 'Male' ? '👨' : '👧'}
 								</td>
