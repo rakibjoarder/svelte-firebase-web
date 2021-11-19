@@ -4,13 +4,20 @@
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
 	import { createForm } from 'svelte-forms-lib';
-	import tailToast from 'tailwind-toast';
+
+	let dispatch = createEventDispatcher();
+
+	// firestore reference
+	let ref = collection(Firestoredb, 'users');
 	const { form, errors, handleChange, handleSubmit } = createForm({
 		initialValues: {},
 		validate: (values) => {
 			let errors = {};
 			if (!values.name) {
 				errors.name = 'Name is Required';
+			}
+			if (!values.email) {
+				errors.email = 'Email is Required';
 			}
 			if (!values.age) {
 				errors['age'] = 'Age is required';
@@ -20,18 +27,29 @@
 				errors['gender'] = 'Gender is required';
 			}
 			console.log(errors);
-			tailToast.default('Title', 'Message!').show();
+			// tailToast.de
 			return errors;
 		},
-		onSubmit: (values) => {
-			alert(JSON.stringify(values));
+		onSubmit: async (values) => {
+			// alert(JSON.stringify(values));
+			const person = {
+				name: values.name,
+				age: values.age,
+				gender: values.gender,
+				email: values.email,
+				id: Math.random()
+			};
+
+			// // add user  to store
+			// await PersonStore.update((currentPerson) => {
+			// 	return [person, ...currentPerson];
+			// });
+			// add user  to firebase
+			await addDoc(ref, person);
+			alert('as');
+			dispatch('addPerson', person);
 		}
 	});
-
-	let dispatch = createEventDispatcher();
-
-	// firestore reference
-	let ref = collection(Firestoredb, 'users');
 
 	// const fields = {
 	// 	name: '',
@@ -110,6 +128,18 @@
 			/>
 			{#if $errors.name}
 				<span class="error mb-2 -mt-2"> {$errors.name}</span>
+			{/if}
+
+			<input
+				class="input"
+				type="text"
+				name="Name"
+				bind:value={$form.email}
+				placeholder="Email"
+				on:change={handleChange}
+			/>
+			{#if $errors.email}
+				<span class="error mb-2 -mt-2"> {$errors.email}</span>
 			{/if}
 			<input
 				class="input"

@@ -32,6 +32,7 @@
 	"dependencies": {
 		"@popperjs/core": "^2.10.2",
 		"firebase": "^9.4.1",
+		"fontawesome-svelte": "^2.0.1",
 		"fuse.js": "^6.4.6",
 		"svelte-forms-lib": "^2.0.0",
 		"sweetalert2": "^11.1.10",
