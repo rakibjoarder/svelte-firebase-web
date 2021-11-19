@@ -4,9 +4,9 @@ node_modules
 /.svelte-kit
 /package
 .env
-src/config/settings.js
+# src/config/settings.js
 /dist
-src/config
+# src/config
 
 # Log files
 npm-debug.log*
