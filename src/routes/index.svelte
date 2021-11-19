@@ -3,7 +3,7 @@
 	import ViewPerson from './views/users/index.svelte';
 </script>
 
-<body class="h-screen bg-gray-100">
+<body class="h-screen bg-gray-200">
 	<section>
 		<ViewPerson />
 	</section>

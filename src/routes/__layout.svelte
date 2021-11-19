@@ -6,7 +6,7 @@
 
 <!-- <Header /> -->
 <div class="md:grid md:grid-cols-5">
-	<div class="md:col-span-1 bg-gray-300 md:flex md:justify-end ">
+	<div class="md:col-span-1 bg-gray-800 md:flex md:justify-end ">
 		<SideBar />
 	</div>
 	<div class="bg-gray-200 col-span-4 ">

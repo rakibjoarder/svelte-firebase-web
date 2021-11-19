@@ -67,26 +67,30 @@
 <main>
 	<div in:fade out:fade class="block w-full overflow-x-auto md:p-10 ">
 		<div class="class bg-gray-800   border-none w-full flex justify-between items-center">
-			<h3 class="text-white font-bold pl-5">User Table</h3>
-			
-			
-			<a class="text-gray-800 border-red  bg-white p-1 m-2 px-4 rounded" href="users/Adduser"
-				>Add User</a
-			>
+			<h3 class="text-white font-bold pl-5 te">User Table</h3>
 
+			<a
+				class="text-gray-800 border-red  bg-white p-1 m-2 px-4 rounded text-sm"
+				href="users/Adduser">Add User</a
+			>
 		</div>
-		<table class="w-full border border-gray-700 border-t-0 rounded shadow-xl overflow-auto">
+		<table
+			class=" table w-full border border-gray-700 border-t-0 rounded shadow-xl overflow-auto border"
+		>
 			<tr class="flex justify-around bg-gray-900 text-white p-2">
 				<th class="text-sm">Name</th>
 				<th class="text-sm">Gender</th>
 				<th class="text-sm">Age</th>
 				<th class="text-sm">Action</th>
 			</tr>
-			{#each people as person} 
-				<tr out:fade class="flex justify-around border-b-1 border-gray-700 p-3 bg-gray-800 text-white  border-b-2">
-					<td>{person.name}</td>
-					<td>{person.gender}</td>
-					<td>{person.age}</td>
+			{#each people as person}
+				<tr
+					out:fade
+					class="flex justify-around border-b-1 border-gray-700 p-s bg-gray-800 text-white  border-b-2"
+				>
+					<td class=" text-xs">{person.name}</td>
+					<td class=" text-xs">{person.gender}</td>
+					<td class=" text-xs">{person.age}</td>
 
 					<button
 						on:click={() => {
@@ -109,10 +113,12 @@
 			{:else}
 				<div class="emptyTable">No Person Available</div>
 			{/each}
-		
 		</table>
 	</div>
 </main>
 
 <style>
+	td {
+		@apply p-2;
+	}
 </style>

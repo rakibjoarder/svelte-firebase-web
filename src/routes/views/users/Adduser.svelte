@@ -3,65 +3,90 @@
 	import { createEventDispatcher } from 'svelte';
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
+	import { createForm } from 'svelte-forms-lib';
+	import tailToast from 'tailwind-toast';
+	const { form, errors, handleChange, handleSubmit } = createForm({
+		initialValues: {},
+		validate: (values) => {
+			let errors = {};
+			if (!values.name) {
+				errors.name = 'Name is Required';
+			}
+			if (!values.age) {
+				errors['age'] = 'Age is required';
+			}
+
+			if (!values.gender) {
+				errors['gender'] = 'Gender is required';
+			}
+			console.log(errors);
+			tailToast.default('Title', 'Message!').show();
+			return errors;
+		},
+		onSubmit: (values) => {
+			alert(JSON.stringify(values));
+		}
+	});
+
 	let dispatch = createEventDispatcher();
 
 	// firestore reference
 	let ref = collection(Firestoredb, 'users');
 
-	const fields = {
-		name: '',
-		age: '',
-		gender: ''
-	};
-	let valid = true;
+	// const fields = {
+	// 	name: '',
+	// 	age: '',
+	// 	gender: ''
+	// };
+	// let valid = true;
 
-	let errors = {
-		name: '',
-		age: '',
-		gender: ''
-	};
+	// let errors = {
+	// 	name: '',
+	// 	age: '',
+	// 	gender: ''
+	// };
 
-	const onSubmit = async () => {
-		valid = true;
-		if (fields.name.trim().length == 0) {
-			valid = false;
-			errors.name = 'Please Enter Name';
-		} else {
-			errors.name = '';
-		}
+	// const onSubmit = async () => {
+	// 	valid = true;
+	// 	if (fields.name.trim().length == 0) {
+	// 		valid = false;
+	// 		errors.name = 'Please Enter Name';
+	// 	} else {
+	// 		errors.name = '';
+	// 	}
 
-		if (fields.age == 0) {
-			valid = false;
-			errors.age = 'Please Enter Age';
-		} else {
-			errors.age = '';
-		}
+	// 	if (fields.age == 0) {
+	// 		valid = false;
+	// 		errors.age = 'Please Enter Age';
+	// 	} else {
+	// 		errors.age = '';
+	// 	}
 
-		if (fields.gender.trim().length == 0) {
-			valid = false;
-			errors.gender = 'Please Select Gender';
-		} else {
-			errors.gender = '';
-		}
+	// 	if (fields.gender.trim().length == 0) {
+	// 		valid = false;
+	// 		errors.gender = 'Please Select Gender';
+	// 	} else {
+	// 		errors.gender = '';
+	// 	}
 
-		if (valid == true) {
-			const person = {
-				name: fields.name,
-				age: fields.age,
-				gender: fields.gender,
-				id: Math.random()
-			};
+	// 	if (valid == true) {
+	// 		const person = {
+	// 			name: fields.name,
+	// 			age: fields.age,
+	// 			gender: fields.gender,
+	// 			id: Math.random()
+	// 		};
 
-			// add user  to store
-			await PersonStore.update((currentPerson) => {
-				return [person, ...currentPerson];
-			});
-			// add user  to firebase
-			await addDoc(ref, person);
+	// 		// add user  to store
+	// 		await PersonStore.update((currentPerson) => {
+	// 			return [person, ...currentPerson];
+	// 		});
+	// 		// add user  to firebase
+	// 		await addDoc(ref, person);
 
-			dispatch('addPerson', person);
-		}
-	};
+	// 		dispatch('addPerson', person);
+	// 	}
+	// };
 </script>
 
 <main class="flex justify-center items-center h-screen">
@@ -72,24 +97,38 @@
 		<p class="text-gray-700  p-1 font-semibold text-xl border-b-2 mb-6 border-gray-600">Add User</p>
 
 		<form
-			on:submit|preventDefault={onSubmit}
+			on:submit|preventDefault={handleSubmit}
 			class="flex justify-center flex-col bg-gray-100 md:w-4/6 "
 		>
-			<input class="input" type="text" name="Name" bind:value={fields.name} placeholder="Name" />
-			{#if valid == false}
-				<div class="error">{errors.name}</div>
+			<input
+				class="input"
+				type="text"
+				name="Name"
+				bind:value={$form.name}
+				placeholder="Name"
+				on:change={handleChange}
+			/>
+			{#if $errors.name}
+				<span class="error mb-2 -mt-2"> {$errors.name}</span>
 			{/if}
-			<input class="input" type="number" name="Age" bind:value={fields.age} placeholder="Age" />
-			{#if valid == false}
-				<div class="error">{errors.age}</div>
+			<input
+				class="input"
+				type="number"
+				name="Age"
+				bind:value={$form.age}
+				placeholder="Age"
+				on:change={handleChange}
+			/>
+			{#if $errors.age}
+				<span class="error mb-2 -mt-2"> {$errors.name}</span>
 			{/if}
-			<select class="input" bind:value={fields.gender}>
+			<select class="input" bind:value={$form.gender}>
 				<option class="" value="">Select Gender</option>
 				<option value="Male">Male</option>
 				<option value="Female">Female</option>
 			</select>
-			{#if valid == false}
-				<div class="error">{errors.gender}</div>
+			{#if $errors.gender}
+				<span class="error mb-2 -mt-2"> {$errors.gender}</span>
 			{/if}
 			<br />
 			<div class="flex justify-around flex-row">

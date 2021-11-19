@@ -14,7 +14,7 @@
 </script>
 
 <body class="h-screen"
-	><div class="flex items-center justify-center min-h-full">
+	><div class="flex items-center justify-center min-h-full top-7">
 		<div class="flex flex-col items-center">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

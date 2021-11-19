@@ -1,9 +1,9 @@
 <script>
 	const showMenuItem = () => {
-		if (document.querySelector('#ul').classList.contains('hidden')) {
-			document.querySelector('#ul').classList.remove('hidden');
+		if (document.querySelector('#ul').classList.contains('navul')) {
+			document.querySelector('#ul').classList.remove('navul');
 		} else {
-			document.querySelector('#ul').classList.add('hidden');
+			document.querySelector('#ul').classList.add('navul');
 		}
 	};
 	let navItem = 'User';
@@ -16,7 +16,11 @@
 <nav class="md:fixed">
 	<div>
 		<div class="flex justify-between items-center">
-			<h1 class="font-bold uppercase p-4 border-b md:border-gray-50">Svelte</h1>
+			<h1
+				class="font-semibold uppercase p-4 pb-2 border-b md:border-gray-50 bg-gradient-to-tr from-yellow-800 to-yellow-200 text-transparent bg-clip-text"
+			>
+				Svelte
+			</h1>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-6 w-6 mr-4 cursor-pointer md:hidden "
@@ -35,7 +39,7 @@
 			</svg>
 		</div>
 	</div>
-	<ul class="text-sm mt-6  md:block items-center flex  justify-center hidden " id="ul">
+	<ul class="navul" id="ul">
 		<li class="text-gray-700 font-bold py-1">
 			<a
 				href="/views/users"
@@ -44,11 +48,11 @@
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4 '}
 				on:click={() => setNavValue('User')}
 			>
-				<span>User</span>
+				<span class="text-sm text-white">User</span>
 
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="w-5 ml-2"
+					class="w-5 ml-2 text-white"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -70,9 +74,9 @@
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
 				on:click={() => setNavValue('About')}
 			>
-				<span>About</span>
+				<span class="text-sm text-white">About</span>
 				<svg
-					class="w-5 ml-2"
+					class="w-5 ml-2 text-white"
 					fill="none"
 					stroke-linecap="round"
 					stroke-linejoin="round"
@@ -93,9 +97,9 @@
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
 				on:click={() => setNavValue('Contact')}
 			>
-				<span>Contact</span>
+				<span class="text-sm text-white">Contact</span>
 				<svg
-					class="w-5 ml-2"
+					class="w-5 ml-2 text-white"
 					fill="none"
 					stroke-linecap="round"
 					stroke-linejoin="round"
@@ -110,3 +114,9 @@
 		</li>
 	</ul>
 </nav>
+
+<style>
+	.navul {
+		@apply text-sm mt-6  md:block items-center flex  justify-center hidden;
+	}
+</style>
