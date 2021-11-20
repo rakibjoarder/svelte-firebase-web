@@ -16,7 +16,6 @@
 		/></svg
 	>
 	<p class="ml-3 text-sm text-green-700">
-		{type}
 		{message}
 	</p>
 </div>

@@ -19,9 +19,13 @@
 			}
 			if (!values.email) {
 				errors.email = 'Email is Required';
+			} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+				errors.email = 'Invalid emaill address';
 			}
 			if (!values.age) {
 				errors['age'] = 'Age is required';
+			} else if (values.age < 0 || values.age > 120) {
+				errors.age = 'Invalid age';
 			}
 
 			if (!values.gender) {
@@ -103,7 +107,7 @@
 				on:change={handleChange}
 			/>
 			{#if $errors.age}
-				<span class="error mb-2 -mt-2"> {$errors.name}</span>
+				<span class="error mb-2 -mt-2"> {$errors.age}</span>
 			{/if}
 			<select class="input" bind:value={$form.gender}>
 				<option class="" value="">Select Gender</option>
@@ -124,7 +128,8 @@
 			</div>
 		</form>
 		{#if message.length > 0}
-			<Alert type="success" class="mt-4" {message} />
+			<div class="mt-4" />
+			<Alert type="success" {message} />
 		{/if}
 	</div>
 </main>
