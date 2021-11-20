@@ -50,8 +50,7 @@
 			// 	return [person, ...currentPerson];
 			// });
 			// add user  to firebase
-			await addDoc(ref, person);
-
+			addDoc(ref, person);
 			message = 'Successfully Created User';
 			await wait();
 			message = '';
