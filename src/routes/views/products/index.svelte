@@ -20,7 +20,7 @@
 
 <div class="text-center font-bold text-3xl pb-5">Product List</div>
 <div />
-<div class="md:grid md:grid-cols-3 lg:grid-cols-5 ">
+<div class="md:grid md:grid-cols-3 lg:grid-cols-5">
 	{#each productList as item}
 		<div class="card relative">
 			<img

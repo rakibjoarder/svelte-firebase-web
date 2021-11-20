@@ -32,6 +32,7 @@
 	"type": "module",
 	"dependencies": {
 		"@popperjs/core": "^2.10.2",
+		"daisyui": "^1.16.2",
 		"firebase": "^9.4.1",
 		"fontawesome-svelte": "^2.0.1",
 		"fuse.js": "^6.4.6",
