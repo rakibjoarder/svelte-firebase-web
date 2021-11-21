@@ -4696,9 +4696,9 @@ var init_shims = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/product-849d1cc0.js
-var product_849d1cc0_exports = {};
-__export(product_849d1cc0_exports, {
+// .svelte-kit/output/server/chunks/product-3dfcb50b.js
+var product_3dfcb50b_exports = {};
+__export(product_3dfcb50b_exports, {
   get: () => get
 });
 async function api(request, resource, data) {
@@ -4725,8 +4725,8 @@ async function api(request, resource, data) {
   };
 }
 var base, get;
-var init_product_849d1cc0 = __esm({
-  ".svelte-kit/output/server/chunks/product-849d1cc0.js"() {
+var init_product_3dfcb50b = __esm({
+  ".svelte-kit/output/server/chunks/product-3dfcb50b.js"() {
     init_shims();
     base = "https://ebazar.droidappbd.com/public/api/v1";
     get = async (request) => {
@@ -4740,32 +4740,32 @@ var init_product_849d1cc0 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/footer-7db8af00.js
-var footer_7db8af00_exports = {};
-__export(footer_7db8af00_exports, {
+// .svelte-kit/output/server/chunks/footer-136c1155.js
+var footer_136c1155_exports = {};
+__export(footer_136c1155_exports, {
   default: () => Footer
 });
 var Footer;
-var init_footer_7db8af00 = __esm({
-  ".svelte-kit/output/server/chunks/footer-7db8af00.js"() {
+var init_footer_136c1155 = __esm({
+  ".svelte-kit/output/server/chunks/footer-136c1155.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<main><div class="${"text-sm text-center text-gray-900 font-bold mb-5"}">Copyright 2021 | Rakib Joarder</div></main>`;
+      return `<main><div class="${"text-sm text-center text-gray-900 font-bold pb-5"}">Copyright 2021 | Rakib Joarder</div></main>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/SideBar-69ebf5bc.js
-var SideBar_69ebf5bc_exports = {};
-__export(SideBar_69ebf5bc_exports, {
+// .svelte-kit/output/server/chunks/SideBar-6c232a6d.js
+var SideBar_6c232a6d_exports = {};
+__export(SideBar_6c232a6d_exports, {
   default: () => SideBar
 });
 var css, SideBar;
-var init_SideBar_69ebf5bc = __esm({
-  ".svelte-kit/output/server/chunks/SideBar-69ebf5bc.js"() {
+var init_SideBar_6c232a6d = __esm({
+  ".svelte-kit/output/server/chunks/SideBar-6c232a6d.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     css = {
       code: ".navul.svelte-zu55zv{align-items:center;display:flex;display:none;font-size:.875rem;justify-content:center;line-height:1.25rem;margin-top:1.5rem}@media(min-width:768px){.navul.svelte-zu55zv{display:block}}",
       map: null
@@ -4779,36 +4779,35 @@ var init_SideBar_69ebf5bc = __esm({
 
 				<svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"w-5 ml-2 text-white"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"}"></path></svg></a></li>
 		<li class="${"py-1"}"><a href="${"/views/products"}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4  ")) + " svelte-zu55zv"}"><span class="${"text-sm text-white"}">Product</span>
-				<svg xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 20 20"}" class="${"w-5 ml-2 text-white"}" fill="${"currentColor"}"><path fill-rule="${"evenodd"}" d="${"M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z"}" clip-rule="${"evenodd"}"></path></svg></a></li>
-		</ul>
+				<svg xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 20 20"}" class="${"w-5 ml-2 text-white"}" fill="${"currentColor"}"><path fill-rule="${"evenodd"}" d="${"M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z"}" clip-rule="${"evenodd"}"></path></svg></a></li></ul>
 </nav>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-9ac4b560.js
-var layout_9ac4b560_exports = {};
-__export(layout_9ac4b560_exports, {
+// .svelte-kit/output/server/chunks/__layout-378d3d5f.js
+var layout_378d3d5f_exports = {};
+__export(layout_378d3d5f_exports, {
   default: () => _layout
 });
 var _layout;
-var init_layout_9ac4b560 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-9ac4b560.js"() {
+var init_layout_378d3d5f = __esm({
+  ".svelte-kit/output/server/chunks/__layout-378d3d5f.js"() {
     init_shims();
-    init_app_6366e663();
-    init_footer_7db8af00();
-    init_SideBar_69ebf5bc();
+    init_app_bd98c447();
+    init_footer_136c1155();
+    init_SideBar_6c232a6d();
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div><div class="${"md:grid md:grid-cols-5"}"><div class="${"md:col-span-1 bg-gray-800 md:flex md:justify-end "}">${validate_component(SideBar, "SideBar").$$render($$result, {}, {}, {})}</div>
-		<div class="${"bg-gray-200 col-span-4 "}"><div class="${"p-10 md:h-screen "}">${slots.default ? slots.default({}) : ``}</div>
+		<div class="${"bg-gray-200 col-span-4 "}"><div class="${"p-10 h-auto"}">${slots.default ? slots.default({}) : ``}</div>
 			${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-3b4d9c4c.js
-var error_3b4d9c4c_exports = {};
-__export(error_3b4d9c4c_exports, {
+// .svelte-kit/output/server/chunks/__error-69f1027e.js
+var error_69f1027e_exports = {};
+__export(error_69f1027e_exports, {
   default: () => _error,
   load: () => load
 });
@@ -4820,10 +4819,10 @@ function load({ error: error2, status }) {
   };
 }
 var _error;
-var init_error_3b4d9c4c = __esm({
-  ".svelte-kit/output/server/chunks/__error-3b4d9c4c.js"() {
+var init_error_69f1027e = __esm({
+  ".svelte-kit/output/server/chunks/__error-69f1027e.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { title } = $$props;
       if ($$props.title === void 0 && $$bindings.title && title !== void 0)
@@ -12476,9 +12475,9 @@ This typically indicates that your device does not have a healthy Internet conne
   }
 });
 
-// .svelte-kit/output/server/chunks/TableDropdown-879479c4.js
-var TableDropdown_879479c4_exports = {};
-__export(TableDropdown_879479c4_exports, {
+// .svelte-kit/output/server/chunks/TableDropdown-79950e2a.js
+var TableDropdown_79950e2a_exports = {};
+__export(TableDropdown_79950e2a_exports, {
   default: () => TableDropdown
 });
 function _classCallCheck(instance, Constructor) {
@@ -12609,10 +12608,10 @@ function MissingIcon(error2) {
   this.stack = new Error().stack;
 }
 var noop, _WINDOW, _DOCUMENT, _MUTATION_OBSERVER, _PERFORMANCE, _ref, _ref$userAgent, userAgent, WINDOW, DOCUMENT, PERFORMANCE, IS_DOM, NAMESPACE_IDENTIFIER, DEFAULT_FAMILY_PREFIX, DEFAULT_REPLACEMENT_CLASS, initial, attrs, _default, _config, config, w2, namespace, functions, listener, loaded, noop$1, bindInternal4, reduce, styles, shims, build, FILL, ANIMATION_BASE, OPACITY_ANIMATE, Library, TableDropdown;
-var init_TableDropdown_879479c4 = __esm({
-  ".svelte-kit/output/server/chunks/TableDropdown-879479c4.js"() {
+var init_TableDropdown_79950e2a = __esm({
+  ".svelte-kit/output/server/chunks/TableDropdown-79950e2a.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     noop = function noop2() {
     };
     _WINDOW = {};
@@ -12897,18 +12896,18 @@ var init_TableDropdown_879479c4 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-316a84eb.js
-var index_316a84eb_exports = {};
-__export(index_316a84eb_exports, {
+// .svelte-kit/output/server/chunks/index-822eb1db.js
+var index_822eb1db_exports = {};
+__export(index_822eb1db_exports, {
   default: () => Users
 });
 var Users;
-var init_index_316a84eb = __esm({
-  ".svelte-kit/output/server/chunks/index-316a84eb.js"() {
+var init_index_822eb1db = __esm({
+  ".svelte-kit/output/server/chunks/index-822eb1db.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     init_firebase_d41aa3ca();
-    init_TableDropdown_879479c4();
+    init_TableDropdown_79950e2a();
     Users = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let people = [];
       ba(Firestoredb, "users");
@@ -12916,7 +12915,7 @@ var init_index_316a84eb = __esm({
       onDestroy(() => {
         console.log("onDestroy");
       });
-      return `<main><div class="${"relative flex flex-col min-w-0 break-words bg-gray-800 text-white w-full mb-6 shadow-lg rounded"}"><div class="${"rounded-t mb-0 px-4 py-3 border-0"}"><div class="${"flex flex-wrap items-center"}"><div class="${"relative w-full px-4 max-w-full flex-grow flex-1"}"><h3 class="${"font-semibold text-base text-blueGray-700"}">User Table</h3></div>
+      return `<main class="${"h-screen"}"><div class="${"relative flex flex-col min-w-0 break-words bg-gray-800 text-white w-full mb-6 shadow-lg rounded"}"><div class="${"rounded-t mb-0 px-4 py-3 border-0"}"><div class="${"flex flex-wrap items-center"}"><div class="${"relative w-full px-4 max-w-full flex-grow flex-1"}"><h3 class="${"font-semibold text-base text-blueGray-700"}">User Table</h3></div>
 				<div class="${"relative w-full px-4 max-w-full flex-grow flex-1 text-right"}"><button class="${"bg-yellow-600 text-white active:bg-green-600 text-xs font-bold uppercase px-5 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"}" type="${"button"}">Add User
 					</button></div></div></div>
 		<div class="${"block w-full overflow-x-auto bg-gray-800 max-h-96"}">
@@ -12939,20 +12938,20 @@ var init_index_316a84eb = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-0eef5aee.js
-var index_0eef5aee_exports = {};
-__export(index_0eef5aee_exports, {
+// .svelte-kit/output/server/chunks/index-0d9576d3.js
+var index_0d9576d3_exports = {};
+__export(index_0d9576d3_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var prerender, Routes;
-var init_index_0eef5aee = __esm({
-  ".svelte-kit/output/server/chunks/index-0eef5aee.js"() {
+var init_index_0d9576d3 = __esm({
+  ".svelte-kit/output/server/chunks/index-0d9576d3.js"() {
     init_shims();
-    init_app_6366e663();
-    init_index_316a84eb();
+    init_app_bd98c447();
+    init_index_822eb1db();
     init_firebase_d41aa3ca();
-    init_TableDropdown_879479c4();
+    init_TableDropdown_79950e2a();
     prerender = true;
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<body class="${"h-screen bg-gray-200"}"><section>${validate_component(Users, "ViewPerson").$$render($$result, {}, {}, {})}</section></body>`;
@@ -12960,16 +12959,16 @@ var init_index_0eef5aee = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/header-c286d652.js
-var header_c286d652_exports = {};
-__export(header_c286d652_exports, {
+// .svelte-kit/output/server/chunks/header-bb36aa1c.js
+var header_bb36aa1c_exports = {};
+__export(header_bb36aa1c_exports, {
   default: () => Header
 });
 var css2, Header;
-var init_header_c286d652 = __esm({
-  ".svelte-kit/output/server/chunks/header-c286d652.js"() {
+var init_header_bb36aa1c = __esm({
+  ".svelte-kit/output/server/chunks/header-bb36aa1c.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     css2 = {
       code: "div.svelte-1eupku3{background-color:#f7f7f7;box-sizing:border-box;color:#fff;padding:10px;text-align:center}img.svelte-1eupku3{margin-top:20px;max-height:100px}",
       map: null
@@ -12982,75 +12981,27 @@ var init_header_c286d652 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Alert-3f5074d9.js
-var Alert_3f5074d9_exports = {};
-__export(Alert_3f5074d9_exports, {
+// .svelte-kit/output/server/chunks/Alert-e786d943.js
+var Alert_e786d943_exports = {};
+__export(Alert_e786d943_exports, {
   default: () => Alert
 });
 var Alert;
-var init_Alert_3f5074d9 = __esm({
-  ".svelte-kit/output/server/chunks/Alert-3f5074d9.js"() {
+var init_Alert_e786d943 = __esm({
+  ".svelte-kit/output/server/chunks/Alert-e786d943.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     Alert = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { type } = $$props;
       let { message } = $$props;
-      if ($$props.type === void 0 && $$bindings.type && type !== void 0)
-        $$bindings.type(type);
       if ($$props.message === void 0 && $$bindings.message && message !== void 0)
         $$bindings.message(message);
       return `<div class="${"flex bg-green-100 rounded-lg p-4 mb-4 transition delay-150 duration-300 ease-in-out"}"><svg class="${"w-5 h-5 text-green-700"}" fill="${"currentColor"}" viewBox="${"0 0 20 20"}" xmlns="${"http://www.w3.org/2000/svg"}"><path fill-rule="${"evenodd"}" d="${"M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"}" clip-rule="${"evenodd"}"></path></svg>
-	<p class="${"ml-3 text-sm text-green-700"}">${escape(type)}
-		${escape(message)}</p></div>`;
+	<p class="${"ml-3 text-sm text-green-700"}">${escape(message)}</p></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/index-7de58f84.js
-var index_7de58f84_exports = {};
-__export(index_7de58f84_exports, {
-  default: () => Products,
-  load: () => load2
-});
-var css3, load2, Products;
-var init_index_7de58f84 = __esm({
-  ".svelte-kit/output/server/chunks/index-7de58f84.js"() {
-    init_shims();
-    init_app_6366e663();
-    css3 = {
-      code: ".card.svelte-bkraak{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(229,231,235,var(--tw-border-opacity));border-radius:.25rem;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);height:15rem;margin:1.75rem;overflow:hidden;padding:1.25rem .5rem .5rem;text-align:center}@media(min-width:768px){.card.svelte-bkraak{grid-column:span 1/span 1;height:15rem;margin:.5rem}}",
-      map: null
-    };
-    load2 = async ({ fetch: fetch2 }) => {
-      try {
-        const res = await fetch2("/api/product");
-        const productList = await res.json();
-        return { props: { productList } };
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    Products = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { productList } = $$props;
-      if ($$props.productList === void 0 && $$bindings.productList && productList !== void 0)
-        $$bindings.productList(productList);
-      $$result.css.add(css3);
-      return `<div class="${"text-center font-bold text-3xl pb-5"}">Product List</div>
-<div></div>
-<div class="${"md:grid md:grid-cols-3 lg:grid-cols-5 "}">${each(productList, (item) => `<div class="${"card relative svelte-bkraak"}"><img src="${"https://ebazar247.s3-ap-southeast-1.amazonaws.com/" + escape(item.image)}" alt="${"stew"}" class="${"h-28 m-auto"}">
-			
-			<p class="${"block text-gray-500 text-sm p-4"}">${escape(item.name)} - ${escape(item.quantity)} ${escape(item.unit_name)}</p>
-		</div>`)}
-</div>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/Adduser-c1e9cb1b.js
-var Adduser_c1e9cb1b_exports = {};
-__export(Adduser_c1e9cb1b_exports, {
-  default: () => Adduser
-});
+// .svelte-kit/output/server/chunks/index-26007130.js
 function readable(value, start) {
   return {
     subscribe: writable(value, start).subscribe
@@ -13135,6 +13086,140 @@ function derived(stores, fn2, initial_value) {
     };
   });
 }
+var subscriber_queue;
+var init_index_26007130 = __esm({
+  ".svelte-kit/output/server/chunks/index-26007130.js"() {
+    init_shims();
+    init_app_bd98c447();
+    subscriber_queue = [];
+  }
+});
+
+// .svelte-kit/output/server/chunks/cartstore-910388fc.js
+var browser2, Cartstore;
+var init_cartstore_910388fc = __esm({
+  ".svelte-kit/output/server/chunks/cartstore-910388fc.js"() {
+    init_shims();
+    init_index_26007130();
+    browser2 = false;
+    Cartstore = writable(JSON.parse(browser2) ?? []);
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-544008e9.js
+var index_544008e9_exports = {};
+__export(index_544008e9_exports, {
+  default: () => Products,
+  load: () => load2
+});
+var css3, load2, Products;
+var init_index_544008e9 = __esm({
+  ".svelte-kit/output/server/chunks/index-544008e9.js"() {
+    init_shims();
+    init_app_bd98c447();
+    init_cartstore_910388fc();
+    init_index_26007130();
+    css3 = {
+      code: ".card.svelte-7yn1zy{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(229,231,235,var(--tw-border-opacity));border-radius:.75rem;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);height:15rem;margin:1.75rem;overflow:hidden;padding-top:1.25rem;text-align:center}@media(min-width:768px){.card.svelte-7yn1zy{margin:.5rem}}",
+      map: null
+    };
+    load2 = async ({ fetch: fetch2 }) => {
+      try {
+        const res = await fetch2("/api/product");
+        const productList = await res.json();
+        productList.forEach((element) => {
+          return element["count"] = 0;
+        });
+        return { props: { productList } };
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    Products = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $Cartstore, $$unsubscribe_Cartstore;
+      $$unsubscribe_Cartstore = subscribe(Cartstore, (value) => $Cartstore = value);
+      let { productList } = $$props;
+      if ($$props.productList === void 0 && $$bindings.productList && productList !== void 0)
+        $$bindings.productList(productList);
+      $$result.css.add(css3);
+      productList = productList;
+      $$unsubscribe_Cartstore();
+      return `<div class="${"relative"}"><a class="${"absolute right-0 " + escape($Cartstore.length == 0 ? "bg-gray-900" : "bg-green-900 animate-bounce") + " rounded-3xl p-2"}" href="${"/views/products/cart"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg></a>
+	<div class="${"text-center font-bold text-2xl pb-5 text-gray-900"}">Product List</div>
+	<div class="${"md:grid md:grid-cols-3 lg:grid-cols-5"}">${each(productList, (item) => `<div class="${"card grid grid-rows-4 svelte-7yn1zy"}"><div class="${"row-span-2"}"><img src="${"https://ebazar247.s3-ap-southeast-1.amazonaws.com/" + escape(item.image)}" alt="${"stew"}" class="${"h-28 m-auto "}"></div>
+				<p class="${"block text-gray-500 text-xs p-4 row-span-1"}">${escape(item.name)} - ${escape(item.quantity)}
+					${escape(item.unit_name)}</p>
+				<button class="${"" + escape(item.count === 0 ? "bg-gray-900" : "bg-green-700") + " row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"}">${escape(item.count === 0 ? "Add To Cart" : "\u2713 Added To Cart")}</button>
+			</div>`)}</div>
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/cart-7de9042c.js
+var cart_7de9042c_exports = {};
+__export(cart_7de9042c_exports, {
+  default: () => Cart
+});
+var Cart;
+var init_cart_7de9042c = __esm({
+  ".svelte-kit/output/server/chunks/cart-7de9042c.js"() {
+    init_shims();
+    init_app_bd98c447();
+    init_cartstore_910388fc();
+    init_index_26007130();
+    Cart = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let totalAmount;
+      let $Cartstore, $$unsubscribe_Cartstore;
+      $$unsubscribe_Cartstore = subscribe(Cartstore, (value) => $Cartstore = value);
+      totalAmount = parseInt(browser2);
+      $$unsubscribe_Cartstore();
+      return `<div class="${"overflow-auto text-gray-900 text-center relative"}"><div class="${"lg:grid lg:grid-cols-4 lg:h-screen"}">${$Cartstore.length > 0 ? `<div class="${"lg:col-span-3 bg-white p-3"}"><div class="${"flex justify-between p-4 border-b-2 border-gray-200"}"><div class="${"text-gray-800 text-lg font-bold"}">Shopping Cart</div>
+					<div class="${"text-gray-800 text-lg font-bold"}">${escape($Cartstore.length)} items</div></div>
+				<div class="${"grid grid-cols-6 p-4 "}"><div class="${"text-sm text-gray-900 font-bold text-left col-span-4"}">Product Details</div>
+					<div class="${"text-sm text-gray-900 font-bold text-center col-span-1 "}">Price</div>
+					<div class="${"text-sm text-gray-900 font-bold text-right col-span-1 "}">Action</div></div>
+
+				${each($Cartstore, (item) => `<div class="${"grid grid-cols-6 p-4 lg:divide-x-2 lg:divide-gray-300 "}"><div class="${"text-sm text-gray-700 font-semibold text-left col-span-4"}">${escape(item.name)}
+							- ${escape(item.quantity + item.unit_name)}</div>
+
+						<div class="${"text-sm text-gray-700 font-semibold text-center col-span-1 "}">${escape(item.price)}</div>
+						
+						
+						<div class="${"flex justify-end col-span-1"}"><button class="${"cursor-pointer"}"><svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg></button>
+
+							<input class="${"mx-2 border text-center w-8"}" type="${"text"}"${add_attribute("value", item.count, 0)} disabled>
+
+							<button class="${"cursor-pointer"}"><svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg>
+							</button></div>
+					</div>`)}</div>
+
+			<div class="${"lg:col-span-1 bg-gray-800 pt-5 p-4"}"><div><div class="${"pt-4 pb-4 border-b border-gray-100 text-left"}"><div class="${"text-white text-sm font-bold"}">Order Summary</div></div>
+					<div class="${"flex justify-between mt-2 border-gray-200 mb-2"}"><div class="${"text-white text-xs font-semibold"}">Items ${escape($Cartstore.length)}</div>
+						<div class="${"text-white text-xs font-semibold"}">$${escape(totalAmount)}</div></div>
+
+					<div class="${"flex justify-between mt-3 border-gray-200 "}"><div class="${"text-white text-xs font-semibold"}">Delivery Charge</div>
+						<div class="${"text-white text-xs font-semibold"}">$40</div></div>
+					<div class="${"flex justify-between mt-4 border-gray-100 border-b"}"></div>
+					<div class="${"flex justify-between mt-1"}"><div class="${"text-white text-sm font-semibold"}">Total</div>
+						<div class="${"text-white text-sm font-semibold"}">$${escape(totalAmount + 40)}</div></div>
+
+					<button class="${"bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl hover:bg-green-900 cursor-pointer"}">CHECK OUT</button></div></div>` : `<div class="${"m-auto col-span-5 h-screen lg:h-auto"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-28 w-28 m-auto"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg>
+				<div class="${"text-3xl font-extrabold mt-4"}"><span class="${"bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-900 animate-pulse"}">Your Cart is Empty
+					</span></div>
+				<div class="${"font-bold text-lg p-4"}">Add something to make me happy :)</div>
+				<button class="${"bg-yellow-600 px-14 text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl hover:bg-green-900 cursor-pointer"}">Continue Shopping
+				</button></div>`}</div>
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/Adduser-7e505883.js
+var Adduser_7e505883_exports = {};
+__export(Adduser_7e505883_exports, {
+  default: () => Adduser
+});
 function dequal(foo, bar) {
   var ctor, len;
   if (foo === bar)
@@ -13249,14 +13334,14 @@ function resolveValue(element) {
     return element.value;
   }
 }
-var subscriber_queue, has, deepEqual2, util, NO_ERROR, IS_TOUCHED, createForm, css4, Adduser;
-var init_Adduser_c1e9cb1b = __esm({
-  ".svelte-kit/output/server/chunks/Adduser-c1e9cb1b.js"() {
+var has, deepEqual2, util, NO_ERROR, IS_TOUCHED, createForm, css4, Adduser;
+var init_Adduser_7e505883 = __esm({
+  ".svelte-kit/output/server/chunks/Adduser-7e505883.js"() {
     init_shims();
-    init_app_6366e663();
+    init_app_bd98c447();
     init_firebase_d41aa3ca();
-    init_Alert_3f5074d9();
-    subscriber_queue = [];
+    init_index_26007130();
+    init_Alert_e786d943();
     has = Object.prototype.hasOwnProperty;
     deepEqual2 = dequal;
     util = {
@@ -13428,7 +13513,7 @@ var init_Adduser_c1e9cb1b = __esm({
       };
     };
     css4 = {
-      code: ".btn.svelte-1dkqbvn{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity));border-radius:9999px;color:rgba(255,255,255,var(--tw-text-opacity));cursor:pointer;font-size:.875rem;font-weight:700;line-height:1.25rem;padding:.25rem 1rem}.btn.svelte-1dkqbvn:hover{--tw-bg-opacity:1;--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);background-color:rgba(55,65,81,var(--tw-bg-opacity));box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.input.svelte-1dkqbvn{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));border-radius:.25rem;border-width:0;color:rgba(75,85,99,var(--tw-text-opacity));font-size:.875rem;line-height:1.25rem;margin-bottom:.75rem;padding:.75rem;width:100%}.input.svelte-1dkqbvn::-moz-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1dkqbvn:-ms-input-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1dkqbvn::placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1dkqbvn{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:linear}.input.svelte-1dkqbvn:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000);outline:2px solid transparent;outline-offset:2px}.error.svelte-1dkqbvn{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity));font-size:.75rem;line-height:1rem}",
+      code: ".btnClass.svelte-1ubs5ep{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity));border-radius:9999px;color:rgba(255,255,255,var(--tw-text-opacity));cursor:pointer;font-size:.875rem;font-weight:700;line-height:1.25rem;padding:.25rem 1rem}.btnClass.svelte-1ubs5ep:hover{--tw-bg-opacity:1;--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);background-color:rgba(55,65,81,var(--tw-bg-opacity));box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.input.svelte-1ubs5ep{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));border-radius:.25rem;border-width:0;color:rgba(75,85,99,var(--tw-text-opacity));font-size:.875rem;line-height:1.25rem;margin-bottom:.75rem;padding:.75rem;width:100%}.input.svelte-1ubs5ep::-moz-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep:-ms-input-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep::placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:linear}.input.svelte-1ubs5ep:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000);outline:2px solid transparent;outline-offset:2px}.error.svelte-1ubs5ep{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity));font-size:.75rem;line-height:1rem}",
       map: null
     };
     Adduser = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -13447,9 +13532,13 @@ var init_Adduser_c1e9cb1b = __esm({
           }
           if (!values.email) {
             errors2.email = "Email is Required";
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+            errors2.email = "Invalid emaill address";
           }
           if (!values.age) {
             errors2["age"] = "Age is required";
+          } else if (values.age < 0 || values.age > 120) {
+            errors2.age = "Invalid age";
           }
           if (!values.gender) {
             errors2["gender"] = "Gender is required";
@@ -13465,7 +13554,7 @@ var init_Adduser_c1e9cb1b = __esm({
             email: values.email,
             id: Math.random()
           };
-          await gh(ref, person);
+          gh(ref, person);
           message = "Successfully Created User";
           await wait();
           message = "";
@@ -13482,26 +13571,27 @@ var init_Adduser_c1e9cb1b = __esm({
       $$unsubscribe_form();
       $$unsubscribe_errors();
       return `<main class="${"flex justify-center items-center h-screen"}"><div class="${"flex flex-col items-center bg-gray-100 p-14 rounded shadow-xl justify-items-center md:w-3/5 "}"><p class="${"text-gray-700 p-1 font-semibold text-xl border-b-2 mb-6 border-gray-600"}">Add User</p>
-		<form class="${"flex justify-center flex-col bg-gray-100 md:w-4/6 "}"><input class="${"input svelte-1dkqbvn"}" type="${"text"}" name="${"Name"}" placeholder="${"Name"}"${add_attribute("value", $form.name, 0)}>
-			${$errors.name ? `<span class="${"error mb-2 -mt-2 svelte-1dkqbvn"}">${escape($errors.name)}</span>` : ``}
+		<form class="${"flex justify-center flex-col bg-gray-100 md:w-4/6 "}"><input class="${"input svelte-1ubs5ep"}" type="${"text"}" name="${"Name"}" placeholder="${"Name"}"${add_attribute("value", $form.name, 0)}>
+			${$errors.name ? `<span class="${"error mb-2 -mt-2 svelte-1ubs5ep"}">${escape($errors.name)}</span>` : ``}
 
-			<input class="${"input svelte-1dkqbvn"}" type="${"text"}" name="${"Name"}" placeholder="${"Email"}"${add_attribute("value", $form.email, 0)}>
-			${$errors.email ? `<span class="${"error mb-2 -mt-2 svelte-1dkqbvn"}">${escape($errors.email)}</span>` : ``}
-			<input class="${"input svelte-1dkqbvn"}" type="${"number"}" name="${"Age"}" placeholder="${"Age"}"${add_attribute("value", $form.age, 0)}>
-			${$errors.age ? `<span class="${"error mb-2 -mt-2 svelte-1dkqbvn"}">${escape($errors.name)}</span>` : ``}
-			<select class="${"input svelte-1dkqbvn"}"><option class="${""}" value="${""}">Select Gender</option><option value="${"Male"}">Male</option><option value="${"Female"}">Female</option></select>
-			${$errors.gender ? `<span class="${"error mb-2 -mt-2 svelte-1dkqbvn"}">${escape($errors.gender)}</span>` : ``}
+			<input class="${"input svelte-1ubs5ep"}" type="${"text"}" name="${"Name"}" placeholder="${"Email"}"${add_attribute("value", $form.email, 0)}>
+			${$errors.email ? `<span class="${"error mb-2 -mt-2 svelte-1ubs5ep"}">${escape($errors.email)}</span>` : ``}
+			<input class="${"input svelte-1ubs5ep"}" type="${"number"}" name="${"Age"}" placeholder="${"Age"}"${add_attribute("value", $form.age, 0)}>
+			${$errors.age ? `<span class="${"error mb-2 -mt-2 svelte-1ubs5ep"}">${escape($errors.age)}</span>` : ``}
+			<select class="${"input svelte-1ubs5ep"}"><option class="${""}" value="${""}">Select Gender</option><option value="${"Male"}">Male</option><option value="${"Female"}">Female</option></select>
+			${$errors.gender ? `<span class="${"error mb-2 -mt-2 svelte-1ubs5ep"}">${escape($errors.gender)}</span>` : ``}
 			<br>
-			<div class="${"flex justify-around flex-row"}"><input class="${"btn flex-grow svelte-1dkqbvn"}" type="${"submit"}"><br>
+			<div class="${"flex justify-around flex-row"}"><input class="${"btnClass flex-grow svelte-1ubs5ep"}" type="${"submit"}"><br>
 				<a class="${"hover:bg-red-700 text-white font-bold py-1 px-4 rounded-full hover:shadow-md cursor-pointer bg-red-500 flex-grow ml-4 text-sm text-center"}" href="${"/views/users"}">Back
 				</a></div></form>
-		${message.length > 0 ? `${validate_component(Alert, "Alert").$$render($$result, { type: "success", class: "mt-4", message }, {}, {})}` : ``}</div>
+		${message.length > 0 ? `<div class="${"mt-4"}"></div>
+			${validate_component(Alert, "Alert").$$render($$result, { type: "success", message }, {}, {})}` : ``}</div>
 </main>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/app-6366e663.js
+// .svelte-kit/output/server/chunks/app-bd98c447.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -14826,9 +14916,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-6c64f2b4.js",
+      file: assets + "/_app/start-3939cb2f.js",
       css: [assets + "/_app/assets/start-464e9d0a.css"],
-      js: [assets + "/_app/start-6c64f2b4.js", assets + "/_app/chunks/vendor-8b9978ea.js"]
+      js: [assets + "/_app/start-3939cb2f.js", assets + "/_app/chunks/vendor-b0d90581.js"]
     },
     fetched: void 0,
     floc: false,
@@ -14872,8 +14962,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender: prerender2 });
 }
 var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css5, Root, base2, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_6366e663 = __esm({
-  ".svelte-kit/output/server/chunks/app-6366e663.js"() {
+var init_app_bd98c447 = __esm({
+  ".svelte-kit/output/server/chunks/app-bd98c447.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -15095,6 +15185,13 @@ ${``}`;
         },
         {
           type: "page",
+          pattern: /^\/views\/products\/cart\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/products/cart.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
           pattern: /^\/views\/users\/?$/,
           params: empty,
           a: ["src/routes/__layout.svelte", "src/routes/views/users/index.svelte"],
@@ -15111,7 +15208,7 @@ ${``}`;
           type: "endpoint",
           pattern: /^\/api\/product\/?$/,
           params: empty,
-          load: () => Promise.resolve().then(() => (init_product_849d1cc0(), product_849d1cc0_exports))
+          load: () => Promise.resolve().then(() => (init_product_3dfcb50b(), product_3dfcb50b_exports))
         }
       ]
     };
@@ -15122,19 +15219,20 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_9ac4b560(), layout_9ac4b560_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_3b4d9c4c(), error_3b4d9c4c_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_0eef5aee(), index_0eef5aee_exports)),
-      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_879479c4(), TableDropdown_879479c4_exports)),
-      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_69ebf5bc(), SideBar_69ebf5bc_exports)),
-      "src/routes/views/components/footer.svelte": () => Promise.resolve().then(() => (init_footer_7db8af00(), footer_7db8af00_exports)),
-      "src/routes/views/components/header.svelte": () => Promise.resolve().then(() => (init_header_c286d652(), header_c286d652_exports)),
-      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_3f5074d9(), Alert_3f5074d9_exports)),
-      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_7de58f84(), index_7de58f84_exports)),
-      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_316a84eb(), index_316a84eb_exports)),
-      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_c1e9cb1b(), Adduser_c1e9cb1b_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_378d3d5f(), layout_378d3d5f_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_69f1027e(), error_69f1027e_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_0d9576d3(), index_0d9576d3_exports)),
+      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_79950e2a(), TableDropdown_79950e2a_exports)),
+      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_6c232a6d(), SideBar_6c232a6d_exports)),
+      "src/routes/views/components/footer.svelte": () => Promise.resolve().then(() => (init_footer_136c1155(), footer_136c1155_exports)),
+      "src/routes/views/components/header.svelte": () => Promise.resolve().then(() => (init_header_bb36aa1c(), header_bb36aa1c_exports)),
+      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_e786d943(), Alert_e786d943_exports)),
+      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_544008e9(), index_544008e9_exports)),
+      "src/routes/views/products/cart.svelte": () => Promise.resolve().then(() => (init_cart_7de9042c(), cart_7de9042c_exports)),
+      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_822eb1db(), index_822eb1db_exports)),
+      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_7e505883(), Adduser_7e505883_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-76a758c4.js", "css": ["assets/pages/__layout.svelte-004d9c1d.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-76a758c4.js", "chunks/vendor-8b9978ea.js", "pages/views/components/footer.svelte-c99d83b1.js", "pages/views/components/SideBar.svelte-22e8ec2b.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-88e3db9b.js", "css": [], "js": ["pages/__error.svelte-88e3db9b.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-4da4b0f8.js", "css": [], "js": ["pages/index.svelte-4da4b0f8.js", "chunks/vendor-8b9978ea.js", "pages/views/users/index.svelte-829b1273.js", "chunks/firebase-d94b5277.js", "pages/views/components/TableDropdown.svelte-16686d54.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-16686d54.js", "css": [], "js": ["pages/views/components/TableDropdown.svelte-16686d54.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-22e8ec2b.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/views/components/SideBar.svelte-22e8ec2b.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/components/footer.svelte": { "entry": "pages/views/components/footer.svelte-c99d83b1.js", "css": [], "js": ["pages/views/components/footer.svelte-c99d83b1.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/components/header.svelte": { "entry": "pages/views/components/header.svelte-f548f664.js", "css": ["assets/pages/views/components/header.svelte-626d80ef.css"], "js": ["pages/views/components/header.svelte-f548f664.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-259e1f96.js", "css": [], "js": ["pages/views/components/Alert.svelte-259e1f96.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-3021213b.js", "css": ["assets/pages/views/products/index.svelte-e645e4e8.css"], "js": ["pages/views/products/index.svelte-3021213b.js", "chunks/vendor-8b9978ea.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-829b1273.js", "css": [], "js": ["pages/views/users/index.svelte-829b1273.js", "chunks/vendor-8b9978ea.js", "chunks/firebase-d94b5277.js", "pages/views/components/TableDropdown.svelte-16686d54.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-a1afad50.js", "css": ["assets/pages/views/users/Adduser.svelte-a645274b.css"], "js": ["pages/views/users/Adduser.svelte-a1afad50.js", "chunks/vendor-8b9978ea.js", "chunks/firebase-d94b5277.js", "pages/views/components/Alert.svelte-259e1f96.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-69d800ba.js", "css": ["assets/pages/__layout.svelte-9727ea93.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-69d800ba.js", "chunks/vendor-b0d90581.js", "pages/views/components/footer.svelte-9170861d.js", "pages/views/components/SideBar.svelte-33746568.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-5b5c2422.js", "css": [], "js": ["pages/__error.svelte-5b5c2422.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-d2761ee5.js", "css": [], "js": ["pages/index.svelte-d2761ee5.js", "chunks/vendor-b0d90581.js", "pages/views/users/index.svelte-1a071714.js", "chunks/firebase-ff2436c3.js", "pages/views/components/TableDropdown.svelte-dd3cacf7.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-dd3cacf7.js", "css": [], "js": ["pages/views/components/TableDropdown.svelte-dd3cacf7.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-33746568.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/views/components/SideBar.svelte-33746568.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/views/components/footer.svelte": { "entry": "pages/views/components/footer.svelte-9170861d.js", "css": [], "js": ["pages/views/components/footer.svelte-9170861d.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/views/components/header.svelte": { "entry": "pages/views/components/header.svelte-c9590fa0.js", "css": ["assets/pages/views/components/header.svelte-626d80ef.css"], "js": ["pages/views/components/header.svelte-c9590fa0.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-8b33c196.js", "css": [], "js": ["pages/views/components/Alert.svelte-8b33c196.js", "chunks/vendor-b0d90581.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-df88fd2e.js", "css": ["assets/pages/views/products/index.svelte-7d83faee.css"], "js": ["pages/views/products/index.svelte-df88fd2e.js", "chunks/vendor-b0d90581.js", "chunks/cartstore-7b51ab0c.js"], "styles": [] }, "src/routes/views/products/cart.svelte": { "entry": "pages/views/products/cart.svelte-b230742b.js", "css": [], "js": ["pages/views/products/cart.svelte-b230742b.js", "chunks/vendor-b0d90581.js", "chunks/cartstore-7b51ab0c.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-1a071714.js", "css": [], "js": ["pages/views/users/index.svelte-1a071714.js", "chunks/vendor-b0d90581.js", "chunks/firebase-ff2436c3.js", "pages/views/components/TableDropdown.svelte-dd3cacf7.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-50778f07.js", "css": ["assets/pages/views/users/Adduser.svelte-61ec6257.css"], "js": ["pages/views/users/Adduser.svelte-50778f07.js", "chunks/vendor-b0d90581.js", "chunks/firebase-ff2436c3.js", "pages/views/components/Alert.svelte-8b33c196.js"], "styles": [] } };
   }
 });
 
@@ -15146,7 +15244,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_6366e663();
+init_app_bd98c447();
 
 // .svelte-kit/netlify/entry.js
 init();

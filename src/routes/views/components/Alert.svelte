@@ -1,5 +1,4 @@
 <script>
-	export let type;
 	export let message;
 </script>
 
