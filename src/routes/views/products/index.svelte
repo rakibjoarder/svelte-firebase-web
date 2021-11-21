@@ -2,11 +2,14 @@
 	import Cartstore from '../../../config/cartstore';
 	import { browser } from '$app/env';
 
-	import { onDestroy } from 'svelte';
 	export const load = async ({ fetch }) => {
 		try {
 			const res = await fetch('/api/product');
 			const productList = await res.json();
+
+			productList.forEach((element) => {
+				return (element['count'] = 0);
+			});
 			return {
 				props: {
 					productList
@@ -16,26 +19,35 @@
 			console.log(e);
 		}
 	};
-
-	const onProductAdded = async (item) => {
-		let cartItems = [];
-		if (browser && localStorage.getItem('cartItems')) {
-			cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
-		}
-		cartItems.push(item);
-		localStorage.setItem('cartItems', JSON.stringify(cartItems));
-		await Cartstore.update((item) => {
-			return [item, ...cartItems];
-		});
-	};
 </script>
 
 <script>
 	export let productList;
+
+	$: productList = productList;
+
+	var totalAmount = 0;
+	const onProductAdded = async (item) => {
+		let cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
+		totalAmount = JSON.parse(browser && localStorage.getItem('totalAmount')) || 0;
+		item.count = 1;
+		productList = productList;
+		totalAmount += item.price;
+		cartItems.push(item);
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+		localStorage.setItem('totalAmount', totalAmount);
+		await Cartstore.update((item) => {
+			return cartItems;
+		});
+	};
 </script>
 
 <div class="relative">
-	<a class="absolute right-0 bg-gray-900 rounded-3xl p-2" href="/views/products/cart"
+	<a
+		class="absolute right-0 {$Cartstore.length == 0
+			? 'bg-gray-900'
+			: 'bg-green-900 animate-bounce'} rounded-3xl p-2"
+		href="/views/products/cart"
 		><svg
 			xmlns="http://www.w3.org/2000/svg"
 			class="h-6 w-6"
@@ -62,18 +74,21 @@
 						class="h-28 m-auto "
 					/>
 				</div>
-				<!-- <p>{item.price}</p> -->
 				<p class="block text-gray-500 text-xs p-4 row-span-1">
 					{item.name} - {item.quantity}
 					{item.unit_name}
 				</p>
 				<button
-					class="bg-gray-900 row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"
+					class=" {item.count === 0
+						? 'bg-gray-900'
+						: 'bg-green-700'} row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"
 					on:click={() => {
-						onProductAdded(item);
+						if (item.count === 0) {
+							onProductAdded(item);
+						}
 					}}
 				>
-					Add To Cart</button
+					{item.count === 0 ? 'Add To Cart' : '✓ Added To Cart'}</button
 				>
 			</div>
 		{/each}
