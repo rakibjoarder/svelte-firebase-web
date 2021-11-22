@@ -6,10 +6,19 @@
 		try {
 			const res = await fetch('/api/product');
 			const productList = await res.json();
+			let cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
 
-			productList.forEach((element) => {
-				return (element['count'] = 0);
-			});
+			for (var i = 0; i < productList.length; i++) {
+				let selectedItem = cartItems.find((product) => product.id === productList[i].id);
+				if (selectedItem) {
+					productList[i]['count'] = selectedItem.count;
+				} else {
+					productList[i]['count'] = 0;
+				}
+			}
+			// productList.forEach((element) => {
+			// 	return (element['count'] = 0);
+			// });
 			return {
 				props: {
 					productList
@@ -22,6 +31,8 @@
 </script>
 
 <script>
+	import Crasoul from '../components/Crasoul.svelte';
+
 	export let productList;
 
 	$: productList = productList;
@@ -42,6 +53,7 @@
 	};
 </script>
 
+<Crasoul />
 <div class="relative">
 	<a
 		class="absolute right-0 {$Cartstore.length == 0
@@ -64,6 +76,7 @@
 		</svg></a
 	>
 	<div class="text-center font-bold text-2xl pb-5 text-gray-900">Product List</div>
+
 	<div class="md:grid md:grid-cols-3 lg:grid-cols-5">
 		{#each productList as item}
 			<div class="card grid grid-rows-4">

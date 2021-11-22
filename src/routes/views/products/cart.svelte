@@ -43,7 +43,30 @@
 	};
 </script>
 
-<div class="  overflow-auto text-gray-900 text-center relative">
+<div class="overflow-auto text-gray-900 text-center flex flex-col ">
+	{#if $Cartstore.length > 0}
+		<a
+			class="text-yellow-600  text-lg  p-1 font-semibold  hover:text-gray-700 cursor-pointer text-left"
+			href="/views/products"
+		>
+			<div class="flex justify-end">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6 mr-1 "
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M10 19l-7-7m0 0l7-7m-7 7h18"
+					/>
+				</svg>Continue Shopping
+			</div>
+		</a>
+	{/if}
 	<div class=" lg:grid lg:grid-cols-4 lg:h-screen">
 		{#if $Cartstore.length > 0}
 			<div class="lg:col-span-3 bg-white p-3">
