@@ -77,7 +77,7 @@
 	>
 	<div class="text-center font-bold text-2xl pb-5 text-gray-900">Product List</div>
 
-	<div class="md:grid md:grid-cols-3 lg:grid-cols-5">
+	<div class="md:grid  md:grid-cols-4 lg:grid-cols-6">
 		{#each productList as item}
 			<div class="card grid grid-rows-4">
 				<div class="row-span-2">
@@ -94,7 +94,7 @@
 				<button
 					class=" {item.count === 0
 						? 'bg-gray-900'
-						: 'bg-green-700'} row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"
+						: 'bg-green-700'} row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl "
 					on:click={() => {
 						if (item.count === 0) {
 							onProductAdded(item);

@@ -151,8 +151,27 @@
 					</div>
 
 					<button
-						class="bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl hover:bg-green-900 cursor-pointer"
-						>CHECK OUT</button
+						class="bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl ho:bg-green-900 cursor-pointer"
+						on:click={() => {
+							let products = [];
+							for (var i = 0; i < $Cartstore.length; i++) {
+								products.push({
+									id: $Cartstore[i].id,
+									name: $Cartstore[i].name,
+									count: $Cartstore[i].count,
+									price: $Cartstore[i].price,
+									image: $Cartstore[i].image,
+									unit_name: $Cartstore[i].unit_name,
+									quantity: $Cartstore[i].quantity
+								});
+							}
+							console.log({
+								products: products,
+								total: totalAmount,
+								delivery_charge: 40,
+								order_status: 'pending'
+							});
+						}}>CHECK OUT</button
 					>
 				</div>
 			</div>
