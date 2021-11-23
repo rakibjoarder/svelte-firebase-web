@@ -4740,16 +4740,16 @@ var init_product_3dfcb50b = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/footer-868ce970.js
-var footer_868ce970_exports = {};
-__export(footer_868ce970_exports, {
+// .svelte-kit/output/server/chunks/footer-ea2efe91.js
+var footer_ea2efe91_exports = {};
+__export(footer_ea2efe91_exports, {
   default: () => Footer
 });
 var Footer;
-var init_footer_868ce970 = __esm({
-  ".svelte-kit/output/server/chunks/footer-868ce970.js"() {
+var init_footer_ea2efe91 = __esm({
+  ".svelte-kit/output/server/chunks/footer-ea2efe91.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<main><footer class="${"p-10 footer bg-base-200 text-base-content footer-center"}"><div class="${"grid grid-flow-col gap-4"}"><a class="${"link link-hover"}" href="${"https://www.linkedin.com/in/rakib-mamun-joarder/"}">Linkedin</a>
 			<a class="${"link link-hover"}" href="${"https://github.com/rakibjoarder/svelte-firebase-web"}">Github</a></div>
@@ -4761,16 +4761,16 @@ var init_footer_868ce970 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/SideBar-8143ca4b.js
-var SideBar_8143ca4b_exports = {};
-__export(SideBar_8143ca4b_exports, {
+// .svelte-kit/output/server/chunks/SideBar-fd1b8213.js
+var SideBar_fd1b8213_exports = {};
+__export(SideBar_fd1b8213_exports, {
   default: () => SideBar
 });
 var css, SideBar;
-var init_SideBar_8143ca4b = __esm({
-  ".svelte-kit/output/server/chunks/SideBar-8143ca4b.js"() {
+var init_SideBar_fd1b8213 = __esm({
+  ".svelte-kit/output/server/chunks/SideBar-fd1b8213.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     css = {
       code: ".navul.svelte-zu55zv{align-items:center;display:flex;display:none;font-size:.875rem;justify-content:center;line-height:1.25rem;margin-top:1.5rem}@media(min-width:768px){.navul.svelte-zu55zv{display:block}}",
       map: null
@@ -4792,18 +4792,18 @@ var init_SideBar_8143ca4b = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-129f8dd8.js
-var layout_129f8dd8_exports = {};
-__export(layout_129f8dd8_exports, {
+// .svelte-kit/output/server/chunks/__layout-97804934.js
+var layout_97804934_exports = {};
+__export(layout_97804934_exports, {
   default: () => _layout
 });
 var _layout;
-var init_layout_129f8dd8 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-129f8dd8.js"() {
+var init_layout_97804934 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-97804934.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_footer_868ce970();
-    init_SideBar_8143ca4b();
+    init_app_5b681aca();
+    init_footer_ea2efe91();
+    init_SideBar_fd1b8213();
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div><div class="${"md:grid md:grid-cols-5"}"><div class="${"md:col-span-1 bg-gray-800 md:flex md:justify-end "}">${validate_component(SideBar, "SideBar").$$render($$result, {}, {}, {})}</div>
 		<div class="${"bg-gray-200 col-span-4 "}"><div class="${"p-10 h-auto"}">${slots.default ? slots.default({}) : ``}</div>
@@ -4812,9 +4812,9 @@ var init_layout_129f8dd8 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-73f8defa.js
-var error_73f8defa_exports = {};
-__export(error_73f8defa_exports, {
+// .svelte-kit/output/server/chunks/__error-85f336f3.js
+var error_85f336f3_exports = {};
+__export(error_85f336f3_exports, {
   default: () => _error,
   load: () => load
 });
@@ -4826,10 +4826,10 @@ function load({ error: error2, status }) {
   };
 }
 var _error;
-var init_error_73f8defa = __esm({
-  ".svelte-kit/output/server/chunks/__error-73f8defa.js"() {
+var init_error_85f336f3 = __esm({
+  ".svelte-kit/output/server/chunks/__error-85f336f3.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { title } = $$props;
       if ($$props.title === void 0 && $$bindings.title && title !== void 0)
@@ -4840,7 +4840,7 @@ var init_error_73f8defa = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/firebase-d41aa3ca.js
+// .svelte-kit/output/server/chunks/firebase-f336866f.js
 function getUA() {
   if (typeof navigator !== "undefined" && typeof navigator["userAgent"] === "string") {
     return navigator["userAgent"];
@@ -8147,8 +8147,8 @@ function Th(t2, e) {
   }(Fa(t2), e);
 }
 var Deferred, ERROR_NAME, FirebaseError, ErrorFactory, PATTERN, Component, DEFAULT_ENTRY_NAME$1, Provider, ComponentContainer, LogLevel, levelStringToEnum, defaultLogLevel, ConsoleMethod, defaultLogHandler, Logger, PlatformLoggerServiceImpl, name$o, version$1, logger, name$n, name$m, name$l, name$k, name$j, name$i, name$h, name$g, name$f, name$e, name$d, name$c, name$b, name$a, name$9, name$8, name$7, name$6, name$5, name$4, name$3, name$2, name$1, name$p, version$2, DEFAULT_ENTRY_NAME, PLATFORM_LOG_STRING, _apps, _components, ERRORS, ERROR_FACTORY, FirebaseAppImpl, SDK_VERSION, name, version, commonjsGlobal2, k, goog, l, ea, fa$1, ka$1, la$1, ma$1, na, ta, x$1, va$1, wa$1, za, Ha, y, Ia$1, Ja$1, Ka, La, Na, Oa$1, Pa, Qa, Ga, Sa, Ta$1, Ua, Va, Wa, B$1, Xa$1, cb, db, pb, rb, ub, vb, wb, Ab, Cb, tb, Ib, Jb, H$1, Rb, Wb, Xb, L$1, cc$1, ec$1, gc, hc$1, Mc, Vc, Xc, Wc$1, $c, Yc$1, fd, hd, rd, vd, wd, xd, yd, createWebChannelTransport, getStatEventTarget, ErrorCode, EventType, Event, Stat, FetchXmlHttpFactory, WebChannel, XhrIo, S, D, C, N, K, j, Q, W, G, H, J, Y, X, tt, it, rt, ut, ht, lt, ft, dt, _t, mt, Pt, Ut, Kt, jt, Jt, Xt, Zt, te, ne, se, ie, re, oe, ae, fe, Ne, Oe, Fe, Le, Ue, We, Ge, He, en, nn, cn, an, hn, ln, wn, _n, mn, gn, yn, pn, En, An, bn, vn, Bn, qs, Ks, js, ni, si, ri, pi, Ti, Ni, ji, Qi, rr, or, cr, ar, Rr, br, Pr, vr, Vr, Sr, Dr, Cr, Nr, xr, Ur, Kr, jr, Qr, Wr, Gr, zr, Xr, Zr, eo, no, so, io, xo, Lo, ec, kc, Fc, Kc, ua, ha, la, pa, Ta, Ia, Aa, Ra, Da, ka, Ja, Xa, Za, tu, eu, nu, ru, ou, Au, firebaseConfig, Firestoredb;
-var init_firebase_d41aa3ca = __esm({
-  ".svelte-kit/output/server/chunks/firebase-d41aa3ca.js"() {
+var init_firebase_f336866f = __esm({
+  ".svelte-kit/output/server/chunks/firebase-f336866f.js"() {
     init_shims();
     Deferred = class {
       constructor() {
@@ -8559,7 +8559,7 @@ var init_firebase_d41aa3ca = __esm({
       }
     };
     name$o = "@firebase/app";
-    version$1 = "0.7.8";
+    version$1 = "0.7.9";
     logger = new Logger("@firebase/app");
     name$n = "@firebase/app-compat";
     name$m = "@firebase/analytics-compat";
@@ -8585,7 +8585,7 @@ var init_firebase_d41aa3ca = __esm({
     name$2 = "@firebase/firestore";
     name$1 = "@firebase/firestore-compat";
     name$p = "firebase";
-    version$2 = "9.4.1";
+    version$2 = "9.5.0";
     DEFAULT_ENTRY_NAME = "[DEFAULT]";
     PLATFORM_LOG_STRING = {
       [name$o]: "fire-core",
@@ -8674,7 +8674,7 @@ var init_firebase_d41aa3ca = __esm({
     SDK_VERSION = version$2;
     registerCoreComponents("");
     name = "firebase";
-    version = "9.4.1";
+    version = "9.5.0";
     registerVersion(name, version, "app");
     commonjsGlobal2 = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
     goog = goog || {};
@@ -9539,7 +9539,7 @@ var init_firebase_d41aa3ca = __esm({
       }
     };
     D.UNAUTHENTICATED = new D(null), D.GOOGLE_CREDENTIALS = new D("google-credentials-uid"), D.FIRST_PARTY = new D("first-party-uid"), D.MOCK_USER = new D("mock-user");
-    C = "9.4.0";
+    C = "9.5.0";
     N = new Logger("@firebase/firestore");
     K = {
       OK: "ok",
@@ -12466,7 +12466,7 @@ This typically indicates that your device does not have a healthy Internet conne
         return n = Object.assign({
           useFetchStreams: e
         }, n), i._setSettings(n), i;
-      }, "PUBLIC")), registerVersion(S, "3.3.0", t2), registerVersion(S, "3.3.0", "esm2017");
+      }, "PUBLIC")), registerVersion(S, "3.3.1", t2), registerVersion(S, "3.3.1", "esm2017");
     }();
     firebaseConfig = {
       apiKey: "AIzaSyArQAsjVObNFvuRrwXT1sqaY6hYEUHS4CM",
@@ -12482,9 +12482,9 @@ This typically indicates that your device does not have a healthy Internet conne
   }
 });
 
-// .svelte-kit/output/server/chunks/TableDropdown-abd20f43.js
-var TableDropdown_abd20f43_exports = {};
-__export(TableDropdown_abd20f43_exports, {
+// .svelte-kit/output/server/chunks/TableDropdown-be88ab73.js
+var TableDropdown_be88ab73_exports = {};
+__export(TableDropdown_be88ab73_exports, {
   default: () => TableDropdown
 });
 function _classCallCheck(instance, Constructor) {
@@ -12615,10 +12615,10 @@ function MissingIcon(error2) {
   this.stack = new Error().stack;
 }
 var noop, _WINDOW, _DOCUMENT, _MUTATION_OBSERVER, _PERFORMANCE, _ref, _ref$userAgent, userAgent, WINDOW, DOCUMENT, PERFORMANCE, IS_DOM, NAMESPACE_IDENTIFIER, DEFAULT_FAMILY_PREFIX, DEFAULT_REPLACEMENT_CLASS, initial, attrs, _default, _config, config, w2, namespace, functions, listener, loaded, noop$1, bindInternal4, reduce, styles, shims, build, FILL, ANIMATION_BASE, OPACITY_ANIMATE, Library, TableDropdown;
-var init_TableDropdown_abd20f43 = __esm({
-  ".svelte-kit/output/server/chunks/TableDropdown-abd20f43.js"() {
+var init_TableDropdown_be88ab73 = __esm({
+  ".svelte-kit/output/server/chunks/TableDropdown-be88ab73.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     noop = function noop2() {
     };
     _WINDOW = {};
@@ -12903,18 +12903,18 @@ var init_TableDropdown_abd20f43 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-e2c1a25a.js
-var index_e2c1a25a_exports = {};
-__export(index_e2c1a25a_exports, {
+// .svelte-kit/output/server/chunks/index-b1b34b97.js
+var index_b1b34b97_exports = {};
+__export(index_b1b34b97_exports, {
   default: () => Users
 });
 var Users;
-var init_index_e2c1a25a = __esm({
-  ".svelte-kit/output/server/chunks/index-e2c1a25a.js"() {
+var init_index_b1b34b97 = __esm({
+  ".svelte-kit/output/server/chunks/index-b1b34b97.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_firebase_d41aa3ca();
-    init_TableDropdown_abd20f43();
+    init_app_5b681aca();
+    init_firebase_f336866f();
+    init_TableDropdown_be88ab73();
     Users = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let people = [];
       ba(Firestoredb, "users");
@@ -12945,20 +12945,20 @@ var init_index_e2c1a25a = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-89f396c4.js
-var index_89f396c4_exports = {};
-__export(index_89f396c4_exports, {
+// .svelte-kit/output/server/chunks/index-3f9148bc.js
+var index_3f9148bc_exports = {};
+__export(index_3f9148bc_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var prerender, Routes;
-var init_index_89f396c4 = __esm({
-  ".svelte-kit/output/server/chunks/index-89f396c4.js"() {
+var init_index_3f9148bc = __esm({
+  ".svelte-kit/output/server/chunks/index-3f9148bc.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_index_e2c1a25a();
-    init_firebase_d41aa3ca();
-    init_TableDropdown_abd20f43();
+    init_app_5b681aca();
+    init_index_b1b34b97();
+    init_firebase_f336866f();
+    init_TableDropdown_be88ab73();
     prerender = true;
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<body class="${"h-screen bg-gray-200"}"><section>${validate_component(Users, "ViewPerson").$$render($$result, {}, {}, {})}</section></body>`;
@@ -12966,9 +12966,9 @@ var init_index_89f396c4 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Crasoul-176dfbea.js
-var Crasoul_176dfbea_exports = {};
-__export(Crasoul_176dfbea_exports, {
+// .svelte-kit/output/server/chunks/Crasoul-4a4715e4.js
+var Crasoul_4a4715e4_exports = {};
+__export(Crasoul_4a4715e4_exports, {
   default: () => Crasoul
 });
 function isObject$2(obj) {
@@ -16774,10 +16774,10 @@ function initSwiper(swiperParams) {
   return new Swiper$1(swiperParams);
 }
 var ssrDocument, ssrWindow, Dom7, Methods, support, deviceCached, browser2, eventsEmitter, update, translate, transition, slide, loop, grabCursor, dummyEventAttached, events, events$1, isGridEnabled, breakpoints, classes, images, checkOverflow$1, defaults, prototypes, extendedDefaults, Swiper$1, paramsList, Swiper, Swiper_slide, Crasoul;
-var init_Crasoul_176dfbea = __esm({
-  ".svelte-kit/output/server/chunks/Crasoul-176dfbea.js"() {
+var init_Crasoul_4a4715e4 = __esm({
+  ".svelte-kit/output/server/chunks/Crasoul-4a4715e4.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     ssrDocument = {
       body: {},
       addEventListener() {
@@ -17978,16 +17978,16 @@ var init_Crasoul_176dfbea = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/header-41deebe8.js
-var header_41deebe8_exports = {};
-__export(header_41deebe8_exports, {
+// .svelte-kit/output/server/chunks/header-b56f65d0.js
+var header_b56f65d0_exports = {};
+__export(header_b56f65d0_exports, {
   default: () => Header
 });
 var css3, Header;
-var init_header_41deebe8 = __esm({
-  ".svelte-kit/output/server/chunks/header-41deebe8.js"() {
+var init_header_b56f65d0 = __esm({
+  ".svelte-kit/output/server/chunks/header-b56f65d0.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     css3 = {
       code: "div.svelte-1eupku3{background-color:#f7f7f7;box-sizing:border-box;color:#fff;padding:10px;text-align:center}img.svelte-1eupku3{margin-top:20px;max-height:100px}",
       map: null
@@ -18000,16 +18000,16 @@ var init_header_41deebe8 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Alert-ca9faa51.js
-var Alert_ca9faa51_exports = {};
-__export(Alert_ca9faa51_exports, {
+// .svelte-kit/output/server/chunks/Alert-8a64cb7a.js
+var Alert_8a64cb7a_exports = {};
+__export(Alert_8a64cb7a_exports, {
   default: () => Alert
 });
 var Alert;
-var init_Alert_ca9faa51 = __esm({
-  ".svelte-kit/output/server/chunks/Alert-ca9faa51.js"() {
+var init_Alert_8a64cb7a = __esm({
+  ".svelte-kit/output/server/chunks/Alert-8a64cb7a.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     Alert = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { message } = $$props;
       if ($$props.message === void 0 && $$bindings.message && message !== void 0)
@@ -18020,7 +18020,7 @@ var init_Alert_ca9faa51 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-8542c097.js
+// .svelte-kit/output/server/chunks/index-bf679aba.js
 function readable(value, start) {
   return {
     subscribe: writable(value, start).subscribe
@@ -18106,39 +18106,39 @@ function derived(stores, fn2, initial_value) {
   });
 }
 var subscriber_queue;
-var init_index_8542c097 = __esm({
-  ".svelte-kit/output/server/chunks/index-8542c097.js"() {
+var init_index_bf679aba = __esm({
+  ".svelte-kit/output/server/chunks/index-bf679aba.js"() {
     init_shims();
-    init_app_7cecb406();
+    init_app_5b681aca();
     subscriber_queue = [];
   }
 });
 
-// .svelte-kit/output/server/chunks/cartstore-f5efa37c.js
+// .svelte-kit/output/server/chunks/cartstore-8603aee1.js
 var browser3, Cartstore;
-var init_cartstore_f5efa37c = __esm({
-  ".svelte-kit/output/server/chunks/cartstore-f5efa37c.js"() {
+var init_cartstore_8603aee1 = __esm({
+  ".svelte-kit/output/server/chunks/cartstore-8603aee1.js"() {
     init_shims();
-    init_index_8542c097();
+    init_index_bf679aba();
     browser3 = false;
     Cartstore = writable(JSON.parse(browser3) ?? []);
   }
 });
 
-// .svelte-kit/output/server/chunks/index-9602edf7.js
-var index_9602edf7_exports = {};
-__export(index_9602edf7_exports, {
+// .svelte-kit/output/server/chunks/index-2cb4927f.js
+var index_2cb4927f_exports = {};
+__export(index_2cb4927f_exports, {
   default: () => Products,
   load: () => load2
 });
 var css4, load2, Products;
-var init_index_9602edf7 = __esm({
-  ".svelte-kit/output/server/chunks/index-9602edf7.js"() {
+var init_index_2cb4927f = __esm({
+  ".svelte-kit/output/server/chunks/index-2cb4927f.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_cartstore_f5efa37c();
-    init_Crasoul_176dfbea();
-    init_index_8542c097();
+    init_app_5b681aca();
+    init_cartstore_8603aee1();
+    init_Crasoul_4a4715e4();
+    init_index_bf679aba();
     css4 = {
       code: ".card.svelte-7yn1zy{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(229,231,235,var(--tw-border-opacity));border-radius:.75rem;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);height:15rem;margin:1.75rem;overflow:hidden;padding-top:1.25rem;text-align:center}@media(min-width:768px){.card.svelte-7yn1zy{margin:.5rem}}",
       map: null
@@ -18184,18 +18184,18 @@ var init_index_9602edf7 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/cart-6e52539c.js
-var cart_6e52539c_exports = {};
-__export(cart_6e52539c_exports, {
+// .svelte-kit/output/server/chunks/cart-74d052cf.js
+var cart_74d052cf_exports = {};
+__export(cart_74d052cf_exports, {
   default: () => Cart
 });
 var Cart;
-var init_cart_6e52539c = __esm({
-  ".svelte-kit/output/server/chunks/cart-6e52539c.js"() {
+var init_cart_74d052cf = __esm({
+  ".svelte-kit/output/server/chunks/cart-74d052cf.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_cartstore_f5efa37c();
-    init_index_8542c097();
+    init_app_5b681aca();
+    init_cartstore_8603aee1();
+    init_index_bf679aba();
     Cart = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let totalAmount;
       let $Cartstore, $$unsubscribe_Cartstore;
@@ -18245,9 +18245,9 @@ var init_cart_6e52539c = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Adduser-aaa96102.js
-var Adduser_aaa96102_exports = {};
-__export(Adduser_aaa96102_exports, {
+// .svelte-kit/output/server/chunks/Adduser-eefd4d05.js
+var Adduser_eefd4d05_exports = {};
+__export(Adduser_eefd4d05_exports, {
   default: () => Adduser
 });
 function dequal(foo, bar) {
@@ -18365,13 +18365,13 @@ function resolveValue(element) {
   }
 }
 var has, deepEqual2, util, NO_ERROR, IS_TOUCHED, createForm, css5, Adduser;
-var init_Adduser_aaa96102 = __esm({
-  ".svelte-kit/output/server/chunks/Adduser-aaa96102.js"() {
+var init_Adduser_eefd4d05 = __esm({
+  ".svelte-kit/output/server/chunks/Adduser-eefd4d05.js"() {
     init_shims();
-    init_app_7cecb406();
-    init_firebase_d41aa3ca();
-    init_index_8542c097();
-    init_Alert_ca9faa51();
+    init_app_5b681aca();
+    init_firebase_f336866f();
+    init_index_bf679aba();
+    init_Alert_8a64cb7a();
     has = Object.prototype.hasOwnProperty;
     deepEqual2 = dequal;
     util = {
@@ -18621,7 +18621,7 @@ var init_Adduser_aaa96102 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-7cecb406.js
+// .svelte-kit/output/server/chunks/app-5b681aca.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -19053,6 +19053,7 @@ async function render_response({
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 		<script async src="https://cdn.ampproject.org/v0.js"><\/script>`;
+    init2 += options2.service_worker ? '<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"><\/script>' : "";
   } else if (include_js) {
     init2 = `<script type="module">
 			import { start } from ${s$1(options2.entry.file)};
@@ -19087,7 +19088,7 @@ async function render_response({
 		<\/script>`;
   }
   if (options2.service_worker) {
-    init2 += `<script>
+    init2 += options2.amp ? `<amp-install-serviceworker src="${options2.service_worker}" layout="nodisplay"></amp-install-serviceworker>` : `<script>
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('${options2.service_worker}');
 			}
@@ -20042,9 +20043,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-35a59305.js",
+      file: assets + "/_app/start-58162cee.js",
       css: [assets + "/_app/assets/start-464e9d0a.css"],
-      js: [assets + "/_app/start-35a59305.js", assets + "/_app/chunks/vendor-f470b14a.js"]
+      js: [assets + "/_app/start-58162cee.js", assets + "/_app/chunks/vendor-3b93c125.js"]
     },
     fetched: void 0,
     floc: false,
@@ -20088,8 +20089,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender: prerender2 });
 }
 var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, dirty_components, binding_callbacks, render_callbacks, flush_callbacks, resolved_promise, update_scheduled, flushing, seen_callbacks, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy, css6, Root, base2, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_7cecb406 = __esm({
-  ".svelte-kit/output/server/chunks/app-7cecb406.js"() {
+var init_app_5b681aca = __esm({
+  ".svelte-kit/output/server/chunks/app-5b681aca.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -20386,21 +20387,21 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_129f8dd8(), layout_129f8dd8_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_73f8defa(), error_73f8defa_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_89f396c4(), index_89f396c4_exports)),
-      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_abd20f43(), TableDropdown_abd20f43_exports)),
-      "src/routes/views/components/Crasoul.svelte": () => Promise.resolve().then(() => (init_Crasoul_176dfbea(), Crasoul_176dfbea_exports)),
-      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_8143ca4b(), SideBar_8143ca4b_exports)),
-      "src/routes/views/components/footer.svelte": () => Promise.resolve().then(() => (init_footer_868ce970(), footer_868ce970_exports)),
-      "src/routes/views/components/header.svelte": () => Promise.resolve().then(() => (init_header_41deebe8(), header_41deebe8_exports)),
-      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_ca9faa51(), Alert_ca9faa51_exports)),
-      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_9602edf7(), index_9602edf7_exports)),
-      "src/routes/views/products/cart.svelte": () => Promise.resolve().then(() => (init_cart_6e52539c(), cart_6e52539c_exports)),
-      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_e2c1a25a(), index_e2c1a25a_exports)),
-      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_aaa96102(), Adduser_aaa96102_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_97804934(), layout_97804934_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_85f336f3(), error_85f336f3_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_3f9148bc(), index_3f9148bc_exports)),
+      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_be88ab73(), TableDropdown_be88ab73_exports)),
+      "src/routes/views/components/Crasoul.svelte": () => Promise.resolve().then(() => (init_Crasoul_4a4715e4(), Crasoul_4a4715e4_exports)),
+      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_fd1b8213(), SideBar_fd1b8213_exports)),
+      "src/routes/views/components/footer.svelte": () => Promise.resolve().then(() => (init_footer_ea2efe91(), footer_ea2efe91_exports)),
+      "src/routes/views/components/header.svelte": () => Promise.resolve().then(() => (init_header_b56f65d0(), header_b56f65d0_exports)),
+      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_8a64cb7a(), Alert_8a64cb7a_exports)),
+      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_2cb4927f(), index_2cb4927f_exports)),
+      "src/routes/views/products/cart.svelte": () => Promise.resolve().then(() => (init_cart_74d052cf(), cart_74d052cf_exports)),
+      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_b1b34b97(), index_b1b34b97_exports)),
+      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_eefd4d05(), Adduser_eefd4d05_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-27d554ed.js", "css": ["assets/pages/__layout.svelte-68934864.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-27d554ed.js", "chunks/vendor-f470b14a.js", "pages/views/components/footer.svelte-77507475.js", "pages/views/components/SideBar.svelte-3401ab25.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-ef5fd529.js", "css": [], "js": ["pages/__error.svelte-ef5fd529.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-4a190948.js", "css": [], "js": ["pages/index.svelte-4a190948.js", "chunks/vendor-f470b14a.js", "pages/views/users/index.svelte-1dde7dfc.js", "chunks/firebase-ad48caef.js", "pages/views/components/TableDropdown.svelte-cc907a56.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-cc907a56.js", "css": [], "js": ["pages/views/components/TableDropdown.svelte-cc907a56.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/components/Crasoul.svelte": { "entry": "pages/views/components/Crasoul.svelte-32b29178.js", "css": ["assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/components/Crasoul.svelte-32b29178.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-3401ab25.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/views/components/SideBar.svelte-3401ab25.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/components/footer.svelte": { "entry": "pages/views/components/footer.svelte-77507475.js", "css": [], "js": ["pages/views/components/footer.svelte-77507475.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/components/header.svelte": { "entry": "pages/views/components/header.svelte-eaa54cf2.js", "css": ["assets/pages/views/components/header.svelte-626d80ef.css"], "js": ["pages/views/components/header.svelte-eaa54cf2.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-b45e142f.js", "css": [], "js": ["pages/views/components/Alert.svelte-b45e142f.js", "chunks/vendor-f470b14a.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-e1136a17.js", "css": ["assets/pages/views/products/index.svelte-7d83faee.css", "assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/products/index.svelte-e1136a17.js", "chunks/vendor-f470b14a.js", "chunks/cartstore-fd78928a.js", "pages/views/components/Crasoul.svelte-32b29178.js"], "styles": [] }, "src/routes/views/products/cart.svelte": { "entry": "pages/views/products/cart.svelte-f44268ee.js", "css": [], "js": ["pages/views/products/cart.svelte-f44268ee.js", "chunks/vendor-f470b14a.js", "chunks/cartstore-fd78928a.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-1dde7dfc.js", "css": [], "js": ["pages/views/users/index.svelte-1dde7dfc.js", "chunks/vendor-f470b14a.js", "chunks/firebase-ad48caef.js", "pages/views/components/TableDropdown.svelte-cc907a56.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-853ce46e.js", "css": ["assets/pages/views/users/Adduser.svelte-61ec6257.css"], "js": ["pages/views/users/Adduser.svelte-853ce46e.js", "chunks/vendor-f470b14a.js", "chunks/firebase-ad48caef.js", "pages/views/components/Alert.svelte-b45e142f.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-60f57e03.js", "css": ["assets/pages/__layout.svelte-d3ed4073.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-60f57e03.js", "chunks/vendor-3b93c125.js", "pages/views/components/footer.svelte-0c31bc5c.js", "pages/views/components/SideBar.svelte-2c013c88.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-834d3f7e.js", "css": [], "js": ["pages/__error.svelte-834d3f7e.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-7ac0a2d4.js", "css": [], "js": ["pages/index.svelte-7ac0a2d4.js", "chunks/vendor-3b93c125.js", "pages/views/users/index.svelte-3d60d14b.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/TableDropdown.svelte-4405d9fe.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-4405d9fe.js", "css": [], "js": ["pages/views/components/TableDropdown.svelte-4405d9fe.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/Crasoul.svelte": { "entry": "pages/views/components/Crasoul.svelte-53881b3a.js", "css": ["assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/components/Crasoul.svelte-53881b3a.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-2c013c88.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/views/components/SideBar.svelte-2c013c88.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/footer.svelte": { "entry": "pages/views/components/footer.svelte-0c31bc5c.js", "css": [], "js": ["pages/views/components/footer.svelte-0c31bc5c.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/header.svelte": { "entry": "pages/views/components/header.svelte-31b4f152.js", "css": ["assets/pages/views/components/header.svelte-626d80ef.css"], "js": ["pages/views/components/header.svelte-31b4f152.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-4711f523.js", "css": [], "js": ["pages/views/components/Alert.svelte-4711f523.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-24b20fe7.js", "css": ["assets/pages/views/products/index.svelte-7d83faee.css", "assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/products/index.svelte-24b20fe7.js", "chunks/vendor-3b93c125.js", "chunks/cartstore-2873a8e2.js", "pages/views/components/Crasoul.svelte-53881b3a.js"], "styles": [] }, "src/routes/views/products/cart.svelte": { "entry": "pages/views/products/cart.svelte-a8323552.js", "css": [], "js": ["pages/views/products/cart.svelte-a8323552.js", "chunks/vendor-3b93c125.js", "chunks/cartstore-2873a8e2.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-3d60d14b.js", "css": [], "js": ["pages/views/users/index.svelte-3d60d14b.js", "chunks/vendor-3b93c125.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/TableDropdown.svelte-4405d9fe.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-3074dab4.js", "css": ["assets/pages/views/users/Adduser.svelte-fe708ff9.css"], "js": ["pages/views/users/Adduser.svelte-3074dab4.js", "chunks/vendor-3b93c125.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/Alert.svelte-4711f523.js"], "styles": [] } };
   }
 });
 
@@ -20412,7 +20413,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_7cecb406();
+init_app_5b681aca();
 
 // .svelte-kit/netlify/entry.js
 init();

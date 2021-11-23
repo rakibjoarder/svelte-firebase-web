@@ -62,7 +62,7 @@
 		href="/views/products/cart"
 		><svg
 			xmlns="http://www.w3.org/2000/svg"
-			class="h-6 w-6"
+			class="h-6 w-6 text-white  "
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke="currentColor"
@@ -77,9 +77,14 @@
 	>
 	<div class="text-center font-bold text-2xl pb-5 text-gray-900">Product List</div>
 
-	<div class="md:grid  md:grid-cols-4 lg:grid-cols-6">
+	<div class="md:grid  md:grid-cols-4 lg:grid-cols-5">
 		{#each productList as item}
-			<div class="card grid grid-rows-4">
+			<div class="card grid grid-rows-4 relative">
+				<div
+					class="absolute bg-gray-700 top-4 px-2 rounded-r-3xl text-xs font-bold shadow-md drop-shadow-md"
+				>
+					${item.price}
+				</div>
 				<div class="row-span-2">
 					<img
 						src="https://ebazar247.s3-ap-southeast-1.amazonaws.com/{item.image}"
@@ -94,7 +99,7 @@
 				<button
 					class=" {item.count === 0
 						? 'bg-gray-900'
-						: 'bg-green-700'} row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl "
+						: 'bg-green-700'} text-white  row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl "
 					on:click={() => {
 						if (item.count === 0) {
 							onProductAdded(item);

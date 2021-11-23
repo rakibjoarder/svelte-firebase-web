@@ -2,7 +2,7 @@
 </script>
 
 <main>
-	<footer class="p-10 footer bg-base-200 text-base-content footer-center">
+	<footer class="p-10 footer bg-base-200 text-base-content footer-center bg-gray-900">
 		<div class="grid grid-flow-col gap-4">
 			<a class="link link-hover" href="https://www.linkedin.com/in/rakib-mamun-joarder/">Linkedin</a
 			>
