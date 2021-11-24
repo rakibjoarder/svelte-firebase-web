@@ -6,7 +6,7 @@
 	import ArrowBack from '../components/icons/ArrowBack.svelte';
 	import DecrementButton from '../components/icons/DecrementButton.svelte';
 	import IncrementButton from '../components/icons/IncrementButton.svelte';
-	import { scale } from 'svelte/transition';
+	import { scale, fade } from 'svelte/transition';
 	import { collection, doc, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
 	import Firestoredb from '../../../config/firebase';
 
@@ -199,7 +199,7 @@
 				</div>
 			</div>
 		{:else}
-			<div class="m-auto col-span-5  bg-white pb-28  md:pb-8 rounded-3xl  w-full " in:scale>
+			<div class="m-auto col-span-5  bg-white pb-28  md:pb-8 rounded-3xl  w-full " in:fade>
 				<img
 					src="https://www.apnashopping.in/assets/img/payment/Empty-Cart.jpg"
 					alt=""
