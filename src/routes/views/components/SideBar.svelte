@@ -1,4 +1,5 @@
 <script>
+	import Cartstore from '../../../../src/config/cartstore';
 	const showMenuItem = () => {
 		if (document.querySelector('#ul').classList.contains('navul')) {
 			document.querySelector('#ul').classList.remove('navul');
@@ -15,12 +16,32 @@
 
 <nav class="md:fixed">
 	<div>
-		<div class="flex justify-between items-center">
+		<div class=" relative flex justify-between items-center">
 			<h1
 				class="font-semibold uppercase p-4 pb-2 border-b md:border-gray-50 bg-gradient-to-tr from-yellow-800 to-yellow-200 text-transparent bg-clip-text"
 			>
 				Svelte
 			</h1>
+			<a
+				class="absolute right-12 {$Cartstore.length == 0
+					? 'bg-gray-900'
+					: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-11 visible md:hidden "
+				href="/views/products/cart"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-4 w-4 text-white  "
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+					/>
+				</svg></a
+			>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-6 w-6 mr-4 cursor-pointer md:hidden text-white"
@@ -50,21 +71,6 @@
 			>
 				<span class="text-lg text-white mr-2">User</span>
 				<span class="text-lg text-white ">👥</span>
-
-				<!-- <svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="w-5 ml-2 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-					/>
-				</svg> -->
 			</a>
 		</li>
 		<li class="py-1">
@@ -77,18 +83,6 @@
 			>
 				<span class="text-lg text-white mr-2">Product</span>
 				<span class="text-lg text-white ">📦</span>
-				<!-- <svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					class="w-5 ml-2 text-white"
-					fill="currentColor"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z"
-						clip-rule="evenodd"
-					/>
-				</svg> -->
 			</a>
 		</li>
 		<li class="py-1">
@@ -101,18 +95,18 @@
 			>
 				<span class="text-lg text-white mr-2">Cart</span>
 				<span class="text-lg text-white ">🛒</span>
-				<!-- <svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					class="w-5 ml-2 text-white"
-					fill="currentColor"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z"
-						clip-rule="evenodd"
-					/>
-				</svg> -->
+			</a>
+		</li>
+		<li class="py-1">
+			<a
+				href="/views/orders"
+				class={navItem === 'Orders'
+					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse  '
+					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
+				on:click={() => setNavValue('Orders')}
+			>
+				<span class="text-lg text-white mr-2">Orders</span>
+				<span class="text-lg text-white ">📜</span>
 			</a>
 		</li>
 	</ul>

@@ -43,7 +43,7 @@
 	};
 </script>
 
-<main class=" h-screen">
+<main class=" h-screen p-10">
 	<div
 		class="relative flex flex-col min-w-0 break-words bg-gray-800 text-white w-full mb-6 shadow-lg rounded"
 	>

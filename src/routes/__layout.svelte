@@ -10,7 +10,7 @@
 			<SideBar />
 		</div>
 		<div class="bg-gray-200 col-span-4 ">
-			<div class="p-10 h-auto"><slot /></div>
+			<div class="h-auto"><slot /></div>
 			<Footer />
 		</div>
 	</div>

@@ -1,11 +1,15 @@
 <script context="module">
 	import Cartstore from '../../../config/cartstore';
 	import { browser } from '$app/env';
+	import { fade, slide, scale } from 'svelte/transition';
 
+	//fetching products from api
 	export const load = async ({ fetch }) => {
 		try {
 			const res = await fetch('/api/product');
 			const productList = await res.json();
+
+			//to check already added products on cart
 			let cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
 
 			for (var i = 0; i < productList.length; i++) {
@@ -16,9 +20,7 @@
 					productList[i]['count'] = 0;
 				}
 			}
-			// productList.forEach((element) => {
-			// 	return (element['count'] = 0);
-			// });
+
 			return {
 				props: {
 					productList
@@ -32,12 +34,15 @@
 
 <script>
 	import Crasoul from '../components/Crasoul.svelte';
+	import CartIcon from '../components/icons/CartIcon.svelte';
 
 	export let productList;
 
 	$: productList = productList;
 
 	var totalAmount = 0;
+
+	//we will save cart item on CartStore
 	const onProductAdded = async (item) => {
 		let cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
 		totalAmount = JSON.parse(browser && localStorage.getItem('totalAmount')) || 0;
@@ -53,35 +58,21 @@
 	};
 </script>
 
-<Crasoul />
-<div class="relative">
+<div class="px-2 pt-1 md:px-8"><Crasoul /></div>
+<div class="relative px-2 md:px-8 py-4">
 	<a
 		class="absolute right-0 {$Cartstore.length == 0
 			? 'bg-gray-900'
-			: 'bg-green-900 animate-bounce'} rounded-3xl p-2"
-		href="/views/products/cart"
-		><svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-6 w-6 text-white  "
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-			/>
-		</svg></a
+			: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-14 invisible md:visible "
+		href="/views/products/cart"><CartIcon /></a
 	>
-	<div class="text-center font-bold text-2xl pb-5 text-gray-900">Product List</div>
+	<div class="text-center font-bold text-xl md:text-2xl pb-5 text-gray-900">Product List</div>
 
-	<div class="md:grid  md:grid-cols-4 lg:grid-cols-5">
+	<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 " in:scale>
 		{#each productList as item}
-			<div class="card grid grid-rows-4 relative">
+			<div class="card grid grid-rows-4 relative  bg-black">
 				<div
-					class="absolute bg-gray-700 top-4 px-2 rounded-r-3xl text-xs font-bold shadow-md drop-shadow-md"
+					class="absolute bg-gray-700 top-4 px-2 rounded-r-3xl text-xs font-bold shadow-md drop-shadow-md text-white"
 				>
 					${item.price}
 				</div>
@@ -89,7 +80,7 @@
 					<img
 						src="https://ebazar247.s3-ap-southeast-1.amazonaws.com/{item.image}"
 						alt="stew"
-						class="h-28 m-auto "
+						class="h-24 md:h-28 m-auto "
 					/>
 				</div>
 				<p class="block text-gray-500 text-xs p-4 row-span-1">
@@ -115,6 +106,6 @@
 
 <style>
 	.card {
-		@apply rounded-xl h-60    md:m-2  m-7 bg-white border-gray-200 shadow-sm overflow-hidden text-center pt-5;
+		@apply rounded-xl md:h-60 h-64    m-2  bg-white border-gray-200 shadow-sm overflow-hidden text-center pt-5;
 	}
 </style>

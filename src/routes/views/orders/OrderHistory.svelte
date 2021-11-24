@@ -1,7 +1,5 @@
 <script>
-	import Cartstore from '../../../config/cartstore';
 	import OrderHistoryStore from '../../../config/orderhistory';
-
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import ArrowBack from '../components/icons/ArrowBack.svelte';
@@ -9,88 +7,22 @@
 	import IncrementButton from '../components/icons/IncrementButton.svelte';
 	import { fade, slide, scale } from 'svelte/transition';
 
-	$: totalAmount = parseInt((browser && localStorage.getItem('totalAmount')) || 0);
-
-	const onIncrement = async (item) => {
-		Cartstore.update((currentItems) => {
-			let copiedItems = [...currentItems];
-			let selectedItem = copiedItems.find((poll) => poll.id === item.id);
-			if (item.id === selectedItem.id) {
-				selectedItem.count += 1;
-
-				totalAmount += selectedItem.price;
-			}
-			localStorage.setItem('totalAmount', totalAmount ?? 0);
-			localStorage.setItem('cartItems', JSON.stringify(copiedItems));
-
-			return copiedItems;
-		});
-	};
-
-	const onDecrement = async (item) => {
-		Cartstore.update((currentItems) => {
-			let copiedItems = [...currentItems];
-			let selectedItem = copiedItems.find((product) => product.id === product.id);
-			if (item.id === selectedItem.id) {
-				if (selectedItem.count > 1) {
-					selectedItem.count -= 1;
-					totalAmount -= selectedItem.price;
-				} else {
-					totalAmount -= selectedItem.price;
-					copiedItems = copiedItems.filter((product) => product.id != item.id);
-				}
-			}
-			localStorage.setItem('totalAmount', totalAmount);
-			localStorage.setItem('cartItems', JSON.stringify(copiedItems));
-			return copiedItems;
-		});
-	};
-
-	const onCheckOut = async () => {
-		let products = [];
-		for (var i = 0; i < $Cartstore.length; i++) {
-			products.push({
-				id: $Cartstore[i].id,
-				name: $Cartstore[i].name,
-				count: $Cartstore[i].count,
-				price: $Cartstore[i].price,
-				image: $Cartstore[i].image,
-				unit_name: $Cartstore[i].unit_name,
-				quantity: $Cartstore[i].quantity
-			});
-		}
-		var order = {
-			products: products,
-			total: totalAmount,
-			date: new Date().toISOString().slice(0, 10),
-			delivery_charge: 40,
-			order_status: 'pending'
-		};
-
-		let orderHistory = JSON.parse(browser && localStorage.getItem('orders')) || [];
-		orderHistory.push(order);
-		localStorage.setItem('orders', JSON.stringify(orderHistory));
-		$OrderHistoryStore = orderHistory;
-		location.href = '#my-modal';
-	};
-
 	const onBuyMoreButton = async () => {
 		goto('/views/products');
 		localStorage.removeItem('cartItems');
 		localStorage.removeItem('totalAmount');
 		await wait();
-		$Cartstore = {};
 	};
 
 	const wait = () => new Promise((res) => setTimeout(res, 2000));
 </script>
 
 <div
-	class="overflow-auto text-gray-900 text-center flex flex-col  {$Cartstore.length > 0
+	class="overflow-auto text-gray-900 text-center flex flex-col  {$OrderHistoryStore.length > 0
 		? 'p-1'
 		: 'p-10'}  md:p-10"
 >
-	{#if $Cartstore.length > 0}
+	{#if $OrderHistoryStore.length > 0}
 		<button
 			class="text-yellow-600  text-lg  p-1 font-semibold  hover:text-gray-700 cursor-pointer text-left"
 			on:click={() => {
@@ -103,12 +35,12 @@
 		</button>
 	{/if}
 	<div class=" lg:grid lg:grid-cols-4 lg:h-screen">
-		{#if $Cartstore.length > 0}
+		{#if $OrderHistoryStore.length > 0}
 			<div class="lg:col-span-3 bg-white p-3">
 				<div class="flex justify-between p-4 border-b-2 border-gray-200">
 					<div class="text-gray-800 text-lg font-bold">Shopping Cart</div>
 					<div class="text-gray-800 text-lg font-bold">
-						{$Cartstore.length} items
+						{$OrderHistoryStore.length} items
 					</div>
 				</div>
 				<div class="grid grid-cols-6 p-4 ">
@@ -116,7 +48,7 @@
 					<div class="text-sm  text-gray-900  font-bold  text-center col-span-1 ">Action</div>
 				</div>
 
-				{#each $Cartstore as item}
+				{#each $OrderHistoryStore as item}
 					<div class="grid grid-cols-6 p-4 lg:divide-x-2 lg:divide-gray-300 ">
 						<div
 							class=" text-xs text-gray-700 font-semibold text-left col-span-5 flex flex-col items-start"
@@ -157,11 +89,11 @@
 					</div>
 					<div class="flex justify-between mt-2  border-gray-200 mb-2">
 						<div class="text-white text-xs font-semibold">
-							Items {$Cartstore.length}
+							Items {$OrderHistoryStore.length}
 						</div>
-						<div class="text-white text-xs font-semibold">
+						<!-- <div class="text-white text-xs font-semibold">
 							${totalAmount}
-						</div>
+						</div> -->
 					</div>
 
 					<div class="flex justify-between mt-3  border-gray-200 ">
@@ -172,14 +104,9 @@
 					<div class="flex justify-between mt-1">
 						<div class="text-white text-sm font-semibold">Total</div>
 						<div class="text-white text-sm font-semibold">
-							${totalAmount + 40}
+							${2 + 40}
 						</div>
 					</div>
-
-					<button
-						class="bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl ho:bg-green-900 cursor-pointer"
-						on:click={onCheckOut}>CHECK OUT</button
-					>
 				</div>
 			</div>
 		{:else}
