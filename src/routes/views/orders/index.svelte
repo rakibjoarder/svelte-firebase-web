@@ -1,11 +1,25 @@
 <script>
-	import OrderHistoryStore from '../../../config/orderhistory';
-	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
-	import ArrowBack from '../components/icons/ArrowBack.svelte';
-	import DecrementButton from '../components/icons/DecrementButton.svelte';
-	import IncrementButton from '../components/icons/IncrementButton.svelte';
-	import { fade, slide, scale } from 'svelte/transition';
+	import Firestoredb from '../../../config/firebase';
+	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
+	import { scale } from 'svelte/transition';
+	import { onDestroy, onMount } from 'svelte';
+
+	let ref = collection(Firestoredb, 'orders');
+	let OrderHistoryStore = [];
+
+	onMount(() => {
+		//getting user orders from firebase
+		console.log('onMount');
+		var unsub = onSnapshot(ref, (snapshot) => {
+			let results = [];
+			snapshot.docs.forEach((doc) => {
+				results.push({ ...doc.data(), id: doc.id });
+			});
+			console.log(results);
+			OrderHistoryStore = results;
+		});
+	});
 
 	const onBuyMoreButton = async () => {
 		goto('/views/products');
@@ -14,14 +28,14 @@
 
 <div class="overflow-auto text-gray-900 text-center flex flex-col p-10  md:px-20">
 	<div class=" lg:h-screen">
-		{#if $OrderHistoryStore.length > 0}
+		{#if OrderHistoryStore.length > 0}
 			<div class=" p-3 h-screen rounded-xl">
 				<div class=" text-lg  text-gray-900 font-bold  text-center mt-0.5">Order History</div>
-				{#each $OrderHistoryStore as item}
+				{#each OrderHistoryStore as item}
 					<div class="flex justify-between p-4  m-2 bg-white rounded-lg shadow-sm">
 						<div class=" text-sm text-gray-700 font-bold text-left ">
 							<div>
-								OrderId#{item.delivery_charge}
+								OrderId# {item.id}
 							</div>
 							<div class=" text-lg  text-yellow-500 font-bold  text-left mt-0.5">
 								${item.total}

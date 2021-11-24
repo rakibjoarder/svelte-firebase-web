@@ -1,16 +1,16 @@
 <script>
 	import Cartstore from '../../../config/cartstore';
 	import OrderHistoryStore from '../../../config/orderhistory';
-
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import ArrowBack from '../components/icons/ArrowBack.svelte';
 	import DecrementButton from '../components/icons/DecrementButton.svelte';
 	import IncrementButton from '../components/icons/IncrementButton.svelte';
-	import { fade, slide, scale } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
+	import { collection, doc, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
+	import Firestoredb from '../../../config/firebase';
 
 	$: totalAmount = parseInt((browser && localStorage.getItem('totalAmount')) || 0);
-
 	const onIncrement = async (item) => {
 		Cartstore.update((currentItems) => {
 			let copiedItems = [...currentItems];
@@ -60,6 +60,7 @@
 			});
 		}
 		var order = {
+			id: orderIdGenerator(),
 			products: products,
 			total: totalAmount,
 			date: new Date().toISOString().slice(0, 10),
@@ -71,8 +72,23 @@
 		orderHistory.push(order);
 		localStorage.setItem('orders', JSON.stringify(orderHistory));
 		$OrderHistoryStore = orderHistory;
+		let ref = collection(Firestoredb, 'orders');
+		addDoc(ref, order);
 		location.href = '#my-modal';
 	};
+
+	function orderIdGenerator() {
+		var result, i, j;
+		result = '';
+		for (j = 0; j < 12; j++) {
+			if (j == 8 || j == 12 || j == 16 || j == 20) result = result + '-';
+			i = Math.floor(Math.random() * 16)
+				.toString(16)
+				.toUpperCase();
+			result = result + i;
+		}
+		return result;
+	}
 
 	const onBuyMoreButton = async () => {
 		goto('/views/products');

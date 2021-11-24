@@ -1,11 +1,10 @@
 <script>
 	import { onDestroy, onMount } from 'svelte';
 	// import PersonStore from "../../stores/personstore";
-	import { fade, slide, scale } from 'svelte/transition';
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
-	import { is_empty } from 'svelte/internal';
 	import TableDropdown from '../components/TableDropdown.svelte';
+	import { goto } from '$app/navigation';
 
 	let people = [];
 	let ref = collection(Firestoredb, 'users');
@@ -57,7 +56,7 @@
 						class="bg-yellow-600 text-white  active:bg-green-600 text-xs font-bold uppercase px-5 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
 						type="button"
 						on:click={() => {
-							location.href = 'users/Adduser';
+							goto('users/Adduser');
 						}}
 					>
 						Add User

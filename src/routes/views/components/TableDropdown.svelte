@@ -3,7 +3,6 @@
 	import { createPopper } from '@popperjs/core';
 	// core components
 	import { createEventDispatcher } from 'svelte';
-	import { FontAwesomeIcon } from 'fontawesome-svelte';
 	let dropdownPopoverShow = false;
 	let btnDropdownRef;
 	let popoverDropdownRef;

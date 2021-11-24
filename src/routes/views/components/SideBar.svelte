@@ -1,4 +1,7 @@
 <script>
+	import { goto } from '$app/navigation';
+	import { action_destroyer } from 'svelte/internal';
+
 	import Cartstore from '../../../../src/config/cartstore';
 	const showMenuItem = () => {
 		if (document.querySelector('#ul').classList.contains('navul')) {
@@ -11,6 +14,7 @@
 
 	function setNavValue(name) {
 		navItem = name;
+		href = goto('/views/' + name);
 	}
 </script>
 
@@ -63,11 +67,11 @@
 	<ul class="navul" id="ul">
 		<li class="text-gray-700 font-bold py-1">
 			<a
-				href="/views/users"
-				class={navItem === 'User'
+				href=""
+				class={navItem === 'users'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4 '}
-				on:click={() => setNavValue('User')}
+				on:click={() => setNavValue('users')}
 			>
 				<span class="text-lg text-white mr-2">User</span>
 				<span class="text-lg text-white ">👥</span>
@@ -75,11 +79,11 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/views/products"
-				class={navItem === 'Product'
+				href=""
+				class={navItem === 'products'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
-				on:click={() => setNavValue('Product')}
+				on:click={() => setNavValue('products')}
 			>
 				<span class="text-lg text-white mr-2">Product</span>
 				<span class="text-lg text-white ">📦</span>
@@ -87,11 +91,11 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/views/products/cart"
-				class={navItem === 'Cart'
-					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse  '
-					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
-				on:click={() => setNavValue('Cart')}
+				href=""
+				class={navItem === 'products/cart'
+					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse cursor-pointer '
+					: 'border-white-500' + ' px-4 flex justify-end border-r-4 cursor-pointer '}
+				on:click={() => setNavValue('products/cart')}
 			>
 				<span class="text-lg text-white mr-2">Cart</span>
 				<span class="text-lg text-white ">🛒</span>
@@ -99,11 +103,11 @@
 		</li>
 		<li class="py-1">
 			<a
-				href="/views/orders"
-				class={navItem === 'Orders'
+				href=""
+				class={navItem === 'orders'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse  '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
-				on:click={() => setNavValue('Orders')}
+				on:click={() => setNavValue('orders')}
 			>
 				<span class="text-lg text-white mr-2">Orders</span>
 				<span class="text-lg text-white ">📜</span>
