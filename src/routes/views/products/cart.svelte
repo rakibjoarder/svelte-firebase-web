@@ -48,6 +48,8 @@
 
 	const onCheckOut = async () => {
 		let products = [];
+
+		//elemeneting unnecessary attributes from the response
 		for (var i = 0; i < $Cartstore.length; i++) {
 			products.push({
 				id: $Cartstore[i].id,
@@ -59,6 +61,7 @@
 				quantity: $Cartstore[i].quantity
 			});
 		}
+		//creating oder item.
 		var order = {
 			id: orderIdGenerator(),
 			products: products,
@@ -67,7 +70,7 @@
 			delivery_charge: 40,
 			order_status: 'pending'
 		};
-
+		//saving order history on both firebase on store.
 		let orderHistory = JSON.parse(browser && localStorage.getItem('orders')) || [];
 		orderHistory.push(order);
 		localStorage.setItem('orders', JSON.stringify(orderHistory));
@@ -77,6 +80,7 @@
 		location.href = '#my-modal';
 	};
 
+	//for unique order id
 	function orderIdGenerator() {
 		var result, i, j;
 		result = '';

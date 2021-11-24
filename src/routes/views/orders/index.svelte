@@ -67,7 +67,7 @@
 				<img
 					src="https://i.ibb.co/qrNxD2N/e8d986243b69af8a5323e3a4c41402b3.png"
 					alt=""
-					class=" w-64 md:w-80 m-auto mt-6 pt-6 "
+					class=" h-64 md:w-80 m-auto mt-6 pt-6 "
 				/>
 				<div class="font-bold text-sm pt-4 text-gray-600 ">You have not place any orders</div>
 				<div class="font-bold text-sm text-gray-600">Let's go by something.</div>

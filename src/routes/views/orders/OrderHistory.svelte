@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { fade, slide, scale } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 	import OrderItemStore from '../../../config/orderstore';
 </script>
 

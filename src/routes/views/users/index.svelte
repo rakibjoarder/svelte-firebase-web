@@ -1,6 +1,5 @@
 <script>
 	import { onDestroy, onMount } from 'svelte';
-	// import PersonStore from "../../stores/personstore";
 	import Firestoredb from '../../../config/firebase';
 	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
 	import TableDropdown from '../components/TableDropdown.svelte';
@@ -21,10 +20,6 @@
 			console.log(results);
 			people = results;
 		});
-		// get person from store.js
-		// var unsub = PersonStore.subscribe((data) => {
-		// 	people = data;
-		// });
 	});
 
 	onDestroy(() => {
@@ -56,7 +51,7 @@
 						class="bg-yellow-600 text-white  active:bg-green-600 text-xs font-bold uppercase px-5 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
 						type="button"
 						on:click={() => {
-							goto('users/Adduser');
+							goto('/views/users/Adduser');
 						}}
 					>
 						Add User
