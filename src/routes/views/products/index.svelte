@@ -37,11 +37,15 @@
 	import CartIcon from '../components/icons/CartIcon.svelte';
 
 	export let productList;
-
-	$: productList = productList;
-
+	let tempProductList = productList;
 	var totalAmount = 0;
 
+	let searchItem = '';
+
+	$: productList = tempProductList.filter((item) =>
+		item.name.toLowerCase().includes(searchItem.toLowerCase())
+	);
+	$: console.log(productList);
 	//we will save cart item on CartStore
 	const onProductAdded = async (item) => {
 		let cartItems = JSON.parse(browser && localStorage.getItem('cartItems')) || [];
@@ -59,14 +63,24 @@
 </script>
 
 <div class="px-2 pt-1 md:px-8"><Carousel /></div>
-<div class="relative px-2 md:px-8 py-4">
-	<a
-		class="absolute right-0 {$Cartstore.length == 0
-			? 'bg-gray-900'
-			: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-14 invisible md:visible "
-		href="/views/products/Cart"><CartIcon /></a
+<div class=" px-2 md:px-8 py-4 ">
+	<div
+		class="flex flex-col-reverse justify-center items-center md:justify-between pb-4 md:flex-row"
 	>
-	<div class="text-center font-bold text-xl md:text-2xl pb-5 text-gray-900">Product List</div>
+		<input
+			bind:value={searchItem}
+			class="text-black  p-1 mt-2  md:mt-0 rounded-md focus:ring-1 ring-gray-900  w-48 border-gray-700 shadow-sm "
+			placeholder="Search Products"
+		/>
+		<div class="text-center font-bold text-xl md:text-2xl  text-gray-900">Product List</div>
+
+		<a
+			class=" right-0 {$Cartstore.length == 0
+				? 'bg-gray-900'
+				: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-14 invisible md:visible "
+			href="/views/products/Cart"><CartIcon /></a
+		>
+	</div>
 
 	<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 " in:scale>
 		{#each productList as item}

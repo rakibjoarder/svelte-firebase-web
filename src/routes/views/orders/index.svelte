@@ -6,10 +6,11 @@
 	import { onDestroy, onMount } from 'svelte';
 	import OrderItemStore from '../../../config/orderstore';
 	import emptyOrder from '../../../assets/images/empty-order.png';
-
+	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 	let ref = collection(Firestoredb, 'orders');
 	let OrderHistoryStore = [];
 	var unsub;
+	let items = [];
 	onMount(() => {
 		//getting user orders from firebase
 		console.log('onMount');
@@ -19,9 +20,12 @@
 				results.push({ ...doc.data(), id: doc.id });
 			});
 			OrderHistoryStore = results;
+			items = results;
 		});
 	});
-
+	let currentPage = 1;
+	let pageSize = 6;
+	$: paginatedItems = paginate({ items, pageSize, currentPage });
 	onDestroy(() => {});
 
 	const onBuyMoreButton = async () => {
@@ -35,7 +39,7 @@
 	<div class=" lg:h-screen overflow-y-auto ">
 		{#if OrderHistoryStore.length > 0}
 			<div class=" p-3 h-screen rounded-xl">
-				{#each OrderHistoryStore as item}
+				{#each paginatedItems as item}
 					<div
 						class="flex justify-between p-4  m-2 bg-white rounded-lg shadow-sm cursor-pointer"
 						on:click={() => {
@@ -65,6 +69,14 @@
 						</div>
 					</div>
 				{/each}
+				<DarkPaginationNav
+					totalItems={items.length}
+					{pageSize}
+					{currentPage}
+					limit={1}
+					showStepOptions={true}
+					on:setPage={(e) => (currentPage = e.detail.page)}
+				/>
 			</div>
 		{:else}
 			<div class="m-auto  bg-white pb-28  md:pb-8 rounded-3xl  w-full " in:scale>
