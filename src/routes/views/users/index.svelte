@@ -4,11 +4,11 @@
 	import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
 	import TableDropdown from '../components/TableDropdown.svelte';
 	import { goto } from '$app/navigation';
+	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
 	let people = [];
 	let ref = collection(Firestoredb, 'users');
-	people = [];
-
+	let items = [];
 	onMount(() => {
 		//getting user data from firebase
 		console.log('onMount');
@@ -18,10 +18,13 @@
 				results.push({ ...doc.data(), id: doc.id });
 			});
 			console.log(results);
-			people = results;
+			items = results;
 		});
 	});
 
+	let currentPage = 1;
+	let pageSize = 8;
+	$: paginatedItems = paginate({ items, pageSize, currentPage });
 	onDestroy(() => {
 		console.log('onDestroy');
 	});
@@ -84,8 +87,8 @@
 						/>
 					</tr>
 				</thead>
-				{#if people.length > 0}
-					{#each people as person}
+				{#if paginatedItems.length > 0}
+					{#each paginatedItems as person}
 						<tbody>
 							<tr>
 								<td
@@ -117,7 +120,16 @@
 					{/each}
 				{/if}
 			</table>
-			{#if people.length == 0} <div class="emptyTable text-center p-4">No Users Available</div>{/if}
+			<DarkPaginationNav
+				totalItems={items.length}
+				{pageSize}
+				{currentPage}
+				limit={1}
+				showStepOptions={true}
+				on:setPage={(e) => (currentPage = e.detail.page)}
+			/>
+			{#if paginatedItems.length == 0}
+				<div class="emptyTable text-center p-4">No Users Available</div>{/if}
 		</div>
 	</div>
 </main>
