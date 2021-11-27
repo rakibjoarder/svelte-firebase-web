@@ -1,5 +1,5 @@
 <script context="module">
-	import Cartstore from '../../../config/cartstore';
+	import Cartstore from '../../../config/cartStore';
 	import { browser } from '$app/env';
 	import { fade, slide, scale } from 'svelte/transition';
 
@@ -33,7 +33,7 @@
 </script>
 
 <script>
-	import Crasoul from '../components/Crasoul.svelte';
+	import Carousel from '../components/Carousel.svelte';
 	import CartIcon from '../components/icons/CartIcon.svelte';
 
 	export let productList;
@@ -58,13 +58,13 @@
 	};
 </script>
 
-<div class="px-2 pt-1 md:px-8"><Crasoul /></div>
+<div class="px-2 pt-1 md:px-8"><Carousel /></div>
 <div class="relative px-2 md:px-8 py-4">
 	<a
 		class="absolute right-0 {$Cartstore.length == 0
 			? 'bg-gray-900'
 			: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-14 invisible md:visible "
-		href="/views/products/cart"><CartIcon /></a
+		href="/views/products/Cart"><CartIcon /></a
 	>
 	<div class="text-center font-bold text-xl md:text-2xl pb-5 text-gray-900">Product List</div>
 

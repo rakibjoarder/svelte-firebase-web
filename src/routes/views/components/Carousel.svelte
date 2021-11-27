@@ -1,5 +1,7 @@
 <script>
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
+	import banner1 from '../../../assets/images/banner1.jpeg';
+	import banner2 from '../../../assets/images/banner2.jpeg';
 
 	// Import Swiper styles
 	import 'swiper/css';
@@ -27,11 +29,7 @@
 	navigation={true}
 	class="mySwiper rounded-lg shadow-sm m-8  md:h-auto"
 >
-	<SwiperSlide
-		><img
-			src="https://www.beautymentor.in/admin/uploads/sliders/818078banner-5334x1972.jpg"
-			alt=""
-			class="image-full"
-		/></SwiperSlide
-	><SwiperSlide><img src="https://marcado.in/images/ffff.jpg" alt="" /></SwiperSlide>
+	<SwiperSlide><img src={banner1} alt="" class="image-full" /></SwiperSlide><SwiperSlide
+		><img src={banner2} alt="" /></SwiperSlide
+	>
 </Swiper>

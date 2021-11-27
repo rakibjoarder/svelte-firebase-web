@@ -1,14 +1,15 @@
 <script>
-	import Cartstore from '../../../config/cartstore';
-	import OrderHistoryStore from '../../../config/orderhistory';
+	import Cartstore from '../../../config/cartStore';
+	import OrderHistoryStore from '../../../config/orderHistory';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import ArrowBack from '../components/icons/ArrowBack.svelte';
 	import DecrementButton from '../components/icons/DecrementButton.svelte';
 	import IncrementButton from '../components/icons/IncrementButton.svelte';
-	import { scale, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { collection, doc, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
 	import Firestoredb from '../../../config/firebase';
+	import emptyCart from '../../../assets/images/empty-cart.jpeg';
 
 	$: totalAmount = parseInt((browser && localStorage.getItem('totalAmount')) || 0);
 	const onIncrement = async (item) => {
@@ -204,11 +205,7 @@
 			</div>
 		{:else}
 			<div class="m-auto col-span-5  bg-white pb-28  md:pb-8 rounded-3xl  w-full " in:fade>
-				<img
-					src="https://www.apnashopping.in/assets/img/payment/Empty-Cart.jpg"
-					alt=""
-					class="rounded-xl"
-				/>
+				<img src={emptyCart} alt="" class="rounded-xl" />
 				<div class="font-bold text-sm pt-4 text-gray-600 ">
 					You have no items in your shopping cart.
 				</div>

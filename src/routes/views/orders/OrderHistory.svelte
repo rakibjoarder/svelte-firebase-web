@@ -6,7 +6,8 @@
 </script>
 
 <div
-	class="overflow-auto text-gray-900 text-center flex flex-col  {$OrderItemStore.products.length > 0
+	class="overflow-y-auto text-gray-900 text-center flex flex-col  {$OrderItemStore.products.length >
+	0
 		? 'p-1'
 		: 'p-10'}  md:p-10"
 >

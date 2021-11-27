@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { action_destroyer } from 'svelte/internal';
 
-	import Cartstore from '../../../../src/config/cartstore';
+	import Cartstore from '../../../config/cartStore';
 	const showMenuItem = () => {
 		if (document.querySelector('#ul').classList.contains('navul')) {
 			document.querySelector('#ul').classList.remove('navul');
@@ -30,7 +30,7 @@
 				class="absolute right-12 {$Cartstore.length == 0
 					? 'bg-gray-900'
 					: 'bg-green-900 animate-bounce'} rounded-3xl p-2 right-11 visible md:hidden "
-				href="/views/products/cart"
+				href="/views/products/Cart"
 				><svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-4 w-4 text-white  "
@@ -79,7 +79,8 @@
 		</li>
 		<li class="py-1">
 			<a
-				href=""
+				sveltekit:prefetch
+				href="/views/products"
 				class={navItem === 'products'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4  '}
@@ -92,10 +93,10 @@
 		<li class="py-1">
 			<a
 				href=""
-				class={navItem === 'products/cart'
+				class={navItem === 'products/Cart'
 					? 'border-yellow-500' + ' px-4 flex justify-end border-r-4 animate-pulse cursor-pointer '
 					: 'border-white-500' + ' px-4 flex justify-end border-r-4 cursor-pointer '}
-				on:click={() => setNavValue('products/cart')}
+				on:click={() => setNavValue('products/Cart')}
 			>
 				<span class="text-lg text-white mr-2">Cart</span>
 				<span class="text-lg text-white ">🛒</span>

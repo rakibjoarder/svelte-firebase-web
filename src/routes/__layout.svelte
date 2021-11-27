@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Footer from './views/components/footer.svelte';
+	import Footer from './views/components/Footer.svelte';
 	import SideBar from './views/components/SideBar.svelte';
 </script>
 
