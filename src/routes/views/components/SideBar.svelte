@@ -1,6 +1,5 @@
 <script>
 	import { goto } from '$app/navigation';
-	import { action_destroyer } from 'svelte/internal';
 
 	import Cartstore from '../../../config/cartStore';
 	const showMenuItem = () => {
@@ -14,7 +13,7 @@
 
 	function setNavValue(name) {
 		navItem = name;
-		href = goto('/views/' + name);
+		goto('/views/' + name);
 	}
 </script>
 

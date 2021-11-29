@@ -417,7 +417,7 @@ var init_install_fetch = __esm({
         factory(exports);
       })(commonjsGlobal, function(exports2) {
         const SymbolPolyfill = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? Symbol : (description) => `Symbol(${description})`;
-        function noop5() {
+        function noop2() {
           return void 0;
         }
         function getGlobals() {
@@ -434,7 +434,7 @@ var init_install_fetch = __esm({
         function typeIsObject(x2) {
           return typeof x2 === "object" && x2 !== null || typeof x2 === "function";
         }
-        const rethrowAssertionErrorRejection = noop5;
+        const rethrowAssertionErrorRejection = noop2;
         const originalPromise = Promise;
         const originalPromiseThen = Promise.prototype.then;
         const originalPromiseResolve = Promise.resolve.bind(originalPromise);
@@ -2637,7 +2637,7 @@ var init_install_fetch = __esm({
                 return newPromise((resolveRead, rejectRead) => {
                   ReadableStreamDefaultReaderRead(reader, {
                     _chunkSteps: (chunk) => {
-                      currentWrite = PerformPromiseThen(WritableStreamDefaultWriterWrite(writer, chunk), void 0, noop5);
+                      currentWrite = PerformPromiseThen(WritableStreamDefaultWriterWrite(writer, chunk), void 0, noop2);
                       resolveRead(false);
                     },
                     _closeSteps: () => resolveRead(true),
@@ -3508,7 +3508,7 @@ var init_install_fetch = __esm({
             reader._readIntoRequests = new SimpleQueue();
           }
           const sourceCancelPromise = stream._readableStreamController[CancelSteps](reason);
-          return transformPromiseWith(sourceCancelPromise, noop5);
+          return transformPromiseWith(sourceCancelPromise, noop2);
         }
         function ReadableStreamClose(stream) {
           stream._state = "closed";
@@ -4740,81 +4740,206 @@ var init_product_3dfcb50b = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/footer-ea2efe91.js
-var footer_ea2efe91_exports = {};
-__export(footer_ea2efe91_exports, {
+// .svelte-kit/output/server/chunks/Footer-14783d0a.js
+var Footer_14783d0a_exports = {};
+__export(Footer_14783d0a_exports, {
   default: () => Footer
 });
 var Footer;
-var init_footer_ea2efe91 = __esm({
-  ".svelte-kit/output/server/chunks/footer-ea2efe91.js"() {
+var init_Footer_14783d0a = __esm({
+  ".svelte-kit/output/server/chunks/Footer-14783d0a.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<main><footer class="${"p-10 footer bg-base-200 text-base-content footer-center"}"><div class="${"grid grid-flow-col gap-4"}"><a class="${"link link-hover"}" href="${"https://www.linkedin.com/in/rakib-mamun-joarder/"}">Linkedin</a>
-			<a class="${"link link-hover"}" href="${"https://github.com/rakibjoarder/svelte-firebase-web"}">Github</a></div>
-		<div><div class="${"grid grid-flow-col gap-4"}"><div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current"}"><path d="${"M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"}"></path></svg></div>
-				<div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current"}"><path d="${"M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"}"></path></svg></div>
-				<div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current"}"><path d="${"M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"}"></path></svg></div></div></div>
-		<div><p>Copyright \xA9 2021 - All right reserved by Rakib Joarder</p></div></footer></main>`;
+      return `<main><footer class="${"p-10 footer text-base-content footer-center bg-gray-900"}"><div class="${"grid grid-flow-col gap-4 text-white"}"><a class="${"link link-hover"}" href="${"https://www.linkedin.com/in/rakib-mamun-joarder/"}">Linkedin</a>
+			<a class="${"link link-hover text-white"}" href="${"https://github.com/rakibjoarder/svelte-firebase-web"}">Github</a></div>
+		<div><div class="${"grid grid-flow-col gap-4"}"><div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current text-white"}"><path d="${"M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"}"></path></svg></div>
+				<div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current text-white"}"><path d="${"M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"}"></path></svg></div>
+				<div><svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"24"}" height="${"24"}" viewBox="${"0 0 24 24"}" class="${"fill-current text-white"}"><path d="${"M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"}"></path></svg></div></div></div>
+		<div><p class="${"text-white"}">Copyright \xA9 2021 - All right reserved by Rakib Joarder</p></div></footer></main>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/SideBar-fd1b8213.js
-var SideBar_fd1b8213_exports = {};
-__export(SideBar_fd1b8213_exports, {
+// .svelte-kit/output/server/chunks/index-8245df5e.js
+function readable(value, start) {
+  return {
+    subscribe: writable(value, start).subscribe
+  };
+}
+function writable(value, start = noop) {
+  let stop;
+  const subscribers = new Set();
+  function set2(new_value) {
+    if (safe_not_equal(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          }
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update4(fn2) {
+    set2(fn2(value));
+  }
+  function subscribe2(run2, invalidate = noop) {
+    const subscriber = [run2, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set2) || noop;
+    }
+    run2(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set: set2, update: update4, subscribe: subscribe2 };
+}
+function derived(stores, fn2, initial_value) {
+  const single = !Array.isArray(stores);
+  const stores_array = single ? [stores] : stores;
+  const auto = fn2.length < 2;
+  return readable(initial_value, (set2) => {
+    let inited = false;
+    const values = [];
+    let pending = 0;
+    let cleanup = noop;
+    const sync = () => {
+      if (pending) {
+        return;
+      }
+      cleanup();
+      const result = fn2(single ? values[0] : values, set2);
+      if (auto) {
+        set2(result);
+      } else {
+        cleanup = is_function(result) ? result : noop;
+      }
+    };
+    const unsubscribers = stores_array.map((store, i) => subscribe(store, (value) => {
+      values[i] = value;
+      pending &= ~(1 << i);
+      if (inited) {
+        sync();
+      }
+    }, () => {
+      pending |= 1 << i;
+    }));
+    inited = true;
+    sync();
+    return function stop() {
+      run_all(unsubscribers);
+      cleanup();
+    };
+  });
+}
+var subscriber_queue;
+var init_index_8245df5e = __esm({
+  ".svelte-kit/output/server/chunks/index-8245df5e.js"() {
+    init_shims();
+    init_app_30b30915();
+    subscriber_queue = [];
+  }
+});
+
+// .svelte-kit/output/server/chunks/env-acc2042d.js
+var browser2;
+var init_env_acc2042d = __esm({
+  ".svelte-kit/output/server/chunks/env-acc2042d.js"() {
+    init_shims();
+    browser2 = false;
+  }
+});
+
+// .svelte-kit/output/server/chunks/cartStore-6a14a696.js
+var Cartstore;
+var init_cartStore_6a14a696 = __esm({
+  ".svelte-kit/output/server/chunks/cartStore-6a14a696.js"() {
+    init_shims();
+    init_index_8245df5e();
+    init_env_acc2042d();
+    Cartstore = writable(JSON.parse(browser2) || []);
+  }
+});
+
+// .svelte-kit/output/server/chunks/SideBar-6cb11ea0.js
+var SideBar_6cb11ea0_exports = {};
+__export(SideBar_6cb11ea0_exports, {
   default: () => SideBar
 });
 var css, SideBar;
-var init_SideBar_fd1b8213 = __esm({
-  ".svelte-kit/output/server/chunks/SideBar-fd1b8213.js"() {
+var init_SideBar_6cb11ea0 = __esm({
+  ".svelte-kit/output/server/chunks/SideBar-6cb11ea0.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
+    init_cartStore_6a14a696();
+    init_index_8245df5e();
+    init_env_acc2042d();
     css = {
       code: ".navul.svelte-zu55zv{align-items:center;display:flex;display:none;font-size:.875rem;justify-content:center;line-height:1.25rem;margin-top:1.5rem}@media(min-width:768px){.navul.svelte-zu55zv{display:block}}",
       map: null
     };
     SideBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $Cartstore, $$unsubscribe_Cartstore;
+      $$unsubscribe_Cartstore = subscribe(Cartstore, (value) => $Cartstore = value);
       $$result.css.add(css);
-      return `<nav class="${"md:fixed"}"><div><div class="${"flex justify-between items-center"}"><h1 class="${"font-semibold uppercase p-4 pb-2 border-b md:border-gray-50 bg-gradient-to-tr from-yellow-800 to-yellow-200 text-transparent bg-clip-text"}">Svelte
+      $$unsubscribe_Cartstore();
+      return `<nav class="${"md:fixed"}"><div><div class="${"relative flex justify-between items-center"}"><h1 class="${"font-semibold uppercase p-4 pb-2 border-b md:border-gray-50 bg-gradient-to-tr from-yellow-800 to-yellow-200 text-transparent bg-clip-text"}">Svelte
 			</h1>
+			<a class="${"absolute right-12 " + escape($Cartstore.length == 0 ? "bg-gray-900" : "bg-green-900 animate-bounce") + " rounded-3xl p-2 right-11 visible md:hidden"}" href="${"/views/products/Cart"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-4 w-4 text-white "}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg></a>
 			<svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6 mr-4 cursor-pointer md:hidden text-white"}" id="${"menu"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M4 6h16M4 12h16M4 18h16"}"></path></svg></div></div>
-	<ul class="${"navul svelte-zu55zv"}" id="${"ul"}"><li class="${"text-gray-700 font-bold py-1"}"><a href="${"/views/users"}" class="${escape(null_to_empty("border-yellow-500 px-4 flex justify-end border-r-4 animate-pulse ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">User</span>
-				<span class="${"text-lg text-white "}">\u{1F465}</span>
-
-				</a></li>
-		<li class="${"py-1"}"><a href="${"/views/products"}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4  ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">Product</span>
-				<span class="${"text-lg text-white "}">\u{1F4E6}</span>
-				</a></li></ul>
+	<ul class="${"navul svelte-zu55zv"}" id="${"ul"}"><li class="${"text-gray-700 font-bold py-1"}"><a href="${""}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4 ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">User</span>
+				<span class="${"text-lg text-white "}">\u{1F465}</span></a></li>
+		<li class="${"py-1"}"><a sveltekit:prefetch href="${"/views/products"}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4  ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">Product</span>
+				<span class="${"text-lg text-white "}">\u{1F4E6}</span></a></li>
+		<li class="${"py-1"}"><a href="${""}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4 cursor-pointer ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">Cart</span>
+				<span class="${"text-lg text-white "}">\u{1F6D2}</span></a></li>
+		<li class="${"py-1"}"><a href="${""}" class="${escape(null_to_empty("border-white-500 px-4 flex justify-end border-r-4  ")) + " svelte-zu55zv"}"><span class="${"text-lg text-white mr-2"}">Orders</span>
+				<span class="${"text-lg text-white "}">\u{1F4DC}</span></a></li></ul>
 </nav>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-97804934.js
-var layout_97804934_exports = {};
-__export(layout_97804934_exports, {
+// .svelte-kit/output/server/chunks/__layout-70535e21.js
+var layout_70535e21_exports = {};
+__export(layout_70535e21_exports, {
   default: () => _layout
 });
 var _layout;
-var init_layout_97804934 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-97804934.js"() {
+var init_layout_70535e21 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-70535e21.js"() {
     init_shims();
-    init_app_5b681aca();
-    init_footer_ea2efe91();
-    init_SideBar_fd1b8213();
+    init_app_30b30915();
+    init_Footer_14783d0a();
+    init_SideBar_6cb11ea0();
+    init_cartStore_6a14a696();
+    init_index_8245df5e();
+    init_env_acc2042d();
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div><div class="${"md:grid md:grid-cols-5"}"><div class="${"md:col-span-1 bg-gray-800 md:flex md:justify-end "}">${validate_component(SideBar, "SideBar").$$render($$result, {}, {}, {})}</div>
-		<div class="${"bg-gray-200 col-span-4 "}"><div class="${"p-10 h-auto"}">${slots.default ? slots.default({}) : ``}</div>
+		<div class="${"bg-gray-200 col-span-4 "}"><div class="${"h-auto"}">${slots.default ? slots.default({}) : ``}</div>
 			${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-85f336f3.js
-var error_85f336f3_exports = {};
-__export(error_85f336f3_exports, {
+// .svelte-kit/output/server/chunks/__error-3adb39a5.js
+var error_3adb39a5_exports = {};
+__export(error_3adb39a5_exports, {
   default: () => _error,
   load: () => load
 });
@@ -4826,10 +4951,10 @@ function load({ error: error2, status }) {
   };
 }
 var _error;
-var init_error_85f336f3 = __esm({
-  ".svelte-kit/output/server/chunks/__error-85f336f3.js"() {
+var init_error_3adb39a5 = __esm({
+  ".svelte-kit/output/server/chunks/__error-3adb39a5.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { title } = $$props;
       if ($$props.title === void 0 && $$bindings.title && title !== void 0)
@@ -4948,8 +5073,8 @@ function initializeApp(options2, rawConfig = {}) {
     const name3 = rawConfig;
     rawConfig = { name: name3 };
   }
-  const config2 = Object.assign({ name: DEFAULT_ENTRY_NAME, automaticDataCollectionEnabled: false }, rawConfig);
-  const name2 = config2.name;
+  const config = Object.assign({ name: DEFAULT_ENTRY_NAME, automaticDataCollectionEnabled: false }, rawConfig);
+  const name2 = config.name;
   if (typeof name2 !== "string" || !name2) {
     throw ERROR_FACTORY.create("bad-app-name", {
       appName: String(name2)
@@ -4957,7 +5082,7 @@ function initializeApp(options2, rawConfig = {}) {
   }
   const existingApp = _apps.get(name2);
   if (existingApp) {
-    if (deepEqual(options2, existingApp.options) && deepEqual(config2, existingApp.config)) {
+    if (deepEqual(options2, existingApp.options) && deepEqual(config, existingApp.config)) {
       return existingApp;
     } else {
       throw ERROR_FACTORY.create("duplicate-app", { appName: name2 });
@@ -4967,7 +5092,7 @@ function initializeApp(options2, rawConfig = {}) {
   for (const component of _components.values()) {
     container.addComponent(component);
   }
-  const newApp = new FirebaseAppImpl(options2, config2, container);
+  const newApp = new FirebaseAppImpl(options2, config, container);
   _apps.set(name2, newApp);
   return newApp;
 }
@@ -8627,12 +8752,12 @@ var init_firebase_f336866f = __esm({
     };
     ERROR_FACTORY = new ErrorFactory("app", "Firebase", ERRORS);
     FirebaseAppImpl = class {
-      constructor(options2, config2, container) {
+      constructor(options2, config, container) {
         this._isDeleted = false;
         this._options = Object.assign({}, options2);
-        this._config = Object.assign({}, config2);
-        this._name = config2.name;
-        this._automaticDataCollectionEnabled = config2.automaticDataCollectionEnabled;
+        this._config = Object.assign({}, config);
+        this._name = config.name;
+        this._automaticDataCollectionEnabled = config.automaticDataCollectionEnabled;
         this._container = container;
         this.container.addComponent(new Component("app", () => this, "PUBLIC"));
       }
@@ -12482,411 +12607,16 @@ This typically indicates that your device does not have a healthy Internet conne
   }
 });
 
-// .svelte-kit/output/server/chunks/TableDropdown-be88ab73.js
-var TableDropdown_be88ab73_exports = {};
-__export(TableDropdown_be88ab73_exports, {
+// .svelte-kit/output/server/chunks/TableDropdown-b1ce7615.js
+var TableDropdown_b1ce7615_exports = {};
+__export(TableDropdown_b1ce7615_exports, {
   default: () => TableDropdown
 });
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor)
-      descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps)
-    _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps)
-    _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-    if (typeof Object.getOwnPropertySymbols === "function") {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-    ownKeys.forEach(function(key) {
-      _defineProperty(target, key, source[key]);
-    });
-  }
-  return target;
-}
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
-}
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr))
-    return arr;
-}
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n2 = true;
-  var _d = false;
-  var _e2 = void 0;
-  try {
-    for (var _i2 = arr[Symbol.iterator](), _s; !(_n2 = (_s = _i2.next()).done); _n2 = true) {
-      _arr.push(_s.value);
-      if (i && _arr.length === i)
-        break;
-    }
-  } catch (err) {
-    _d = true;
-    _e2 = err;
-  } finally {
-    try {
-      if (!_n2 && _i2["return"] != null)
-        _i2["return"]();
-    } finally {
-      if (_d)
-        throw _e2;
-    }
-  }
-  return _arr;
-}
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-function getAttrConfig(attr2) {
-  var element = DOCUMENT.querySelector("script[" + attr2 + "]");
-  if (element) {
-    return element.getAttribute(attr2);
-  }
-}
-function coerce(val) {
-  if (val === "")
-    return true;
-  if (val === "false")
-    return false;
-  if (val === "true")
-    return true;
-  return val;
-}
-function defineIcons(prefix, icons) {
-  var params = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
-  var _params$skipHooks = params.skipHooks, skipHooks = _params$skipHooks === void 0 ? false : _params$skipHooks;
-  var normalized = Object.keys(icons).reduce(function(acc, iconName) {
-    var icon = icons[iconName];
-    var expanded = !!icon.icon;
-    if (expanded) {
-      acc[icon.iconName] = icon.icon;
-    } else {
-      acc[iconName] = icon;
-    }
-    return acc;
-  }, {});
-  if (typeof namespace.hooks.addPack === "function" && !skipHooks) {
-    namespace.hooks.addPack(prefix, normalized);
-  } else {
-    namespace.styles[prefix] = _objectSpread({}, namespace.styles[prefix] || {}, normalized);
-  }
-  if (prefix === "fas") {
-    defineIcons("fa", icons);
-  }
-}
-function MissingIcon(error2) {
-  this.name = "MissingIcon";
-  this.message = error2 || "Icon unavailable";
-  this.stack = new Error().stack;
-}
-var noop, _WINDOW, _DOCUMENT, _MUTATION_OBSERVER, _PERFORMANCE, _ref, _ref$userAgent, userAgent, WINDOW, DOCUMENT, PERFORMANCE, IS_DOM, NAMESPACE_IDENTIFIER, DEFAULT_FAMILY_PREFIX, DEFAULT_REPLACEMENT_CLASS, initial, attrs, _default, _config, config, w2, namespace, functions, listener, loaded, noop$1, bindInternal4, reduce, styles, shims, build, FILL, ANIMATION_BASE, OPACITY_ANIMATE, Library, TableDropdown;
-var init_TableDropdown_be88ab73 = __esm({
-  ".svelte-kit/output/server/chunks/TableDropdown-be88ab73.js"() {
+var TableDropdown;
+var init_TableDropdown_b1ce7615 = __esm({
+  ".svelte-kit/output/server/chunks/TableDropdown-b1ce7615.js"() {
     init_shims();
-    init_app_5b681aca();
-    noop = function noop2() {
-    };
-    _WINDOW = {};
-    _DOCUMENT = {};
-    _MUTATION_OBSERVER = null;
-    _PERFORMANCE = {
-      mark: noop,
-      measure: noop
-    };
-    try {
-      if (typeof window !== "undefined")
-        _WINDOW = window;
-      if (typeof document !== "undefined")
-        _DOCUMENT = document;
-      if (typeof MutationObserver !== "undefined")
-        _MUTATION_OBSERVER = MutationObserver;
-      if (typeof performance !== "undefined")
-        _PERFORMANCE = performance;
-    } catch (e) {
-    }
-    _ref = _WINDOW.navigator || {};
-    _ref$userAgent = _ref.userAgent;
-    userAgent = _ref$userAgent === void 0 ? "" : _ref$userAgent;
-    WINDOW = _WINDOW;
-    DOCUMENT = _DOCUMENT;
-    PERFORMANCE = _PERFORMANCE;
-    !!WINDOW.document;
-    IS_DOM = !!DOCUMENT.documentElement && !!DOCUMENT.head && typeof DOCUMENT.addEventListener === "function" && typeof DOCUMENT.createElement === "function";
-    ~userAgent.indexOf("MSIE") || ~userAgent.indexOf("Trident/");
-    NAMESPACE_IDENTIFIER = "___FONT_AWESOME___";
-    DEFAULT_FAMILY_PREFIX = "fa";
-    DEFAULT_REPLACEMENT_CLASS = "svg-inline--fa";
-    (function() {
-      try {
-        return true;
-      } catch (e) {
-        return false;
-      }
-    })();
-    initial = WINDOW.FontAwesomeConfig || {};
-    if (DOCUMENT && typeof DOCUMENT.querySelector === "function") {
-      attrs = [["data-family-prefix", "familyPrefix"], ["data-replacement-class", "replacementClass"], ["data-auto-replace-svg", "autoReplaceSvg"], ["data-auto-add-css", "autoAddCss"], ["data-auto-a11y", "autoA11y"], ["data-search-pseudo-elements", "searchPseudoElements"], ["data-observe-mutations", "observeMutations"], ["data-mutate-approach", "mutateApproach"], ["data-keep-original-source", "keepOriginalSource"], ["data-measure-performance", "measurePerformance"], ["data-show-missing-icons", "showMissingIcons"]];
-      attrs.forEach(function(_ref2) {
-        var _ref22 = _slicedToArray(_ref2, 2), attr2 = _ref22[0], key = _ref22[1];
-        var val = coerce(getAttrConfig(attr2));
-        if (val !== void 0 && val !== null) {
-          initial[key] = val;
-        }
-      });
-    }
-    _default = {
-      familyPrefix: DEFAULT_FAMILY_PREFIX,
-      replacementClass: DEFAULT_REPLACEMENT_CLASS,
-      autoReplaceSvg: true,
-      autoAddCss: true,
-      autoA11y: true,
-      searchPseudoElements: false,
-      observeMutations: true,
-      mutateApproach: "async",
-      keepOriginalSource: true,
-      measurePerformance: false,
-      showMissingIcons: true
-    };
-    _config = _objectSpread({}, _default, initial);
-    if (!_config.autoReplaceSvg)
-      _config.observeMutations = false;
-    config = _objectSpread({}, _config);
-    WINDOW.FontAwesomeConfig = config;
-    w2 = WINDOW || {};
-    if (!w2[NAMESPACE_IDENTIFIER])
-      w2[NAMESPACE_IDENTIFIER] = {};
-    if (!w2[NAMESPACE_IDENTIFIER].styles)
-      w2[NAMESPACE_IDENTIFIER].styles = {};
-    if (!w2[NAMESPACE_IDENTIFIER].hooks)
-      w2[NAMESPACE_IDENTIFIER].hooks = {};
-    if (!w2[NAMESPACE_IDENTIFIER].shims)
-      w2[NAMESPACE_IDENTIFIER].shims = [];
-    namespace = w2[NAMESPACE_IDENTIFIER];
-    functions = [];
-    listener = function listener2() {
-      DOCUMENT.removeEventListener("DOMContentLoaded", listener2);
-      loaded = 1;
-      functions.map(function(fn2) {
-        return fn2();
-      });
-    };
-    loaded = false;
-    if (IS_DOM) {
-      loaded = (DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(DOCUMENT.readyState);
-      if (!loaded)
-        DOCUMENT.addEventListener("DOMContentLoaded", listener);
-    }
-    typeof global !== "undefined" && typeof global.process !== "undefined" && typeof global.process.emit === "function";
-    noop$1 = function noop3() {
-    };
-    config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMANCE.measure ? PERFORMANCE : {
-      mark: noop$1,
-      measure: noop$1
-    };
-    bindInternal4 = function bindInternal42(func, thisContext) {
-      return function(a, b, c, d) {
-        return func.call(thisContext, a, b, c, d);
-      };
-    };
-    reduce = function fastReduceObject(subject, fn2, initialValue, thisContext) {
-      var keys = Object.keys(subject), length = keys.length, iterator = thisContext !== void 0 ? bindInternal4(fn2, thisContext) : fn2, i, key, result;
-      if (initialValue === void 0) {
-        i = 1;
-        result = subject[keys[0]];
-      } else {
-        i = 0;
-        result = initialValue;
-      }
-      for (; i < length; i++) {
-        key = keys[i];
-        result = iterator(result, subject[key], key, subject);
-      }
-      return result;
-    };
-    styles = namespace.styles;
-    shims = namespace.shims;
-    build = function build2() {
-      var lookup = function lookup2(reducer) {
-        return reduce(styles, function(o, style, prefix) {
-          o[prefix] = reduce(style, reducer, {});
-          return o;
-        }, {});
-      };
-      lookup(function(acc, icon, iconName) {
-        if (icon[3]) {
-          acc[icon[3]] = iconName;
-        }
-        return acc;
-      });
-      lookup(function(acc, icon, iconName) {
-        var ligatures = icon[2];
-        acc[iconName] = iconName;
-        ligatures.forEach(function(ligature) {
-          acc[ligature] = iconName;
-        });
-        return acc;
-      });
-      var hasRegular = "far" in styles;
-      reduce(shims, function(acc, shim) {
-        var oldName = shim[0];
-        var prefix = shim[1];
-        var iconName = shim[2];
-        if (prefix === "far" && !hasRegular) {
-          prefix = "fas";
-        }
-        acc[oldName] = {
-          prefix,
-          iconName
-        };
-        return acc;
-      }, {});
-    };
-    build();
-    namespace.styles;
-    MissingIcon.prototype = Object.create(Error.prototype);
-    MissingIcon.prototype.constructor = MissingIcon;
-    FILL = {
-      fill: "currentColor"
-    };
-    ANIMATION_BASE = {
-      attributeType: "XML",
-      repeatCount: "indefinite",
-      dur: "2s"
-    };
-    ({
-      tag: "path",
-      attributes: _objectSpread({}, FILL, {
-        d: "M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"
-      })
-    });
-    OPACITY_ANIMATE = _objectSpread({}, ANIMATION_BASE, {
-      attributeName: "opacity"
-    });
-    ({
-      tag: "circle",
-      attributes: _objectSpread({}, FILL, {
-        cx: "256",
-        cy: "364",
-        r: "28"
-      }),
-      children: [{
-        tag: "animate",
-        attributes: _objectSpread({}, ANIMATION_BASE, {
-          attributeName: "r",
-          values: "28;14;28;28;14;28;"
-        })
-      }, {
-        tag: "animate",
-        attributes: _objectSpread({}, OPACITY_ANIMATE, {
-          values: "1;0;1;1;0;1;"
-        })
-      }]
-    });
-    ({
-      tag: "path",
-      attributes: _objectSpread({}, FILL, {
-        opacity: "1",
-        d: "M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"
-      }),
-      children: [{
-        tag: "animate",
-        attributes: _objectSpread({}, OPACITY_ANIMATE, {
-          values: "1;0;0;0;0;1;"
-        })
-      }]
-    });
-    ({
-      tag: "path",
-      attributes: _objectSpread({}, FILL, {
-        opacity: "0",
-        d: "M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"
-      }),
-      children: [{
-        tag: "animate",
-        attributes: _objectSpread({}, OPACITY_ANIMATE, {
-          values: "0;0;1;1;0;0;"
-        })
-      }]
-    });
-    namespace.styles;
-    namespace.styles;
-    Library = /* @__PURE__ */ function() {
-      function Library2() {
-        _classCallCheck(this, Library2);
-        this.definitions = {};
-      }
-      _createClass(Library2, [{
-        key: "add",
-        value: function add() {
-          var _this = this;
-          for (var _len = arguments.length, definitions = new Array(_len), _key = 0; _key < _len; _key++) {
-            definitions[_key] = arguments[_key];
-          }
-          var additions = definitions.reduce(this._pullDefinitions, {});
-          Object.keys(additions).forEach(function(key) {
-            _this.definitions[key] = _objectSpread({}, _this.definitions[key] || {}, additions[key]);
-            defineIcons(key, additions[key]);
-            build();
-          });
-        }
-      }, {
-        key: "reset",
-        value: function reset() {
-          this.definitions = {};
-        }
-      }, {
-        key: "_pullDefinitions",
-        value: function _pullDefinitions(additions, definition) {
-          var normalized = definition.prefix && definition.iconName && definition.icon ? {
-            0: definition
-          } : definition;
-          Object.keys(normalized).map(function(key) {
-            var _normalized$key = normalized[key], prefix = _normalized$key.prefix, iconName = _normalized$key.iconName, icon = _normalized$key.icon;
-            if (!additions[prefix])
-              additions[prefix] = {};
-            additions[prefix][iconName] = icon;
-          });
-          return additions;
-        }
-      }]);
-      return Library2;
-    }();
-    new Library();
+    init_app_30b30915();
     TableDropdown = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let btnDropdownRef;
       let popoverDropdownRef;
@@ -12903,26 +12633,203 @@ var init_TableDropdown_be88ab73 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-b1b34b97.js
-var index_b1b34b97_exports = {};
-__export(index_b1b34b97_exports, {
+// .svelte-kit/output/server/chunks/DarkPaginationNav-579560e7.js
+function paginate({ items, pageSize: pageSize3, currentPage }) {
+  return items.slice((currentPage - 1) * pageSize3, (currentPage - 1) * pageSize3 + pageSize3);
+}
+function generateNavigationOptions({ totalItems, pageSize: pageSize3, currentPage, limit = null, showStepOptions = false }) {
+  const totalPages = Math.ceil(totalItems / pageSize3);
+  const limitThreshold = getLimitThreshold({ limit });
+  const limited = limit && totalPages > limitThreshold;
+  let options2 = limited ? generateLimitedOptions({ totalPages, limit, currentPage }) : generateUnlimitedOptions({ totalPages });
+  return showStepOptions ? addStepOptions({ options: options2, currentPage, totalPages }) : options2;
+}
+function generateUnlimitedOptions({ totalPages }) {
+  return new Array(totalPages).fill(null).map((value, index2) => ({
+    type: "number",
+    value: index2 + 1
+  }));
+}
+function generateLimitedOptions({ totalPages, limit, currentPage }) {
+  const boundarySize = limit * 2 + 2;
+  const firstBoundary = 1 + boundarySize;
+  const lastBoundary = totalPages - boundarySize;
+  const totalShownPages = firstBoundary + 2;
+  if (currentPage <= firstBoundary - limit) {
+    return Array(totalShownPages).fill(null).map((value, index2) => {
+      if (index2 === totalShownPages - 1) {
+        return {
+          type: "number",
+          value: totalPages
+        };
+      } else if (index2 === totalShownPages - 2) {
+        return {
+          type: "symbol",
+          symbol: ELLIPSIS,
+          value: firstBoundary + 1
+        };
+      }
+      return {
+        type: "number",
+        value: index2 + 1
+      };
+    });
+  } else if (currentPage >= lastBoundary + limit) {
+    return Array(totalShownPages).fill(null).map((value, index2) => {
+      if (index2 === 0) {
+        return {
+          type: "number",
+          value: 1
+        };
+      } else if (index2 === 1) {
+        return {
+          type: "symbol",
+          symbol: ELLIPSIS,
+          value: lastBoundary - 1
+        };
+      }
+      return {
+        type: "number",
+        value: lastBoundary + index2 - 2
+      };
+    });
+  } else if (currentPage >= firstBoundary - limit && currentPage <= lastBoundary + limit) {
+    return Array(totalShownPages).fill(null).map((value, index2) => {
+      if (index2 === 0) {
+        return {
+          type: "number",
+          value: 1
+        };
+      } else if (index2 === 1) {
+        return {
+          type: "symbol",
+          symbol: ELLIPSIS,
+          value: currentPage - limit + (index2 - 2)
+        };
+      } else if (index2 === totalShownPages - 1) {
+        return {
+          type: "number",
+          value: totalPages
+        };
+      } else if (index2 === totalShownPages - 2) {
+        return {
+          type: "symbol",
+          symbol: ELLIPSIS,
+          value: currentPage + limit + 1
+        };
+      }
+      return {
+        type: "number",
+        value: currentPage - limit + (index2 - 2)
+      };
+    });
+  }
+}
+function addStepOptions({ options: options2, currentPage, totalPages }) {
+  return [
+    {
+      type: "symbol",
+      symbol: PREVIOUS_PAGE,
+      value: currentPage <= 1 ? 1 : currentPage - 1
+    },
+    ...options2,
+    {
+      type: "symbol",
+      symbol: NEXT_PAGE,
+      value: currentPage >= totalPages ? totalPages : currentPage + 1
+    }
+  ];
+}
+function getLimitThreshold({ limit }) {
+  const maximumUnlimitedPages = 3;
+  const numberOfBoundaryPages = 2;
+  return limit * 2 + maximumUnlimitedPages + numberOfBoundaryPages;
+}
+var PREVIOUS_PAGE, NEXT_PAGE, ELLIPSIS, PaginationNav, css2, DarkPaginationNav;
+var init_DarkPaginationNav_579560e7 = __esm({
+  ".svelte-kit/output/server/chunks/DarkPaginationNav-579560e7.js"() {
+    init_shims();
+    init_app_30b30915();
+    PREVIOUS_PAGE = "PREVIOUS_PAGE";
+    NEXT_PAGE = "NEXT_PAGE";
+    ELLIPSIS = "ELLIPSIS";
+    PaginationNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let options2;
+      let totalPages;
+      createEventDispatcher();
+      let { totalItems = 0 } = $$props;
+      let { pageSize: pageSize3 = 1 } = $$props;
+      let { currentPage = 1 } = $$props;
+      let { limit = null } = $$props;
+      let { showStepOptions = false } = $$props;
+      if ($$props.totalItems === void 0 && $$bindings.totalItems && totalItems !== void 0)
+        $$bindings.totalItems(totalItems);
+      if ($$props.pageSize === void 0 && $$bindings.pageSize && pageSize3 !== void 0)
+        $$bindings.pageSize(pageSize3);
+      if ($$props.currentPage === void 0 && $$bindings.currentPage && currentPage !== void 0)
+        $$bindings.currentPage(currentPage);
+      if ($$props.limit === void 0 && $$bindings.limit && limit !== void 0)
+        $$bindings.limit(limit);
+      if ($$props.showStepOptions === void 0 && $$bindings.showStepOptions && showStepOptions !== void 0)
+        $$bindings.showStepOptions(showStepOptions);
+      options2 = generateNavigationOptions({
+        totalItems,
+        pageSize: pageSize3,
+        currentPage,
+        limit,
+        showStepOptions
+      });
+      totalPages = Math.ceil(totalItems / pageSize3);
+      return `<div class="${"pagination-nav"}">${each(options2, (option) => `<span class="${[
+        "option",
+        (option.type === "number" ? "number" : "") + " " + (option.type === "symbol" && option.symbol === PREVIOUS_PAGE ? "prev" : "") + " " + (option.type === "symbol" && option.symbol === NEXT_PAGE ? "next" : "") + " " + (option.type === "symbol" && option.symbol === NEXT_PAGE && currentPage >= totalPages || option.type === "symbol" && option.symbol === PREVIOUS_PAGE && currentPage <= 1 ? "disabled" : "") + " " + (option.type === "symbol" && option.symbol === ELLIPSIS ? "ellipsis" : "") + " " + (option.type === "number" && option.value === currentPage ? "active" : "")
+      ].join(" ").trim()}">${option.type === "number" ? `${slots.number ? slots.number({ value: option.value }) : `
+          <span>${escape(option.value)}</span>
+        `}` : `${option.type === "symbol" && option.symbol === ELLIPSIS ? `${slots.ellipsis ? slots.ellipsis({}) : `
+          <span>...</span>
+        `}` : `${option.type === "symbol" && option.symbol === PREVIOUS_PAGE ? `${slots.prev ? slots.prev({}) : `
+          <svg style="${"width:24px;height:24px"}" viewBox="${"0 0 24 24"}"><path fill="${"#000000"}" d="${"M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"}"></path></svg>
+        `}` : `${option.type === "symbol" && option.symbol === NEXT_PAGE ? `${slots.next ? slots.next({}) : `
+          <svg style="${"width:24px;height:24px"}" viewBox="${"0 0 24 24"}"><path fill="${"#000000"}" d="${"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"}"></path></svg>
+        `}` : ``}`}`}`}
+    </span>`)}</div>`;
+    });
+    css2 = {
+      code: ".dark-pagination-nav.svelte-1ke8gxx .pagination-nav{background:#031017;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.3);display:flex;justify-content:center}.dark-pagination-nav.svelte-1ke8gxx .option{align-items:center;color:#cfedfc;display:flex;justify-content:center;padding:10px;transition:all .2s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.dark-pagination-nav.svelte-1ke8gxx .option svg path{fill:#cfedfc}.dark-pagination-nav.svelte-1ke8gxx .option:first-child{border-radius:3px 0 0 3px}.dark-pagination-nav.svelte-1ke8gxx .option:last-child{border-radius:0 3px 3px 0}.dark-pagination-nav.svelte-1ke8gxx .option.ellipsis,.dark-pagination-nav.svelte-1ke8gxx .option.number{padding:10px 15px}.dark-pagination-nav.svelte-1ke8gxx .option:hover{background:#000;cursor:pointer}.dark-pagination-nav.svelte-1ke8gxx .option.active{color:#0af}",
+      map: null
+    };
+    DarkPaginationNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css2);
+      return `<div class="${"dark-pagination-nav svelte-1ke8gxx"}">${validate_component(PaginationNav, "PaginationNav").$$render($$result, Object.assign($$props), {}, {})}
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-84ff0310.js
+var index_84ff0310_exports = {};
+__export(index_84ff0310_exports, {
   default: () => Users
 });
-var Users;
-var init_index_b1b34b97 = __esm({
-  ".svelte-kit/output/server/chunks/index-b1b34b97.js"() {
+var pageSize, Users;
+var init_index_84ff0310 = __esm({
+  ".svelte-kit/output/server/chunks/index-84ff0310.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     init_firebase_f336866f();
-    init_TableDropdown_be88ab73();
+    init_TableDropdown_b1ce7615();
+    init_DarkPaginationNav_579560e7();
+    pageSize = 8;
     Users = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let people = [];
+      let paginatedItems;
       ba(Firestoredb, "users");
-      people = [];
+      let items = [];
+      let currentPage = 1;
       onDestroy(() => {
         console.log("onDestroy");
       });
-      return `<main class="${"h-screen"}"><div class="${"relative flex flex-col min-w-0 break-words bg-gray-800 text-white w-full mb-6 shadow-lg rounded"}"><div class="${"rounded-t mb-0 px-4 py-3 border-0"}"><div class="${"flex flex-wrap items-center"}"><div class="${"relative w-full px-4 max-w-full flex-grow flex-1"}"><h3 class="${"font-semibold text-base text-blueGray-700"}">User Table</h3></div>
+      paginatedItems = paginate({ items, pageSize, currentPage });
+      return `<main class="${"h-screen p-10"}"><div class="${"relative flex flex-col min-w-0 break-words bg-gray-800 text-white w-full mb-6 shadow-lg rounded"}"><div class="${"rounded-t mb-0 px-4 py-3 border-0"}"><div class="${"flex flex-wrap items-center"}"><div class="${"relative w-full px-4 max-w-full flex-grow flex-1"}"><h3 class="${"font-semibold text-base text-blueGray-700"}">User Table</h3></div>
 				<div class="${"relative w-full px-4 max-w-full flex-grow flex-1 text-right"}"><button class="${"bg-yellow-600 text-white active:bg-green-600 text-xs font-bold uppercase px-5 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"}" type="${"button"}">Add User
 					</button></div></div></div>
 		<div class="${"block w-full overflow-x-auto bg-gray-800 max-h-96"}">
@@ -12933,32 +12840,40 @@ var init_index_b1b34b97 = __esm({
 						<th class="${"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"}">Gender
 						</th>
 						<th class="${"px-6 bg-blueGray-50 text-blueGray-500 border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold "}"></th></tr></thead>
-				${people.length > 0 ? `${each(people, (person) => `<tbody><tr><td class="${"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-center"}">${escape(person.name)}</td>
+				${paginatedItems.length > 0 ? `${each(paginatedItems, (person) => `<tbody><tr><td class="${"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-center"}">${escape(person.name)}</td>
 								<td class="${"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-center"}">${escape(person.email)}</td>
 								<td class="${"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xl whitespace-nowrap p-2 text-center"}">${escape(person.gender === "Male" ? "\u{1F468}" : "\u{1F467}")}</td>
 								<td class="${"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-left"}">${validate_component(TableDropdown, "TableDropdown").$$render($$result, { item: person }, {}, {})}
 								</td></tr>
 						</tbody>`)}` : ``}</table>
-			${people.length == 0 ? `<div class="${"emptyTable text-center p-4"}">No Users Available</div>` : ``}</div></div>
+			${validate_component(DarkPaginationNav, "DarkPaginationNav").$$render($$result, {
+        totalItems: items.length,
+        pageSize,
+        currentPage,
+        limit: 1,
+        showStepOptions: true
+      }, {}, {})}
+			${paginatedItems.length == 0 ? `<div class="${"emptyTable text-center p-4"}">No Users Available</div>` : ``}</div></div>
 </main>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/index-3f9148bc.js
-var index_3f9148bc_exports = {};
-__export(index_3f9148bc_exports, {
+// .svelte-kit/output/server/chunks/index-9b7b085a.js
+var index_9b7b085a_exports = {};
+__export(index_9b7b085a_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var prerender, Routes;
-var init_index_3f9148bc = __esm({
-  ".svelte-kit/output/server/chunks/index-3f9148bc.js"() {
+var init_index_9b7b085a = __esm({
+  ".svelte-kit/output/server/chunks/index-9b7b085a.js"() {
     init_shims();
-    init_app_5b681aca();
-    init_index_b1b34b97();
+    init_app_30b30915();
+    init_index_84ff0310();
     init_firebase_f336866f();
-    init_TableDropdown_be88ab73();
+    init_TableDropdown_b1ce7615();
+    init_DarkPaginationNav_579560e7();
     prerender = true;
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<body class="${"h-screen bg-gray-200"}"><section>${validate_component(Users, "ViewPerson").$$render($$result, {}, {}, {})}</section></body>`;
@@ -12966,10 +12881,10 @@ var init_index_3f9148bc = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Crasoul-4a4715e4.js
-var Crasoul_4a4715e4_exports = {};
-__export(Crasoul_4a4715e4_exports, {
-  default: () => Crasoul
+// .svelte-kit/output/server/chunks/Carousel-e4549425.js
+var Carousel_e4549425_exports = {};
+__export(Carousel_e4549425_exports, {
+  default: () => Carousel
 });
 function isObject$2(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
@@ -13143,9 +13058,9 @@ function transition$1(duration) {
   return this;
 }
 function on2(...args) {
-  let [eventType, targetSelector, listener3, capture] = args;
+  let [eventType, targetSelector, listener, capture] = args;
   if (typeof args[1] === "function") {
-    [eventType, listener3, capture] = args;
+    [eventType, listener, capture] = args;
     targetSelector = void 0;
   }
   if (!capture)
@@ -13159,12 +13074,12 @@ function on2(...args) {
       eventData.unshift(e);
     }
     if ($2(target).is(targetSelector))
-      listener3.apply(target, eventData);
+      listener.apply(target, eventData);
     else {
       const parents2 = $2(target).parents();
       for (let k2 = 0; k2 < parents2.length; k2 += 1) {
         if ($2(parents2[k2]).is(targetSelector))
-          listener3.apply(parents2[k2], eventData);
+          listener.apply(parents2[k2], eventData);
       }
     }
   }
@@ -13173,7 +13088,7 @@ function on2(...args) {
     if (eventData.indexOf(e) < 0) {
       eventData.unshift(e);
     }
-    listener3.apply(this, eventData);
+    listener.apply(this, eventData);
   }
   const events2 = eventType.split(" ");
   let j2;
@@ -13187,7 +13102,7 @@ function on2(...args) {
         if (!el.dom7Listeners[event])
           el.dom7Listeners[event] = [];
         el.dom7Listeners[event].push({
-          listener: listener3,
+          listener,
           proxyListener: handleEvent
         });
         el.addEventListener(event, handleEvent, capture);
@@ -13200,7 +13115,7 @@ function on2(...args) {
         if (!el.dom7LiveListeners[event])
           el.dom7LiveListeners[event] = [];
         el.dom7LiveListeners[event].push({
-          listener: listener3,
+          listener,
           proxyListener: handleLiveEvent
         });
         el.addEventListener(event, handleLiveEvent, capture);
@@ -13210,9 +13125,9 @@ function on2(...args) {
   return this;
 }
 function off(...args) {
-  let [eventType, targetSelector, listener3, capture] = args;
+  let [eventType, targetSelector, listener, capture] = args;
   if (typeof args[1] === "function") {
-    [eventType, listener3, capture] = args;
+    [eventType, listener, capture] = args;
     targetSelector = void 0;
   }
   if (!capture)
@@ -13231,13 +13146,13 @@ function off(...args) {
       if (handlers && handlers.length) {
         for (let k2 = handlers.length - 1; k2 >= 0; k2 -= 1) {
           const handler2 = handlers[k2];
-          if (listener3 && handler2.listener === listener3) {
+          if (listener && handler2.listener === listener) {
             el.removeEventListener(event, handler2.proxyListener, capture);
             handlers.splice(k2, 1);
-          } else if (listener3 && handler2.listener && handler2.listener.dom7proxy && handler2.listener.dom7proxy === listener3) {
+          } else if (listener && handler2.listener && handler2.listener.dom7proxy && handler2.listener.dom7proxy === listener) {
             el.removeEventListener(event, handler2.proxyListener, capture);
             handlers.splice(k2, 1);
-          } else if (!listener3) {
+          } else if (!listener) {
             el.removeEventListener(event, handler2.proxyListener, capture);
             handlers.splice(k2, 1);
           }
@@ -13286,8 +13201,8 @@ function transitionEnd$1(callback) {
 function outerWidth(includeMargins) {
   if (this.length > 0) {
     if (includeMargins) {
-      const styles22 = this.styles();
-      return this[0].offsetWidth + parseFloat(styles22.getPropertyValue("margin-right")) + parseFloat(styles22.getPropertyValue("margin-left"));
+      const styles2 = this.styles();
+      return this[0].offsetWidth + parseFloat(styles2.getPropertyValue("margin-right")) + parseFloat(styles2.getPropertyValue("margin-left"));
     }
     return this[0].offsetWidth;
   }
@@ -13296,8 +13211,8 @@ function outerWidth(includeMargins) {
 function outerHeight(includeMargins) {
   if (this.length > 0) {
     if (includeMargins) {
-      const styles22 = this.styles();
-      return this[0].offsetHeight + parseFloat(styles22.getPropertyValue("margin-top")) + parseFloat(styles22.getPropertyValue("margin-bottom"));
+      const styles2 = this.styles();
+      return this[0].offsetHeight + parseFloat(styles2.getPropertyValue("margin-top")) + parseFloat(styles2.getPropertyValue("margin-bottom"));
     }
     return this[0].offsetHeight;
   }
@@ -13321,13 +13236,13 @@ function offset() {
   }
   return null;
 }
-function styles2() {
+function styles() {
   const window2 = getWindow();
   if (this[0])
     return window2.getComputedStyle(this[0], null);
   return {};
 }
-function css2(props, value) {
+function css3(props, value) {
   const window2 = getWindow();
   let i;
   if (arguments.length === 1) {
@@ -13810,12 +13725,12 @@ function getSupport() {
   return support;
 }
 function calcDevice({
-  userAgent: userAgent2
+  userAgent
 } = {}) {
   const support2 = getSupport();
   const window2 = getWindow();
   const platform = window2.navigator.platform;
-  const ua2 = userAgent2 || window2.navigator.userAgent;
+  const ua2 = userAgent || window2.navigator.userAgent;
   const device = {
     ios: false,
     android: false
@@ -13863,10 +13778,10 @@ function calcBrowser() {
   };
 }
 function getBrowser() {
-  if (!browser2) {
-    browser2 = calcBrowser();
+  if (!browser3) {
+    browser3 = calcBrowser();
   }
-  return browser2;
+  return browser3;
 }
 function Resize({
   swiper,
@@ -14776,7 +14691,7 @@ function transitionEnd(runCallbacks = true, direction) {
     step: "End"
   });
 }
-function slideTo(index2 = 0, speed = this.params.speed, runCallbacks = true, internal, initial2) {
+function slideTo(index2 = 0, speed = this.params.speed, runCallbacks = true, internal, initial) {
   if (typeof index2 !== "number" && typeof index2 !== "string") {
     throw new Error(`The 'index' argument cannot have type other than 'number' or 'string'. [${typeof index2}] given.`);
   }
@@ -14802,7 +14717,7 @@ function slideTo(index2 = 0, speed = this.params.speed, runCallbacks = true, int
     wrapperEl,
     enabled
   } = swiper;
-  if (swiper.animating && params.preventInteractionOnTransition || !enabled && !internal && !initial2) {
+  if (swiper.animating && params.preventInteractionOnTransition || !enabled && !internal && !initial) {
     return false;
   }
   const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
@@ -16773,11 +16688,11 @@ function getParams(obj = {}) {
 function initSwiper(swiperParams) {
   return new Swiper$1(swiperParams);
 }
-var ssrDocument, ssrWindow, Dom7, Methods, support, deviceCached, browser2, eventsEmitter, update, translate, transition, slide, loop, grabCursor, dummyEventAttached, events, events$1, isGridEnabled, breakpoints, classes, images, checkOverflow$1, defaults, prototypes, extendedDefaults, Swiper$1, paramsList, Swiper, Swiper_slide, Crasoul;
-var init_Crasoul_4a4715e4 = __esm({
-  ".svelte-kit/output/server/chunks/Crasoul-4a4715e4.js"() {
+var ssrDocument, ssrWindow, Dom7, Methods, support, deviceCached, browser3, eventsEmitter, update, translate, transition, slide, loop, grabCursor, dummyEventAttached, events, events$1, isGridEnabled, breakpoints, classes, images, checkOverflow$1, defaults, prototypes, extendedDefaults, Swiper$1, paramsList, Swiper, Swiper_slide, banner1, banner2, Carousel;
+var init_Carousel_e4549425 = __esm({
+  ".svelte-kit/output/server/chunks/Carousel-e4549425.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     ssrDocument = {
       body: {},
       addEventListener() {
@@ -16920,9 +16835,9 @@ var init_Crasoul_4a4715e4 = __esm({
       transitionEnd: transitionEnd$1,
       outerWidth,
       outerHeight,
-      styles: styles2,
+      styles,
       offset,
-      css: css2,
+      css: css3,
       each: each2,
       html,
       text,
@@ -17958,7 +17873,9 @@ var init_Crasoul_4a4715e4 = __esm({
         escape_object($$restProps)
       ])}${add_attribute("this", slideEl, 0)}>${zoom ? `<div class="${"swiper-zoom-container"}"${add_attribute("data-swiper-zoom", typeof zoom === "number" ? zoom : void 0, 0)}>${slots.default ? slots.default({ data: slideData }) : ``}</div>` : `${slots.default ? slots.default({ data: slideData }) : ``}`}</div>`;
     });
-    Crasoul = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    banner1 = "/_app/assets/banner1-04f6119c.jpeg";
+    banner2 = "/_app/assets/banner2-2a1cc322.jpeg";
+    Carousel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       Swiper$1.use([Autoplay, Pagination, Navigation]);
       return `${validate_component(Swiper, "Swiper").$$render($$result, {
         spaceBetween: 30,
@@ -17969,47 +17886,47 @@ var init_Crasoul_4a4715e4 = __esm({
         class: "mySwiper rounded-lg shadow-sm m-8  md:h-auto"
       }, {}, {
         default: () => `${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
-          default: () => `<img src="${"https://www.beautymentor.in/admin/uploads/sliders/818078banner-5334x1972.jpg"}" alt="${""}" class="${"image-full"}">`
+          default: () => `<img${add_attribute("src", banner1, 0)} alt="${""}" class="${"image-full"}">`
         })}${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
-          default: () => `<img src="${"https://marcado.in/images/ffff.jpg"}" alt="${""}">`
+          default: () => `<img${add_attribute("src", banner2, 0)} alt="${""}">`
         })}`
       })}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/header-b56f65d0.js
-var header_b56f65d0_exports = {};
-__export(header_b56f65d0_exports, {
+// .svelte-kit/output/server/chunks/Header-47810240.js
+var Header_47810240_exports = {};
+__export(Header_47810240_exports, {
   default: () => Header
 });
-var css3, Header;
-var init_header_b56f65d0 = __esm({
-  ".svelte-kit/output/server/chunks/header-b56f65d0.js"() {
+var css4, Header;
+var init_Header_47810240 = __esm({
+  ".svelte-kit/output/server/chunks/Header-47810240.js"() {
     init_shims();
-    init_app_5b681aca();
-    css3 = {
+    init_app_30b30915();
+    css4 = {
       code: "div.svelte-1eupku3{background-color:#f7f7f7;box-sizing:border-box;color:#fff;padding:10px;text-align:center}img.svelte-1eupku3{margin-top:20px;max-height:100px}",
       map: null
     };
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css3);
+      $$result.css.add(css4);
       return `<main><div class="${"svelte-1eupku3"}"><img src="${"svelte-welcome.png"}" alt="${"logo"}" class="${"svelte-1eupku3"}"></div>
 </main>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/Alert-8a64cb7a.js
-var Alert_8a64cb7a_exports = {};
-__export(Alert_8a64cb7a_exports, {
+// .svelte-kit/output/server/chunks/Alert-03e81913.js
+var Alert_03e81913_exports = {};
+__export(Alert_03e81913_exports, {
   default: () => Alert
 });
 var Alert;
-var init_Alert_8a64cb7a = __esm({
-  ".svelte-kit/output/server/chunks/Alert-8a64cb7a.js"() {
+var init_Alert_03e81913 = __esm({
+  ".svelte-kit/output/server/chunks/Alert-03e81913.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     Alert = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { message } = $$props;
       if ($$props.message === void 0 && $$bindings.message && message !== void 0)
@@ -18020,134 +17937,95 @@ var init_Alert_8a64cb7a = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-bf679aba.js
-function readable(value, start) {
-  return {
-    subscribe: writable(value, start).subscribe
-  };
-}
-function writable(value, start = noop4) {
-  let stop;
-  const subscribers = new Set();
-  function set2(new_value) {
-    if (safe_not_equal(value, new_value)) {
-      value = new_value;
-      if (stop) {
-        const run_queue = !subscriber_queue.length;
-        for (const subscriber of subscribers) {
-          subscriber[1]();
-          subscriber_queue.push(subscriber, value);
-        }
-        if (run_queue) {
-          for (let i = 0; i < subscriber_queue.length; i += 2) {
-            subscriber_queue[i][0](subscriber_queue[i + 1]);
-          }
-          subscriber_queue.length = 0;
-        }
-      }
-    }
-  }
-  function update4(fn2) {
-    set2(fn2(value));
-  }
-  function subscribe2(run2, invalidate = noop4) {
-    const subscriber = [run2, invalidate];
-    subscribers.add(subscriber);
-    if (subscribers.size === 1) {
-      stop = start(set2) || noop4;
-    }
-    run2(value);
-    return () => {
-      subscribers.delete(subscriber);
-      if (subscribers.size === 0) {
-        stop();
-        stop = null;
-      }
-    };
-  }
-  return { set: set2, update: update4, subscribe: subscribe2 };
-}
-function derived(stores, fn2, initial_value) {
-  const single = !Array.isArray(stores);
-  const stores_array = single ? [stores] : stores;
-  const auto = fn2.length < 2;
-  return readable(initial_value, (set2) => {
-    let inited = false;
-    const values = [];
-    let pending = 0;
-    let cleanup = noop4;
-    const sync = () => {
-      if (pending) {
-        return;
-      }
-      cleanup();
-      const result = fn2(single ? values[0] : values, set2);
-      if (auto) {
-        set2(result);
-      } else {
-        cleanup = is_function(result) ? result : noop4;
-      }
-    };
-    const unsubscribers = stores_array.map((store, i) => subscribe(store, (value) => {
-      values[i] = value;
-      pending &= ~(1 << i);
-      if (inited) {
-        sync();
-      }
-    }, () => {
-      pending |= 1 << i;
-    }));
-    inited = true;
-    sync();
-    return function stop() {
-      run_all(unsubscribers);
-      cleanup();
-    };
-  });
-}
-var subscriber_queue;
-var init_index_bf679aba = __esm({
-  ".svelte-kit/output/server/chunks/index-bf679aba.js"() {
+// .svelte-kit/output/server/chunks/DecrementButton-bcffb2c2.js
+var DecrementButton_bcffb2c2_exports = {};
+__export(DecrementButton_bcffb2c2_exports, {
+  default: () => DecrementButton
+});
+var DecrementButton;
+var init_DecrementButton_bcffb2c2 = __esm({
+  ".svelte-kit/output/server/chunks/DecrementButton-bcffb2c2.js"() {
     init_shims();
-    init_app_5b681aca();
-    subscriber_queue = [];
+    init_app_30b30915();
+    DecrementButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `<svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg>`;
+    });
   }
 });
 
-// .svelte-kit/output/server/chunks/cartstore-8603aee1.js
-var browser3, Cartstore;
-var init_cartstore_8603aee1 = __esm({
-  ".svelte-kit/output/server/chunks/cartstore-8603aee1.js"() {
+// .svelte-kit/output/server/chunks/IncrementButton-29b00830.js
+var IncrementButton_29b00830_exports = {};
+__export(IncrementButton_29b00830_exports, {
+  default: () => IncrementButton
+});
+var IncrementButton;
+var init_IncrementButton_29b00830 = __esm({
+  ".svelte-kit/output/server/chunks/IncrementButton-29b00830.js"() {
     init_shims();
-    init_index_bf679aba();
-    browser3 = false;
-    Cartstore = writable(JSON.parse(browser3) ?? []);
+    init_app_30b30915();
+    IncrementButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `<svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg>`;
+    });
   }
 });
 
-// .svelte-kit/output/server/chunks/index-2cb4927f.js
-var index_2cb4927f_exports = {};
-__export(index_2cb4927f_exports, {
+// .svelte-kit/output/server/chunks/ArrowBack-9810cec1.js
+var ArrowBack_9810cec1_exports = {};
+__export(ArrowBack_9810cec1_exports, {
+  default: () => ArrowBack
+});
+var ArrowBack;
+var init_ArrowBack_9810cec1 = __esm({
+  ".svelte-kit/output/server/chunks/ArrowBack-9810cec1.js"() {
+    init_shims();
+    init_app_30b30915();
+    ArrowBack = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `<svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6 mr-1 "}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M10 19l-7-7m0 0l7-7m-7 7h18"}"></path></svg>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/CartIcon-25cc83d1.js
+var CartIcon_25cc83d1_exports = {};
+__export(CartIcon_25cc83d1_exports, {
+  default: () => CartIcon
+});
+var CartIcon;
+var init_CartIcon_25cc83d1 = __esm({
+  ".svelte-kit/output/server/chunks/CartIcon-25cc83d1.js"() {
+    init_shims();
+    init_app_30b30915();
+    CartIcon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `<svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6 text-white "}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-d9325d69.js
+var index_d9325d69_exports = {};
+__export(index_d9325d69_exports, {
   default: () => Products,
   load: () => load2
 });
-var css4, load2, Products;
-var init_index_2cb4927f = __esm({
-  ".svelte-kit/output/server/chunks/index-2cb4927f.js"() {
+var css5, load2, Products;
+var init_index_d9325d69 = __esm({
+  ".svelte-kit/output/server/chunks/index-d9325d69.js"() {
     init_shims();
-    init_app_5b681aca();
-    init_cartstore_8603aee1();
-    init_Crasoul_4a4715e4();
-    init_index_bf679aba();
-    css4 = {
-      code: ".card.svelte-7yn1zy{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(229,231,235,var(--tw-border-opacity));border-radius:.75rem;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);height:15rem;margin:1.75rem;overflow:hidden;padding-top:1.25rem;text-align:center}@media(min-width:768px){.card.svelte-7yn1zy{margin:.5rem}}",
+    init_app_30b30915();
+    init_env_acc2042d();
+    init_cartStore_6a14a696();
+    init_Carousel_e4549425();
+    init_CartIcon_25cc83d1();
+    init_index_8245df5e();
+    css5 = {
+      code: ".card.svelte-1ca6683{--tw-border-opacity:1;--tw-bg-opacity:1;--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);background-color:rgba(255,255,255,var(--tw-bg-opacity));border-color:rgba(229,231,235,var(--tw-border-opacity));border-radius:.75rem;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);height:16rem;margin:.5rem;overflow:hidden;padding-top:1.25rem;text-align:center}@media(min-width:768px){.card.svelte-1ca6683{height:15rem}}",
       map: null
     };
     load2 = async ({ fetch: fetch2 }) => {
       try {
         const res = await fetch2("/api/product");
         const productList = await res.json();
-        let cartItems = JSON.parse(browser3 && localStorage.getItem("cartItems")) || [];
+        let cartItems = JSON.parse(browser2 && localStorage.getItem("cartItems")) || [];
         for (var i = 0; i < productList.length; i++) {
           let selectedItem = cartItems.find((product) => product.id === productList[i].id);
           if (selectedItem) {
@@ -18165,62 +18043,79 @@ var init_index_2cb4927f = __esm({
       let $Cartstore, $$unsubscribe_Cartstore;
       $$unsubscribe_Cartstore = subscribe(Cartstore, (value) => $Cartstore = value);
       let { productList } = $$props;
+      let tempProductList = productList;
+      let searchItem = "";
       if ($$props.productList === void 0 && $$bindings.productList && productList !== void 0)
         $$bindings.productList(productList);
-      $$result.css.add(css4);
-      productList = productList;
+      $$result.css.add(css5);
+      productList = tempProductList.filter((item) => item.name.toLowerCase().includes(searchItem.toLowerCase()));
+      {
+        console.log(productList);
+      }
       $$unsubscribe_Cartstore();
-      return `${validate_component(Crasoul, "Crasoul").$$render($$result, {}, {}, {})}
-<div class="${"relative"}"><a class="${"absolute right-0 " + escape($Cartstore.length == 0 ? "bg-gray-900" : "bg-green-900 animate-bounce") + " rounded-3xl p-2"}" href="${"/views/products/cart"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg></a>
-	<div class="${"text-center font-bold text-2xl pb-5 text-gray-900"}">Product List</div>
+      return `<div class="${"px-2 pt-1 md:px-8"}">${validate_component(Carousel, "Carousel").$$render($$result, {}, {}, {})}</div>
+<div class="${"px-2 md:px-8 py-4 "}"><div class="${"flex flex-col-reverse justify-center items-center md:justify-between pb-4 md:flex-row"}"><input class="${"text-black p-1 mt-2 md:mt-0 rounded-md focus:ring-1 ring-gray-900 w-48 border-gray-700 shadow-sm "}" placeholder="${"Search Products"}"${add_attribute("value", searchItem, 0)}>
+		<div class="${"text-center font-bold text-xl md:text-2xl text-gray-900"}">Product List</div>
 
-	<div class="${"md:grid md:grid-cols-4 lg:grid-cols-6"}">${each(productList, (item) => `<div class="${"card grid grid-rows-4 svelte-7yn1zy"}"><div class="${"row-span-2"}"><img src="${"https://ebazar247.s3-ap-southeast-1.amazonaws.com/" + escape(item.image)}" alt="${"stew"}" class="${"h-28 m-auto "}"></div>
+		<a class="${"right-0 " + escape($Cartstore.length == 0 ? "bg-gray-900" : "bg-green-900 animate-bounce") + " rounded-3xl p-2 right-14 invisible md:visible"}" href="${"/views/products/Cart"}">${validate_component(CartIcon, "CartIcon").$$render($$result, {}, {}, {})}</a></div>
+
+	<div class="${"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 "}">${each(productList, (item) => `<div class="${"card grid grid-rows-4 relative bg-black svelte-1ca6683"}"><div class="${"absolute bg-gray-700 top-4 px-2 rounded-r-3xl text-xs font-bold shadow-md drop-shadow-md text-white"}">$${escape(item.price)}</div>
+				<div class="${"row-span-2"}"><img src="${"https://ebazar247.s3-ap-southeast-1.amazonaws.com/" + escape(item.image)}" alt="${"stew"}" class="${"h-24 md:h-28 m-auto "}"></div>
 				<p class="${"block text-gray-500 text-xs p-4 row-span-1"}">${escape(item.name)} - ${escape(item.quantity)}
 					${escape(item.unit_name)}</p>
-				<button class="${"" + escape(item.count === 0 ? "bg-gray-900" : "bg-green-700") + " row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"}">${escape(item.count === 0 ? "Add To Cart" : "\u2713 Added To Cart")}</button>
+				<button class="${"" + escape(item.count === 0 ? "bg-gray-900" : "bg-green-700") + " text-white row-span-1 rounded-3xl h-7 text-xs w-28 m-auto hover:bg-green-700 shadow-2xl"}">${escape(item.count === 0 ? "Add To Cart" : "\u2713 Added To Cart")}</button>
 			</div>`)}</div>
 </div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/cart-74d052cf.js
-var cart_74d052cf_exports = {};
-__export(cart_74d052cf_exports, {
+// .svelte-kit/output/server/chunks/Cart-316f3014.js
+var Cart_316f3014_exports = {};
+__export(Cart_316f3014_exports, {
   default: () => Cart
 });
-var Cart;
-var init_cart_74d052cf = __esm({
-  ".svelte-kit/output/server/chunks/cart-74d052cf.js"() {
+var OrderHistoryStore, emptyCart, Cart;
+var init_Cart_316f3014 = __esm({
+  ".svelte-kit/output/server/chunks/Cart-316f3014.js"() {
     init_shims();
-    init_app_5b681aca();
-    init_cartstore_8603aee1();
-    init_index_bf679aba();
+    init_app_30b30915();
+    init_cartStore_6a14a696();
+    init_index_8245df5e();
+    init_env_acc2042d();
+    init_ArrowBack_9810cec1();
+    init_DecrementButton_bcffb2c2();
+    init_IncrementButton_29b00830();
+    init_firebase_f336866f();
+    OrderHistoryStore = writable(JSON.parse(browser2) || []);
+    emptyCart = "/_app/assets/empty-cart-48e4f55d.jpeg";
     Cart = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let totalAmount;
       let $Cartstore, $$unsubscribe_Cartstore;
+      let $$unsubscribe_OrderHistoryStore;
       $$unsubscribe_Cartstore = subscribe(Cartstore, (value) => $Cartstore = value);
-      totalAmount = parseInt(browser3);
+      $$unsubscribe_OrderHistoryStore = subscribe(OrderHistoryStore, (value) => value);
+      totalAmount = parseInt(0);
       $$unsubscribe_Cartstore();
-      return `<div class="${"overflow-auto text-gray-900 text-center flex flex-col "}">${$Cartstore.length > 0 ? `<a class="${"text-yellow-600 text-lg p-1 font-semibold hover:text-gray-700 cursor-pointer text-left"}" href="${"/views/products"}"><div class="${"flex justify-end"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-6 w-6 mr-1 "}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M10 19l-7-7m0 0l7-7m-7 7h18"}"></path></svg>Continue Shopping
-			</div></a>` : ``}
+      $$unsubscribe_OrderHistoryStore();
+      return `<div class="${"overflow-auto text-gray-900 text-center flex flex-col " + escape($Cartstore.length > 0 ? "p-1" : "p-10") + " md:p-10"}">${$Cartstore.length > 0 ? `<button class="${"text-yellow-600 text-lg p-1 font-semibold hover:text-gray-700 cursor-pointer text-left"}"><div class="${"flex justify-end"}">${validate_component(ArrowBack, "ArrowBack").$$render($$result, {}, {}, {})}Continue Shopping
+			</div></button>` : ``}
 	<div class="${"lg:grid lg:grid-cols-4 lg:h-screen"}">${$Cartstore.length > 0 ? `<div class="${"lg:col-span-3 bg-white p-3"}"><div class="${"flex justify-between p-4 border-b-2 border-gray-200"}"><div class="${"text-gray-800 text-lg font-bold"}">Shopping Cart</div>
-					<div class="${"text-gray-800 text-lg font-bold"}">${escape($Cartstore.length)} items</div></div>
-				<div class="${"grid grid-cols-6 p-4 "}"><div class="${"text-sm text-gray-900 font-bold text-left col-span-4"}">Product Details</div>
-					<div class="${"text-sm text-gray-900 font-bold text-center col-span-1 "}">Price</div>
-					<div class="${"text-sm text-gray-900 font-bold text-right col-span-1 "}">Action</div></div>
+					<div class="${"text-gray-800 text-lg font-bold"}">${escape($Cartstore.length)} items
+					</div></div>
+				<div class="${"grid grid-cols-6 p-4 "}"><div class="${"text-sm text-gray-900 font-bold text-left col-span-5"}">Product Details</div>
+					<div class="${"text-sm text-gray-900 font-bold text-center col-span-1 "}">Action</div></div>
 
-				${each($Cartstore, (item) => `<div class="${"grid grid-cols-6 p-4 lg:divide-x-2 lg:divide-gray-300 "}"><div class="${"text-sm text-gray-700 font-semibold text-left col-span-4"}">${escape(item.name)}
-							- ${escape(item.quantity + item.unit_name)}</div>
+				${each($Cartstore, (item) => `<div class="${"grid grid-cols-6 p-4 lg:divide-x-2 lg:divide-gray-300 "}"><div class="${"text-xs text-gray-700 font-semibold text-left col-span-5 flex flex-col items-start"}"><div>${escape(item.name)}
+								- ${escape(item.quantity + item.unit_name)}</div>
+							<div class="${"text-xs text-gray-700 font-semibold text-center "}">- $${escape(item.price)}
+							</div></div>
 
-						<div class="${"text-sm text-gray-700 font-semibold text-center col-span-1 "}">${escape(item.price)}</div>
-						
-						
-						<div class="${"flex justify-end col-span-1"}"><button class="${"cursor-pointer"}"><svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg></button>
+						<div class="${"flex justify-end col-span-1 "}"><button class="${"cursor-pointer"}">${validate_component(DecrementButton, "DecrementButton").$$render($$result, {}, {}, {})}</button>
 
-							<input class="${"mx-2 border text-center w-8"}" type="${"text"}"${add_attribute("value", item.count, 0)} disabled>
+							<input class="${"mx-2 border text-center w-6 text-sm rounded-md bg-gray-50"}" type="${"text"}"${add_attribute("value", item.count, 0)} disabled>
 
-							<button class="${"cursor-pointer"}"><svg class="${"fill-current text-gray-600 w-3"}" viewBox="${"0 0 448 512"}"><path d="${"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"}"></path></svg>
+							<button class="${"cursor-pointer"}">${validate_component(IncrementButton, "IncrementButton").$$render($$result, {}, {}, {})}
 							</button></div>
 					</div>`)}</div>
 
@@ -18234,20 +18129,141 @@ var init_cart_74d052cf = __esm({
 					<div class="${"flex justify-between mt-1"}"><div class="${"text-white text-sm font-semibold"}">Total</div>
 						<div class="${"text-white text-sm font-semibold"}">$${escape(totalAmount + 40)}</div></div>
 
-					<button class="${"bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl ho:bg-green-900 cursor-pointer"}">CHECK OUT</button></div></div>` : `<div class="${"m-auto col-span-5 h-screen lg:h-auto"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-28 w-28 m-auto"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"}"></path></svg>
-				<div class="${"text-3xl font-extrabold mt-4"}"><span class="${"bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-900 animate-pulse"}">Your Cart is Empty
-					</span></div>
-				<div class="${"font-bold text-lg p-4"}">Add something to make me happy :)</div>
-				<button class="${"bg-yellow-600 px-14 text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl hover:bg-green-900 cursor-pointer"}">Continue Shopping
-				</button></div>`}</div>
+					<button class="${"bg-yellow-600 w-3/5 md:w-2/5 lg:w-full text-white mt-6 text-sm font-semibold p-1 rounded shadow-xl ho:bg-green-900 cursor-pointer"}">CHECK OUT</button></div></div>` : `<div class="${"m-auto col-span-5 bg-white pb-28 md:pb-8 rounded-3xl w-full "}"><img${add_attribute("src", emptyCart, 0)} alt="${""}" class="${"rounded-xl"}">
+				<div class="${"font-bold text-sm pt-4 text-gray-600 "}">You have no items in your shopping cart.
+				</div>
+				<div class="${"font-bold text-sm text-gray-600"}">Let&#39;s go by something.</div>
+				<button class="${"bg-yellow-600 px-14 text-white mt-6 text-sm font-semibold p-1 rounded-2xl shadow-xl hover:bg-green-900 cursor-pointer"}">Continue Shopping
+				</button></div>`}</div></div>
+
+<div id="${"my-modal"}" class="${"modal "}"><div class="${"modal-box bg-gray-100 flex flex-col justify-center items-center"}"><img src="${"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU_CuTVFbqZyLmtynDk55v3FQhcuHjeM0HYwO0JVdLXGe1NymP7YQ58tCDds3DSFJYok&usqp=CAU"}" alt="${""}" class="${"w-24 pb-4"}">
+		<p class="${"text-green-700 pb-2 font-bold text-xl"}">Order Successfully placed</p>
+		<p class="${"text-gray-700 "}">Estimated Delivery time : Approximately 1 to 24 hours</p>
+		<div class="${"modal-action "}"><button class="${"btn btn-primary bg-gray-900 hover:bg-yellow-500"}">Buy More</button></div></div>
 </div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/Adduser-eefd4d05.js
-var Adduser_eefd4d05_exports = {};
-__export(Adduser_eefd4d05_exports, {
+// .svelte-kit/output/server/chunks/orderstore-48c5788c.js
+var OrderItemStore;
+var init_orderstore_48c5788c = __esm({
+  ".svelte-kit/output/server/chunks/orderstore-48c5788c.js"() {
+    init_shims();
+    init_index_8245df5e();
+    init_env_acc2042d();
+    OrderItemStore = writable(JSON.parse(browser2) || []);
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-bff2a861.js
+var index_bff2a861_exports = {};
+__export(index_bff2a861_exports, {
+  default: () => Orders
+});
+var emptyOrder, pageSize2, Orders;
+var init_index_bff2a861 = __esm({
+  ".svelte-kit/output/server/chunks/index-bff2a861.js"() {
+    init_shims();
+    init_app_30b30915();
+    init_firebase_f336866f();
+    init_orderstore_48c5788c();
+    init_DarkPaginationNav_579560e7();
+    init_index_8245df5e();
+    init_env_acc2042d();
+    emptyOrder = "/_app/assets/empty-order-08960d38.png";
+    pageSize2 = 6;
+    Orders = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let paginatedItems;
+      let $$unsubscribe_OrderItemStore;
+      $$unsubscribe_OrderItemStore = subscribe(OrderItemStore, (value) => value);
+      ba(Firestoredb, "orders");
+      let OrderHistoryStore2 = [];
+      let items = [];
+      let currentPage = 1;
+      onDestroy(() => {
+      });
+      paginatedItems = paginate({ items, pageSize: pageSize2, currentPage });
+      $$unsubscribe_OrderItemStore();
+      return `<div class="${"text-gray-900 text-center flex flex-col p-10 md:px-20 md:w-3/4 m-auto"}"><div class="${"md:text-2xl text-gray-900 font-bold text-center p-2"}">Order History</div>
+
+	<div class="${"lg:h-screen overflow-y-auto "}">${OrderHistoryStore2.length > 0 ? `<div class="${"p-3 h-screen rounded-xl"}">${each(paginatedItems, (item) => `<div class="${"flex justify-between p-4 m-2 bg-white rounded-lg shadow-sm cursor-pointer"}"><div class="${"text-sm text-gray-700 font-bold text-left "}"><div>OrderId# ${escape(item.id)}</div>
+							<div class="${"text-lg text-yellow-500 font-bold text-left mt-0.5"}">$${escape(item.total + item.delivery_charge)}
+							</div></div>
+						<div class="${"text-gray-700 font-bold text-sm text-left "}"><div>${escape(item.date)}</div>
+							<div class="${"text-xs text-white font-bold " + escape(item.order_status === "pending" ? "bg-red-500" : "bg-green-700") + " text-center rounded-lg px-1 py-0.5 mt-2"}">${escape(item.order_status)}
+							</div></div>
+					</div>`)}
+				${validate_component(DarkPaginationNav, "DarkPaginationNav").$$render($$result, {
+        totalItems: items.length,
+        pageSize: pageSize2,
+        currentPage,
+        limit: 1,
+        showStepOptions: true
+      }, {}, {})}</div>` : `<div class="${"m-auto bg-white pb-28 md:pb-8 rounded-3xl w-full "}"><img${add_attribute("src", emptyOrder, 0)} alt="${""}" class="${"h-64 md:w-80 m-auto mt-6 pt-6 "}">
+				<div class="${"font-bold text-sm pt-4 text-gray-600 "}">You have not place any orders</div>
+				<div class="${"font-bold text-sm text-gray-600"}">Let&#39;s go by something.</div>
+				<button class="${"bg-yellow-600 px-14 text-white mt-6 text-sm font-semibold p-1 rounded-2xl shadow-xl hover:bg-green-900 cursor-pointer"}">Order Now
+				</button></div>`}</div></div>
+
+<div id="${"my-modal"}" class="${"modal "}"><div class="${"modal-box bg-gray-100 flex flex-col justify-center items-center"}"><img src="${"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU_CuTVFbqZyLmtynDk55v3FQhcuHjeM0HYwO0JVdLXGe1NymP7YQ58tCDds3DSFJYok&usqp=CAU"}" alt="${""}" class="${"w-24 pb-4"}">
+		<p class="${"text-green-700 pb-2 font-bold text-xl"}">Order Successfully placed</p>
+		<p class="${"text-gray-700 "}">Estimated Delivery time : Approximately 1 to 24 hours</p>
+		<div class="${"modal-action "}"><button class="${"btn btn-primary bg-gray-900 hover:bg-yellow-500"}">Buy More</button></div></div>
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/OrderHistory-6cff0d23.js
+var OrderHistory_6cff0d23_exports = {};
+__export(OrderHistory_6cff0d23_exports, {
+  default: () => OrderHistory
+});
+var OrderHistory;
+var init_OrderHistory_6cff0d23 = __esm({
+  ".svelte-kit/output/server/chunks/OrderHistory-6cff0d23.js"() {
+    init_shims();
+    init_app_30b30915();
+    init_orderstore_48c5788c();
+    init_index_8245df5e();
+    init_env_acc2042d();
+    OrderHistory = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $OrderItemStore, $$unsubscribe_OrderItemStore;
+      $$unsubscribe_OrderItemStore = subscribe(OrderItemStore, (value) => $OrderItemStore = value);
+      $$unsubscribe_OrderItemStore();
+      return `<div class="${"overflow-y-auto text-gray-900 text-center flex flex-col " + escape($OrderItemStore.products.length > 0 ? "p-1" : "p-10") + " md:p-10"}">${$OrderItemStore.products.length > 0 ? `<button class="${"text-yellow-600 text-lg p-1 font-semibold hover:text-gray-700 cursor-pointer text-left"}"><div class="${"flex justify-end"}">Back</div></button>` : ``}
+	<div class="${"lg:grid lg:grid-cols-4 lg:h-screen"}">${$OrderItemStore.products.length > 0 ? `<div class="${"lg:col-span-3 bg-white p-3"}"><div class="${"flex justify-between p-4 border-b-2 border-gray-200"}"><div class="${"text-gray-800 text-lg font-bold"}">OrderId# ${escape($OrderItemStore.id)}</div>
+					<div class="${"text-gray-800 text-lg font-bold"}">${escape($OrderItemStore.products.length)} items
+					</div></div>
+				<div class="${"grid grid-cols-6 p-4 "}"><div class="${"text-sm text-gray-900 font-bold text-left col-span-5"}">Product Details</div>
+					<div class="${"text-sm text-gray-900 font-bold text-right col-span-1 "}">Price</div></div>
+
+				${each($OrderItemStore.products, (item) => `<div class="${"grid grid-cols-6 p-4 lg:divide-x-2 lg:divide-gray-300 "}"><div class="${"text-xs text-gray-700 font-semibold text-left col-span-5 flex flex-col items-start"}"><div>${escape(item.name)}
+								- ${escape(item.quantity + item.unit_name)} x ${escape(item.count)}
+							</div></div>
+
+						<div class="${"flex justify-end col-span-1 "}"><div class="${"text-xs text-gray-700 font-semibold text-center "}">- $${escape(item.price)}
+							</div></div>
+					</div>`)}</div>
+
+			<div class="${"lg:col-span-1 bg-gray-800 pt-5 p-4"}"><div><div class="${"pt-4 pb-4 border-b border-gray-100 text-left"}"><div class="${"text-white text-sm font-bold"}">Order Summary</div></div>
+					<div class="${"flex justify-between mt-2 border-gray-200 mb-2"}"><div class="${"text-white text-xs font-semibold"}">Items ${escape($OrderItemStore.products.length)}</div>
+						<div class="${"text-white text-xs font-semibold"}">$${escape($OrderItemStore.total)}</div></div>
+
+					<div class="${"flex justify-between mt-3 border-gray-200 "}"><div class="${"text-white text-xs font-semibold"}">Delivery Charge</div>
+						<div class="${"text-white text-xs font-semibold"}">${escape($OrderItemStore.delivery_charge)}</div></div>
+					<div class="${"flex justify-between mt-4 border-gray-100 border-b"}"></div>
+					<div class="${"flex justify-between mt-1"}"><div class="${"text-white text-sm font-semibold"}">Total</div>
+						<div class="${"text-white text-sm font-semibold"}">${escape($OrderItemStore.total + $OrderItemStore.delivery_charge)}</div></div></div></div>` : ``}</div>
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/Adduser-5ed9545c.js
+var Adduser_5ed9545c_exports = {};
+__export(Adduser_5ed9545c_exports, {
   default: () => Adduser
 });
 function dequal(foo, bar) {
@@ -18364,14 +18380,14 @@ function resolveValue(element) {
     return element.value;
   }
 }
-var has, deepEqual2, util, NO_ERROR, IS_TOUCHED, createForm, css5, Adduser;
-var init_Adduser_eefd4d05 = __esm({
-  ".svelte-kit/output/server/chunks/Adduser-eefd4d05.js"() {
+var has, deepEqual2, util, NO_ERROR, IS_TOUCHED, createForm, css6, Adduser;
+var init_Adduser_5ed9545c = __esm({
+  ".svelte-kit/output/server/chunks/Adduser-5ed9545c.js"() {
     init_shims();
-    init_app_5b681aca();
+    init_app_30b30915();
     init_firebase_f336866f();
-    init_index_bf679aba();
-    init_Alert_8a64cb7a();
+    init_index_8245df5e();
+    init_Alert_03e81913();
     has = Object.prototype.hasOwnProperty;
     deepEqual2 = dequal;
     util = {
@@ -18388,11 +18404,11 @@ var init_Adduser_eefd4d05 = __esm({
     };
     NO_ERROR = "";
     IS_TOUCHED = true;
-    createForm = (config2) => {
-      let initialValues = config2.initialValues || {};
-      const validationSchema = config2.validationSchema;
-      const validateFunction = config2.validate;
-      const onSubmit = config2.onSubmit;
+    createForm = (config) => {
+      let initialValues = config.initialValues || {};
+      const validationSchema = config.validationSchema;
+      const validateFunction = config.validate;
+      const onSubmit = config.onSubmit;
       const getInitial = {
         values: () => util.cloneDeep(initialValues),
         errors: () => validationSchema ? util.getErrorsFromSchema(initialValues, validationSchema.fields) : util.assignDeep(initialValues, NO_ERROR),
@@ -18542,7 +18558,7 @@ var init_Adduser_eefd4d05 = __esm({
         }))
       };
     };
-    css5 = {
+    css6 = {
       code: ".btnClass.svelte-1ubs5ep{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity));border-radius:9999px;color:rgba(255,255,255,var(--tw-text-opacity));cursor:pointer;font-size:.875rem;font-weight:700;line-height:1.25rem;padding:.25rem 1rem}.btnClass.svelte-1ubs5ep:hover{--tw-bg-opacity:1;--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);background-color:rgba(55,65,81,var(--tw-bg-opacity));box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.input.svelte-1ubs5ep{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));border-radius:.25rem;border-width:0;color:rgba(75,85,99,var(--tw-text-opacity));font-size:.875rem;line-height:1.25rem;margin-bottom:.75rem;padding:.75rem;width:100%}.input.svelte-1ubs5ep::-moz-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep:-ms-input-placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep::placeholder{--tw-placeholder-opacity:1;color:rgba(209,213,219,var(--tw-placeholder-opacity))}.input.svelte-1ubs5ep{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:linear}.input.svelte-1ubs5ep:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000);outline:2px solid transparent;outline-offset:2px}.error.svelte-1ubs5ep{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity));font-size:.75rem;line-height:1rem}",
       map: null
     };
@@ -18597,7 +18613,7 @@ var init_Adduser_eefd4d05 = __esm({
       $$unsubscribe_form = subscribe(form, (value) => $form = value);
       $$unsubscribe_errors = subscribe(errors, (value) => $errors = value);
       const wait = () => new Promise((res) => setTimeout(res, 2e3));
-      $$result.css.add(css5);
+      $$result.css.add(css6);
       $$unsubscribe_form();
       $$unsubscribe_errors();
       return `<main class="${"flex justify-center items-center h-screen"}"><div class="${"flex flex-col items-center bg-gray-100 p-14 rounded shadow-xl justify-items-center md:w-3/5 "}"><p class="${"text-gray-700 p-1 font-semibold text-xl border-b-2 mb-6 border-gray-600"}">Add User</p>
@@ -18621,7 +18637,7 @@ var init_Adduser_eefd4d05 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-5b681aca.js
+// .svelte-kit/output/server/chunks/app-30b30915.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -18896,12 +18912,12 @@ function stringifyString(str) {
   result += '"';
   return result;
 }
-function noop$12() {
+function noop$1() {
 }
 function safe_not_equal$1(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
-function writable2(value, start = noop$12) {
+function writable2(value, start = noop$1) {
   let stop;
   const subscribers = new Set();
   function set2(new_value) {
@@ -18925,11 +18941,11 @@ function writable2(value, start = noop$12) {
   function update22(fn2) {
     set2(fn2(value));
   }
-  function subscribe2(run2, invalidate = noop$12) {
+  function subscribe2(run2, invalidate = noop$1) {
     const subscriber = [run2, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set2) || noop$12;
+      stop = start(set2) || noop$1;
     }
     run2(value);
     return () => {
@@ -18991,7 +19007,7 @@ async function render_response({
 }) {
   const css22 = new Set(options2.entry.css);
   const js2 = new Set(options2.entry.js);
-  const styles3 = new Set();
+  const styles2 = new Set();
   const serialized_data = [];
   let rendered;
   let is_private = false;
@@ -19000,18 +19016,18 @@ async function render_response({
     error2.stack = options2.get_stack(error2);
   }
   if (page_config.ssr) {
-    branch.forEach(({ node, loaded: loaded2, fetched, uses_credentials }) => {
+    branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
         node.css.forEach((url) => css22.add(url));
       if (node.js)
         node.js.forEach((url) => js2.add(url));
       if (node.styles)
-        node.styles.forEach((content) => styles3.add(content));
+        node.styles.forEach((content) => styles2.add(content));
       if (fetched && page_config.hydrate)
         serialized_data.push(...fetched);
       if (uses_credentials)
         is_private = true;
-      maxage = loaded2.maxage;
+      maxage = loaded.maxage;
     });
     const session = writable2($session);
     const props = {
@@ -19043,7 +19059,7 @@ async function render_response({
   const include_js = page_config.router || page_config.hydrate;
   if (!include_js)
     js2.clear();
-  const links = options2.amp ? styles3.size > 0 || rendered.css.code.length > 0 ? `<style amp-custom>${Array.from(styles3).concat(rendered.css.code).join("\n")}</style>` : "" : [
+  const links = options2.amp ? styles2.size > 0 || rendered.css.code.length > 0 ? `<style amp-custom>${Array.from(styles2).concat(rendered.css.code).join("\n")}</style>` : "" : [
     ...Array.from(js2).map((dep) => `<link rel="modulepreload" href="${dep}">`),
     ...Array.from(css22).map((dep) => `<link rel="stylesheet" href="${dep}">`)
   ].join("\n		");
@@ -19053,7 +19069,6 @@ async function render_response({
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 		<script async src="https://cdn.ampproject.org/v0.js"><\/script>`;
-    init2 += options2.service_worker ? '<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"><\/script>' : "";
   } else if (include_js) {
     init2 = `<script type="module">
 			import { start } from ${s$1(options2.entry.file)};
@@ -19088,7 +19103,7 @@ async function render_response({
 		<\/script>`;
   }
   if (options2.service_worker) {
-    init2 += options2.amp ? `<amp-install-serviceworker src="${options2.service_worker}" layout="nodisplay"></amp-install-serviceworker>` : `<script>
+    init2 += `<script>
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('${options2.service_worker}');
 			}
@@ -19096,7 +19111,7 @@ async function render_response({
   }
   const head = [
     rendered.head,
-    styles3.size && !options2.amp ? `<style data-svelte>${Array.from(styles3).join("\n")}</style>` : "",
+    styles2.size && !options2.amp ? `<style data-svelte>${Array.from(styles2).join("\n")}</style>` : "",
     links,
     init2
   ].join("\n\n		");
@@ -19146,17 +19161,17 @@ function serialize_error(error2) {
   }
   return serialized;
 }
-function normalize(loaded2) {
-  const has_error_status = loaded2.status && loaded2.status >= 400 && loaded2.status <= 599 && !loaded2.redirect;
-  if (loaded2.error || has_error_status) {
-    const status = loaded2.status;
-    if (!loaded2.error && has_error_status) {
+function normalize(loaded) {
+  const has_error_status = loaded.status && loaded.status >= 400 && loaded.status <= 599 && !loaded.redirect;
+  if (loaded.error || has_error_status) {
+    const status = loaded.status;
+    if (!loaded.error && has_error_status) {
       return {
         status: status || 500,
         error: new Error()
       };
     }
-    const error2 = typeof loaded2.error === "string" ? new Error(loaded2.error) : loaded2.error;
+    const error2 = typeof loaded.error === "string" ? new Error(loaded.error) : loaded.error;
     if (!(error2 instanceof Error)) {
       return {
         status: 500,
@@ -19169,24 +19184,24 @@ function normalize(loaded2) {
     }
     return { status, error: error2 };
   }
-  if (loaded2.redirect) {
-    if (!loaded2.status || Math.floor(loaded2.status / 100) !== 3) {
+  if (loaded.redirect) {
+    if (!loaded.status || Math.floor(loaded.status / 100) !== 3) {
       return {
         status: 500,
         error: new Error('"redirect" property returned from load() must be accompanied by a 3xx status code')
       };
     }
-    if (typeof loaded2.redirect !== "string") {
+    if (typeof loaded.redirect !== "string") {
       return {
         status: 500,
         error: new Error('"redirect" property returned from load() must be a string')
       };
     }
   }
-  if (loaded2.context) {
+  if (loaded.context) {
     throw new Error('You are returning "context" from a load function. "context" was renamed to "stuff", please adjust your code accordingly.');
   }
-  return loaded2;
+  return loaded;
 }
 async function load_node({
   request,
@@ -19207,7 +19222,7 @@ async function load_node({
   let uses_credentials = false;
   const fetched = [];
   let set_cookie_headers = [];
-  let loaded2;
+  let loaded;
   const page_proxy = new Proxy(page, {
     get: (target, prop, receiver) => {
       if (prop === "query" && prerender_enabled) {
@@ -19351,19 +19366,19 @@ async function load_node({
       load_input.status = status;
       load_input.error = error2;
     }
-    loaded2 = await module2.load.call(null, load_input);
+    loaded = await module2.load.call(null, load_input);
   } else {
-    loaded2 = {};
+    loaded = {};
   }
-  if (!loaded2 && is_leaf && !is_error)
+  if (!loaded && is_leaf && !is_error)
     return;
-  if (!loaded2) {
+  if (!loaded) {
     throw new Error(`${node.entry} - load must return a value except for page fall through`);
   }
   return {
     node,
-    loaded: normalize(loaded2),
-    stuff: loaded2.stuff || stuff,
+    loaded: normalize(loaded),
+    stuff: loaded.stuff || stuff,
     fetched,
     set_cookie_headers,
     uses_credentials
@@ -19399,7 +19414,7 @@ async function respond_with_error({ request, options: options2, state, $session,
     query: request.query,
     params: {}
   };
-  const loaded2 = await load_node({
+  const loaded = await load_node({
     request,
     options: options2,
     state,
@@ -19413,7 +19428,7 @@ async function respond_with_error({ request, options: options2, state, $session,
     is_error: false
   });
   const branch = [
-    loaded2,
+    loaded,
     await load_node({
       request,
       options: options2,
@@ -19422,7 +19437,7 @@ async function respond_with_error({ request, options: options2, state, $session,
       page,
       node: default_error,
       $session,
-      stuff: loaded2 ? loaded2.stuff : {},
+      stuff: loaded ? loaded.stuff : {},
       prerender_enabled: is_prerender_enabled(options2, default_error, state),
       is_leaf: false,
       is_error: true,
@@ -19491,10 +19506,10 @@ async function respond$1(opts) {
       let stuff = {};
       for (let i = 0; i < nodes.length; i += 1) {
         const node = nodes[i];
-        let loaded2;
+        let loaded;
         if (node) {
           try {
-            loaded2 = await load_node({
+            loaded = await load_node({
               ...opts,
               node,
               stuff,
@@ -19502,19 +19517,19 @@ async function respond$1(opts) {
               is_leaf: i === nodes.length - 1,
               is_error: false
             });
-            if (!loaded2)
+            if (!loaded)
               return;
-            set_cookie_headers = set_cookie_headers.concat(loaded2.set_cookie_headers);
-            if (loaded2.loaded.redirect) {
+            set_cookie_headers = set_cookie_headers.concat(loaded.set_cookie_headers);
+            if (loaded.loaded.redirect) {
               return with_cookies({
-                status: loaded2.loaded.status,
+                status: loaded.loaded.status,
                 headers: {
-                  location: encodeURI(loaded2.loaded.redirect)
+                  location: encodeURI(loaded.loaded.redirect)
                 }
               }, set_cookie_headers);
             }
-            if (loaded2.loaded.error) {
-              ({ status, error: error2 } = loaded2.loaded);
+            if (loaded.loaded.error) {
+              ({ status, error: error2 } = loaded.loaded);
             }
           } catch (err) {
             const e = coalesce_to_error(err);
@@ -19522,8 +19537,8 @@ async function respond$1(opts) {
             status = 500;
             error2 = e;
           }
-          if (loaded2 && !error2) {
-            branch.push(loaded2);
+          if (loaded && !error2) {
+            branch.push(loaded);
           }
           if (error2) {
             while (i--) {
@@ -19568,10 +19583,10 @@ async function respond$1(opts) {
             }), set_cookie_headers);
           }
         }
-        if (loaded2 && loaded2.loaded.stuff) {
+        if (loaded && loaded.loaded.stuff) {
           stuff = {
             ...stuff,
-            ...loaded2.loaded.stuff
+            ...loaded.loaded.stuff
           };
         }
       }
@@ -19807,7 +19822,7 @@ async function respond(incoming, options2, state = {}) {
     };
   }
 }
-function noop4() {
+function noop() {
 }
 function run(fn2) {
   return fn2();
@@ -19826,7 +19841,7 @@ function safe_not_equal(a, b) {
 }
 function subscribe(store, ...callbacks) {
   if (store == null) {
-    return noop4;
+    return noop;
   }
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
@@ -20043,9 +20058,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-58162cee.js",
-      css: [assets + "/_app/assets/start-464e9d0a.css"],
-      js: [assets + "/_app/start-58162cee.js", assets + "/_app/chunks/vendor-3b93c125.js"]
+      file: assets + "/_app/start-4ead421d.js",
+      css: [assets + "/_app/assets/start-464e9d0a.css", assets + "/_app/assets/vendor-8daff541.css"],
+      js: [assets + "/_app/start-4ead421d.js", assets + "/_app/chunks/vendor-1426421c.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -20073,13 +20088,13 @@ function init(settings = default_settings) {
   };
 }
 async function load_component(file) {
-  const { entry, css: css22, js: js2, styles: styles3 } = metadata_lookup[file];
+  const { entry, css: css22, js: js2, styles: styles2 } = metadata_lookup[file];
   return {
     module: await module_lookup[file](),
     entry: assets + "/_app/" + entry,
     css: css22.map((dep) => assets + "/_app/" + dep),
     js: js2.map((dep) => assets + "/_app/" + dep),
-    styles: styles3
+    styles: styles2
   };
 }
 function render(request, {
@@ -20088,9 +20103,9 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender: prerender2 });
 }
-var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, dirty_components, binding_callbacks, render_callbacks, flush_callbacks, resolved_promise, update_scheduled, flushing, seen_callbacks, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy, css6, Root, base2, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_5b681aca = __esm({
-  ".svelte-kit/output/server/chunks/app-5b681aca.js"() {
+var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, dirty_components, binding_callbacks, render_callbacks, flush_callbacks, resolved_promise, update_scheduled, flushing, seen_callbacks, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy, css7, Root, base2, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_30b30915 = __esm({
+  ".svelte-kit/output/server/chunks/app-30b30915.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -20240,7 +20255,7 @@ var init_app_5b681aca = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css6 = {
+    css7 = {
       code: "#svelte-announcer.svelte-1pdgbjn{clip:rect(0 0 0 0);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;left:0;overflow:hidden;position:absolute;top:0;white-space:nowrap;width:1px}",
       map: null
     };
@@ -20265,7 +20280,7 @@ var init_app_5b681aca = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css6);
+      $$result.css.add(css7);
       {
         stores.page.set(page);
       }
@@ -20311,9 +20326,9 @@ ${``}`;
         },
         {
           type: "page",
-          pattern: /^\/views\/components\/Crasoul\/?$/,
+          pattern: /^\/views\/components\/Carousel\/?$/,
           params: empty,
-          a: ["src/routes/__layout.svelte", "src/routes/views/components/Crasoul.svelte"],
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/Carousel.svelte"],
           b: ["src/routes/__error.svelte"]
         },
         {
@@ -20325,16 +20340,16 @@ ${``}`;
         },
         {
           type: "page",
-          pattern: /^\/views\/components\/footer\/?$/,
+          pattern: /^\/views\/components\/Footer\/?$/,
           params: empty,
-          a: ["src/routes/__layout.svelte", "src/routes/views/components/footer.svelte"],
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/Footer.svelte"],
           b: ["src/routes/__error.svelte"]
         },
         {
           type: "page",
-          pattern: /^\/views\/components\/header\/?$/,
+          pattern: /^\/views\/components\/Header\/?$/,
           params: empty,
-          a: ["src/routes/__layout.svelte", "src/routes/views/components/header.svelte"],
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/Header.svelte"],
           b: ["src/routes/__error.svelte"]
         },
         {
@@ -20346,6 +20361,34 @@ ${``}`;
         },
         {
           type: "page",
+          pattern: /^\/views\/components\/icons\/DecrementButton\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/icons/DecrementButton.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/views\/components\/icons\/IncrementButton\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/icons/IncrementButton.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/views\/components\/icons\/ArrowBack\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/icons/ArrowBack.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/views\/components\/icons\/CartIcon\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/components/icons/CartIcon.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
           pattern: /^\/views\/products\/?$/,
           params: empty,
           a: ["src/routes/__layout.svelte", "src/routes/views/products/index.svelte"],
@@ -20353,9 +20396,23 @@ ${``}`;
         },
         {
           type: "page",
-          pattern: /^\/views\/products\/cart\/?$/,
+          pattern: /^\/views\/products\/Cart\/?$/,
           params: empty,
-          a: ["src/routes/__layout.svelte", "src/routes/views/products/cart.svelte"],
+          a: ["src/routes/__layout.svelte", "src/routes/views/products/Cart.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/views\/orders\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/orders/index.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/views\/orders\/OrderHistory\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/views/orders/OrderHistory.svelte"],
           b: ["src/routes/__error.svelte"]
         },
         {
@@ -20387,21 +20444,27 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_97804934(), layout_97804934_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_85f336f3(), error_85f336f3_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_3f9148bc(), index_3f9148bc_exports)),
-      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_be88ab73(), TableDropdown_be88ab73_exports)),
-      "src/routes/views/components/Crasoul.svelte": () => Promise.resolve().then(() => (init_Crasoul_4a4715e4(), Crasoul_4a4715e4_exports)),
-      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_fd1b8213(), SideBar_fd1b8213_exports)),
-      "src/routes/views/components/footer.svelte": () => Promise.resolve().then(() => (init_footer_ea2efe91(), footer_ea2efe91_exports)),
-      "src/routes/views/components/header.svelte": () => Promise.resolve().then(() => (init_header_b56f65d0(), header_b56f65d0_exports)),
-      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_8a64cb7a(), Alert_8a64cb7a_exports)),
-      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_2cb4927f(), index_2cb4927f_exports)),
-      "src/routes/views/products/cart.svelte": () => Promise.resolve().then(() => (init_cart_74d052cf(), cart_74d052cf_exports)),
-      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_b1b34b97(), index_b1b34b97_exports)),
-      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_eefd4d05(), Adduser_eefd4d05_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_70535e21(), layout_70535e21_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_3adb39a5(), error_3adb39a5_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_9b7b085a(), index_9b7b085a_exports)),
+      "src/routes/views/components/TableDropdown.svelte": () => Promise.resolve().then(() => (init_TableDropdown_b1ce7615(), TableDropdown_b1ce7615_exports)),
+      "src/routes/views/components/Carousel.svelte": () => Promise.resolve().then(() => (init_Carousel_e4549425(), Carousel_e4549425_exports)),
+      "src/routes/views/components/SideBar.svelte": () => Promise.resolve().then(() => (init_SideBar_6cb11ea0(), SideBar_6cb11ea0_exports)),
+      "src/routes/views/components/Footer.svelte": () => Promise.resolve().then(() => (init_Footer_14783d0a(), Footer_14783d0a_exports)),
+      "src/routes/views/components/Header.svelte": () => Promise.resolve().then(() => (init_Header_47810240(), Header_47810240_exports)),
+      "src/routes/views/components/Alert.svelte": () => Promise.resolve().then(() => (init_Alert_03e81913(), Alert_03e81913_exports)),
+      "src/routes/views/components/icons/DecrementButton.svelte": () => Promise.resolve().then(() => (init_DecrementButton_bcffb2c2(), DecrementButton_bcffb2c2_exports)),
+      "src/routes/views/components/icons/IncrementButton.svelte": () => Promise.resolve().then(() => (init_IncrementButton_29b00830(), IncrementButton_29b00830_exports)),
+      "src/routes/views/components/icons/ArrowBack.svelte": () => Promise.resolve().then(() => (init_ArrowBack_9810cec1(), ArrowBack_9810cec1_exports)),
+      "src/routes/views/components/icons/CartIcon.svelte": () => Promise.resolve().then(() => (init_CartIcon_25cc83d1(), CartIcon_25cc83d1_exports)),
+      "src/routes/views/products/index.svelte": () => Promise.resolve().then(() => (init_index_d9325d69(), index_d9325d69_exports)),
+      "src/routes/views/products/Cart.svelte": () => Promise.resolve().then(() => (init_Cart_316f3014(), Cart_316f3014_exports)),
+      "src/routes/views/orders/index.svelte": () => Promise.resolve().then(() => (init_index_bff2a861(), index_bff2a861_exports)),
+      "src/routes/views/orders/OrderHistory.svelte": () => Promise.resolve().then(() => (init_OrderHistory_6cff0d23(), OrderHistory_6cff0d23_exports)),
+      "src/routes/views/users/index.svelte": () => Promise.resolve().then(() => (init_index_84ff0310(), index_84ff0310_exports)),
+      "src/routes/views/users/Adduser.svelte": () => Promise.resolve().then(() => (init_Adduser_5ed9545c(), Adduser_5ed9545c_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-60f57e03.js", "css": ["assets/pages/__layout.svelte-d3ed4073.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-60f57e03.js", "chunks/vendor-3b93c125.js", "pages/views/components/footer.svelte-0c31bc5c.js", "pages/views/components/SideBar.svelte-2c013c88.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-834d3f7e.js", "css": [], "js": ["pages/__error.svelte-834d3f7e.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-7ac0a2d4.js", "css": [], "js": ["pages/index.svelte-7ac0a2d4.js", "chunks/vendor-3b93c125.js", "pages/views/users/index.svelte-3d60d14b.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/TableDropdown.svelte-4405d9fe.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-4405d9fe.js", "css": [], "js": ["pages/views/components/TableDropdown.svelte-4405d9fe.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/Crasoul.svelte": { "entry": "pages/views/components/Crasoul.svelte-53881b3a.js", "css": ["assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/components/Crasoul.svelte-53881b3a.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-2c013c88.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/views/components/SideBar.svelte-2c013c88.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/footer.svelte": { "entry": "pages/views/components/footer.svelte-0c31bc5c.js", "css": [], "js": ["pages/views/components/footer.svelte-0c31bc5c.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/header.svelte": { "entry": "pages/views/components/header.svelte-31b4f152.js", "css": ["assets/pages/views/components/header.svelte-626d80ef.css"], "js": ["pages/views/components/header.svelte-31b4f152.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-4711f523.js", "css": [], "js": ["pages/views/components/Alert.svelte-4711f523.js", "chunks/vendor-3b93c125.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-24b20fe7.js", "css": ["assets/pages/views/products/index.svelte-7d83faee.css", "assets/pages/views/components/Crasoul.svelte-534b0b6d.css"], "js": ["pages/views/products/index.svelte-24b20fe7.js", "chunks/vendor-3b93c125.js", "chunks/cartstore-2873a8e2.js", "pages/views/components/Crasoul.svelte-53881b3a.js"], "styles": [] }, "src/routes/views/products/cart.svelte": { "entry": "pages/views/products/cart.svelte-a8323552.js", "css": [], "js": ["pages/views/products/cart.svelte-a8323552.js", "chunks/vendor-3b93c125.js", "chunks/cartstore-2873a8e2.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-3d60d14b.js", "css": [], "js": ["pages/views/users/index.svelte-3d60d14b.js", "chunks/vendor-3b93c125.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/TableDropdown.svelte-4405d9fe.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-3074dab4.js", "css": ["assets/pages/views/users/Adduser.svelte-fe708ff9.css"], "js": ["pages/views/users/Adduser.svelte-3074dab4.js", "chunks/vendor-3b93c125.js", "chunks/firebase-ad3acdbf.js", "pages/views/components/Alert.svelte-4711f523.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-a7399928.js", "css": ["assets/pages/__layout.svelte-0ecd4150.css", "assets/vendor-8daff541.css", "assets/pages/views/components/SideBar.svelte-377c2cf2.css"], "js": ["pages/__layout.svelte-a7399928.js", "chunks/vendor-1426421c.js", "pages/views/components/Footer.svelte-c8c47d83.js", "pages/views/components/SideBar.svelte-bb7208fb.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/cartStore-5b0fc680.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-b64cb55d.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/__error.svelte-b64cb55d.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-4ba84e8d.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/index.svelte-4ba84e8d.js", "chunks/vendor-1426421c.js", "pages/views/users/index.svelte-7c67d5d7.js", "chunks/firebase-e1afa422.js", "pages/views/components/TableDropdown.svelte-8bc2e084.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/views/components/TableDropdown.svelte": { "entry": "pages/views/components/TableDropdown.svelte-8bc2e084.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/TableDropdown.svelte-8bc2e084.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/Carousel.svelte": { "entry": "pages/views/components/Carousel.svelte-2a732199.js", "css": ["assets/pages/views/components/Carousel.svelte-f3e46a19.css", "assets/vendor-8daff541.css"], "js": ["pages/views/components/Carousel.svelte-2a732199.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/SideBar.svelte": { "entry": "pages/views/components/SideBar.svelte-bb7208fb.js", "css": ["assets/pages/views/components/SideBar.svelte-377c2cf2.css", "assets/vendor-8daff541.css"], "js": ["pages/views/components/SideBar.svelte-bb7208fb.js", "chunks/vendor-1426421c.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/cartStore-5b0fc680.js"], "styles": [] }, "src/routes/views/components/Footer.svelte": { "entry": "pages/views/components/Footer.svelte-c8c47d83.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/Footer.svelte-c8c47d83.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/Header.svelte": { "entry": "pages/views/components/Header.svelte-75489481.js", "css": ["assets/pages/views/components/Header.svelte-a712ca71.css", "assets/vendor-8daff541.css"], "js": ["pages/views/components/Header.svelte-75489481.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/Alert.svelte": { "entry": "pages/views/components/Alert.svelte-9f2d26e1.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/Alert.svelte-9f2d26e1.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/icons/DecrementButton.svelte": { "entry": "pages/views/components/icons/DecrementButton.svelte-eaf94b81.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/icons/DecrementButton.svelte-eaf94b81.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/icons/IncrementButton.svelte": { "entry": "pages/views/components/icons/IncrementButton.svelte-6c4b2f24.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/icons/IncrementButton.svelte-6c4b2f24.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/icons/ArrowBack.svelte": { "entry": "pages/views/components/icons/ArrowBack.svelte-92d26f93.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/icons/ArrowBack.svelte-92d26f93.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/components/icons/CartIcon.svelte": { "entry": "pages/views/components/icons/CartIcon.svelte-ea3baad6.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/components/icons/CartIcon.svelte-ea3baad6.js", "chunks/vendor-1426421c.js"], "styles": [] }, "src/routes/views/products/index.svelte": { "entry": "pages/views/products/index.svelte-968baa29.js", "css": ["assets/pages/views/products/index.svelte-d54ee17d.css", "assets/vendor-8daff541.css", "assets/pages/views/components/Carousel.svelte-f3e46a19.css"], "js": ["pages/views/products/index.svelte-968baa29.js", "chunks/vendor-1426421c.js", "chunks/cartStore-5b0fc680.js", "pages/views/components/Carousel.svelte-2a732199.js", "pages/views/components/icons/CartIcon.svelte-ea3baad6.js"], "styles": [] }, "src/routes/views/products/Cart.svelte": { "entry": "pages/views/products/Cart.svelte-78856f6f.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/products/Cart.svelte-78856f6f.js", "chunks/vendor-1426421c.js", "chunks/cartStore-5b0fc680.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "pages/views/components/icons/ArrowBack.svelte-92d26f93.js", "pages/views/components/icons/DecrementButton.svelte-eaf94b81.js", "pages/views/components/icons/IncrementButton.svelte-6c4b2f24.js", "chunks/firebase-e1afa422.js"], "styles": [] }, "src/routes/views/orders/index.svelte": { "entry": "pages/views/orders/index.svelte-7e0723bb.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/orders/index.svelte-7e0723bb.js", "chunks/vendor-1426421c.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/firebase-e1afa422.js", "chunks/orderstore-5280ef75.js"], "styles": [] }, "src/routes/views/orders/OrderHistory.svelte": { "entry": "pages/views/orders/OrderHistory.svelte-323721d6.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/orders/OrderHistory.svelte-323721d6.js", "chunks/vendor-1426421c.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/orderstore-5280ef75.js"], "styles": [] }, "src/routes/views/users/index.svelte": { "entry": "pages/views/users/index.svelte-7c67d5d7.js", "css": ["assets/vendor-8daff541.css"], "js": ["pages/views/users/index.svelte-7c67d5d7.js", "chunks/vendor-1426421c.js", "chunks/firebase-e1afa422.js", "pages/views/components/TableDropdown.svelte-8bc2e084.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/views/users/Adduser.svelte": { "entry": "pages/views/users/Adduser.svelte-cd2f8965.js", "css": ["assets/pages/views/users/Adduser.svelte-61ec6257.css", "assets/vendor-8daff541.css"], "js": ["pages/views/users/Adduser.svelte-cd2f8965.js", "chunks/vendor-1426421c.js", "chunks/firebase-e1afa422.js", "pages/views/components/Alert.svelte-9f2d26e1.js"], "styles": [] } };
   }
 });
 
@@ -20413,7 +20476,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_5b681aca();
+init_app_30b30915();
 
 // .svelte-kit/netlify/entry.js
 init();
@@ -20468,10 +20531,6 @@ function split_headers(headers) {
 0 && (module.exports = {
   handler
 });
-/*!
- * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
 /*! fetch-blob. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 /**
  * @license
